@@ -1,44 +1,89 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AudioManager } from "./engine/audio";
-import { loadGameContent } from "./engine/loader";
+import { getDefaultStoryEntry, loadGameContent, loadStoryCatalog } from "./engine/loader";
 import { RuntimeEngine, type RuntimeSnapshot } from "./engine/runtime";
 import { clearGameSave, loadGameSave, saveGame } from "./engine/save";
 import { createDebugLoggerPlugin } from "./engine/plugins";
-import type { AssetManifest, Character, SceneCharacter, Story } from "./engine/schema";
+import type {
+  AssetManifest,
+  Character,
+  SceneCharacter,
+  Story,
+  StoryCatalog,
+  StoryCatalogEntry
+} from "./engine/schema";
 
 type GameSession = {
   story: Story;
   assets: AssetManifest;
   engine: RuntimeEngine;
   audio: AudioManager;
+  catalogEntry: StoryCatalogEntry;
 };
 
 export default function App() {
+  const [catalog, setCatalog] = useState<StoryCatalog | null>(null);
+  const [selectedStoryId, setSelectedStoryId] = useState<string>("");
   const [session, setSession] = useState<GameSession | null>(null);
   const [snapshot, setSnapshot] = useState<RuntimeSnapshot | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
   const [muted, setMuted] = useState(false);
+  const audioRef = useRef<AudioManager | null>(null);
   const lastLineKey = useRef<string>("");
+  const loadToken = useRef(0);
+  const mutedRef = useRef(false);
+
+  useEffect(() => {
+    mutedRef.current = muted;
+  }, [muted]);
+
+  const startStory = useCallback(async (entry: StoryCatalogEntry, preferSave = true) => {
+    const token = loadToken.current + 1;
+    loadToken.current = token;
+    setError(null);
+    setMessage("");
+    setSnapshot(null);
+
+    try {
+      const { story, assets, catalogEntry } = await loadGameContent(entry);
+      if (token !== loadToken.current) {
+        return;
+      }
+
+      const save = preferSave ? loadGameSave(story.id) : null;
+      const engine = new RuntimeEngine(story, {
+        initialState: save ?? undefined,
+        plugins: [createDebugLoggerPlugin(import.meta.env.DEV)]
+      });
+      const audio = new AudioManager(assets);
+      audio.setMuted(mutedRef.current);
+
+      audioRef.current?.dispose();
+      audioRef.current = audio;
+      lastLineKey.current = "";
+
+      setSession({ story, assets, engine, audio, catalogEntry });
+      setSelectedStoryId(catalogEntry.id);
+      setSnapshot(engine.snapshot());
+    } catch (cause) {
+      if (token === loadToken.current) {
+        setError(cause instanceof Error ? cause.message : String(cause));
+      }
+    }
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
-    let audio: AudioManager | null = null;
 
     async function boot() {
       try {
-        const { story, assets } = await loadGameContent();
-        const save = loadGameSave(story.id);
-        const engine = new RuntimeEngine(story, {
-          initialState: save ?? undefined,
-          plugins: [createDebugLoggerPlugin(import.meta.env.DEV)]
-        });
-        audio = new AudioManager(assets);
-
-        if (!cancelled) {
-          setSession({ story, assets, engine, audio });
-          setSnapshot(engine.snapshot());
+        const loadedCatalog = await loadStoryCatalog();
+        if (cancelled) {
+          return;
         }
+        setCatalog(loadedCatalog);
+        await startStory(getDefaultStoryEntry(loadedCatalog));
       } catch (cause) {
         if (!cancelled) {
           setError(cause instanceof Error ? cause.message : String(cause));
@@ -49,9 +94,10 @@ export default function App() {
     boot();
     return () => {
       cancelled = true;
-      audio?.dispose();
+      loadToken.current += 1;
+      audioRef.current?.dispose();
     };
-  }, []);
+  }, [startStory]);
 
   useEffect(() => {
     if (!session || !snapshot) {
@@ -87,7 +133,7 @@ export default function App() {
   }
 
   if (!session || !snapshot) {
-    return <Shell><div className="panel">正在加载剧情与资源……</div></Shell>;
+    return <Shell><div className="panel">正在加载故事与资源……</div></Shell>;
   }
 
   const { story, assets } = session;
@@ -127,7 +173,10 @@ export default function App() {
       setMessage("没有找到存档");
       return;
     }
-    const engine = new RuntimeEngine(session.story, { initialState: save });
+    const engine = new RuntimeEngine(session.story, {
+      initialState: save,
+      plugins: [createDebugLoggerPlugin(import.meta.env.DEV)]
+    });
     setSession({ ...session, engine });
     setSnapshot(engine.snapshot());
     setMessage("已读取存档");
@@ -144,6 +193,13 @@ export default function App() {
     setSession({ ...session, engine });
     setSnapshot(engine.snapshot());
     setMessage("新游戏开始");
+  }
+
+  function handleStoryChange(storyId: string) {
+    const entry = catalog?.stories.find((storyEntry) => storyEntry.id === storyId);
+    if (entry) {
+      void startStory(entry);
+    }
   }
 
   function handleMuteToggle() {
@@ -164,8 +220,11 @@ export default function App() {
         <TopBar
           title={snapshot.storyTitle}
           nodeTitle={snapshot.nodeTitle}
+          stories={catalog?.stories ?? [session.catalogEntry]}
+          selectedStoryId={selectedStoryId}
           muted={muted}
           message={message}
+          onStoryChange={handleStoryChange}
           onSave={handleSave}
           onLoad={handleLoad}
           onNewGame={handleNewGame}
@@ -211,8 +270,11 @@ function Shell({ children }: { children: React.ReactNode }) {
 function TopBar(props: {
   title: string;
   nodeTitle?: string;
+  stories: StoryCatalogEntry[];
+  selectedStoryId: string;
   muted: boolean;
   message: string;
+  onStoryChange: (storyId: string) => void;
   onSave: () => void;
   onLoad: () => void;
   onNewGame: () => void;
@@ -225,6 +287,15 @@ function TopBar(props: {
         <div className="node-title">{props.nodeTitle ?? "未命名段落"}</div>
       </div>
       <div className="toolbar">
+        <select
+          aria-label="选择故事"
+          value={props.selectedStoryId}
+          onChange={(event) => props.onStoryChange(event.currentTarget.value)}
+        >
+          {props.stories.map((story) => (
+            <option key={story.id} value={story.id}>{story.title}</option>
+          ))}
+        </select>
         {props.message && <span className="toast">{props.message}</span>}
         <button onClick={props.onSave}>保存</button>
         <button onClick={props.onLoad}>读取</button>
@@ -270,8 +341,8 @@ function ChoicePanel(props: { snapshot: RuntimeSnapshot; onChoice: (choiceId: st
 function EndingPanel({ onNewGame }: { onNewGame: () => void }) {
   return (
     <div>
-      <div className="ending-title">本章结束</div>
-      <p className="dialogue-text">你已经抵达当前示例剧情的终点。继续添加节点即可扩展章节。</p>
+      <div className="ending-title">故事结束</div>
+      <p className="dialogue-text">你已经抵达当前故事的终点。添加更多节点即可继续扩展。</p>
       <button className="primary-button" onClick={onNewGame}>重新开始</button>
     </div>
   );

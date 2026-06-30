@@ -2,19 +2,20 @@
 
 ## 1. 设计目标
 
-这套 starter 面向类似《隐形守护者》一类互动影视/视觉小说：剧情以场景和对白推进，玩家在关键点选择路线，系统需要支持图片、文字、配乐、音效、人物配音、存档和分支变量。
+这套 framework 面向类似《隐形守护者》一类互动影视/视觉小说：剧情以场景和对白推进，玩家在关键点选择路线，系统需要支持多个 story、图片、文字、配乐、音效、人物配音、存档和分支变量。
 
 优先级：
 
-1. **容易迭代**：编剧改 JSON 即可预览，不需要每次改 React 代码。
+1. **容易迭代**：编剧新增或修改 story JSON 即可预览，不需要每次改 React 代码。
 2. **容易扩展**：核心 runtime 不依赖 UI，后续可以接 Web、Electron、移动端或自制编辑器。
-3. **资源可插拔**：图片、BGM、SFX、VO 都通过 manifest id 引用。
-4. **强校验**：剧情跳转、条件分支、资源引用尽量在开发阶段失败，而不是运行时失败。
-5. **适合 MacBook 开发**：Node + Vite 本地启动快，资源直接放 public 目录即可。
+3. **多故事入口**：播放器通过 catalog 加载不同 story，每个 story 可复用或指定自己的 manifest。
+4. **资源可插拔**：图片、BGM、SFX、VO 都通过 manifest id 引用。
+5. **强校验**：catalog、剧情跳转、条件分支、资源引用尽量在开发阶段失败，而不是运行时失败。
+6. **适合 MacBook 开发**：Node + Vite 本地启动快，资源直接放 public 目录即可。
 
 ## 2. 技术路线
 
-当前 starter 使用：
+当前 framework 使用：
 
 - **TypeScript**：保证剧情解释器、schema、插件接口可维护。
 - **React**：实现可替换的播放器 UI。
@@ -31,11 +32,18 @@ packages/engine
 packages/editor
 ```
 
-当前 starter 为了简洁先采用单包结构。
+当前 framework 为了简洁先采用单包结构。
 
 ## 3. 架构总览
 
 ```text
++------------------------------+
+| Story Catalog                |
+| - storyUrl                   |
+| - manifestUrl                |
++---------------+--------------+
+                |
+                v
 +------------------------------+
 | Writer JSON / Asset Manifest |
 +---------------+--------------+
@@ -43,6 +51,7 @@ packages/editor
                 v
 +------------------------------+
 | schema.ts                    |
+| - StoryCatalogSchema         |
 | - StorySchema                |
 | - AssetManifestSchema        |
 | - static-ish runtime types   |
@@ -77,9 +86,37 @@ packages/editor
 
 ## 4. 数据模型
 
-### 4.1 Story
+### 4.1 Story Catalog
 
-`Story` 是整个游戏脚本入口：
+`StoryCatalog` 是播放器入口，用来声明可运行的多个 story：
+
+```ts
+type StoryCatalog = {
+  version: 1;
+  defaultStory: string;
+  stories: StoryCatalogEntry[];
+};
+
+type StoryCatalogEntry = {
+  id: string;
+  title: string;
+  description?: string;
+  storyUrl: string;
+  manifestUrl: string;
+  tags?: string[];
+};
+```
+
+规则：
+
+- `defaultStory` 必须匹配某个 catalog entry 的 `id`。
+- `storyUrl` 指向一个符合 `StorySchema` 的 story JSON。
+- `manifestUrl` 指向资源 manifest；多个 story 可以共用同一个 manifest。
+- story JSON 的 `id` 应与 catalog entry 的 `id` 保持一致，方便存档和工具链定位。
+
+### 4.2 Story
+
+`Story` 是单个故事脚本入口：
 
 ```ts
 type Story = {
@@ -93,7 +130,7 @@ type Story = {
 };
 ```
 
-### 4.2 Node
+### 4.3 Node
 
 一个 node 是剧情图中的一个可跳转段落。它可以更新场景，也可以只继承上一场景。
 
@@ -118,9 +155,9 @@ type StoryNode = {
 - 没有 `choices` 但有 `next` 时自动进入下一个 node。
 - 没有 `choices`、没有 `next`、steps 执行完则进入 ending。
 
-### 4.3 Step
+### 4.4 Step
 
-当前 starter 已支持：
+当前 framework 已支持：
 
 ```ts
 type Step =
@@ -143,7 +180,7 @@ type Step =
 | { type: "minigame"; id: string; success: string; fail: string }
 ```
 
-### 4.4 Choice
+### 4.5 Choice
 
 ```ts
 type Choice = {
@@ -158,7 +195,7 @@ type Choice = {
 
 Choice 的 `conditions` 全部通过才显示。`effects` 在玩家选择后立即应用。
 
-### 4.5 Variables / Conditions
+### 4.6 Variables / Conditions
 
 变量是剧情状态：信任度、物品、flag、路线标记。
 

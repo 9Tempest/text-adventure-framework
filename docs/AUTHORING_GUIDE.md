@@ -1,6 +1,32 @@
 # Authoring Guide
 
-## 1. 添加图片
+## 1. 添加故事
+
+每个 story 是一个独立 JSON 文件，放在：
+
+```text
+public/game/story
+```
+
+在 `public/game/catalog.json` 增加入口：
+
+```json
+{
+  "id": "chapter-one",
+  "title": "第一章",
+  "description": "章节简介",
+  "storyUrl": "/game/story/chapter-one.story.json",
+  "manifestUrl": "/game/assets/manifest.json"
+}
+```
+
+约定：
+
+- catalog entry 的 `id` 和 story JSON 里的 `id` 保持一致。
+- 多个 story 可以共用一个 manifest，也可以指向不同 manifest。
+- `defaultStory` 决定播放器首次打开时加载哪一个 story。
+
+## 2. 添加图片
 
 把文件放入：
 
@@ -24,7 +50,7 @@ public/game/assets/images
 "scene": { "background": "bg_office" }
 ```
 
-## 2. 添加配乐
+## 3. 添加配乐
 
 ```json
 "bgm_office": {
@@ -47,7 +73,7 @@ public/game/assets/images
 "scene": { "music": null }
 ```
 
-## 3. 添加人物配音
+## 4. 添加人物配音
 
 建议一条对白一个 voice id：
 
@@ -70,7 +96,7 @@ manifest：
 }
 ```
 
-## 4. 添加分支
+## 5. 添加分支
 
 ```json
 "choices": [
@@ -89,7 +115,7 @@ manifest：
 ]
 ```
 
-## 5. 条件显示选项
+## 6. 条件显示选项
 
 ```json
 {
@@ -100,7 +126,7 @@ manifest：
 }
 ```
 
-## 6. 验证
+## 7. 验证
 
 每次改完：
 
@@ -110,7 +136,9 @@ npm run validate
 
 这个命令会检查：
 
-- story JSON 是否符合 schema
+- catalog JSON 是否符合 schema
+- catalog 中的每个 story JSON 是否符合 schema
+- catalog entry id 和 story id 是否一致
 - `startNode` 是否存在
 - choice/jump/next target 是否存在
 - story 引用的 asset id 是否存在

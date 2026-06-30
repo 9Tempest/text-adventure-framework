@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "id": "echo-lane-demo",
+  "title": "回声巷 Demo",
+  "startNode": "lane.start",
+  "variables": {
+    "heardSignal": false,
+    "nerve": 1
+  },
+  "characters": [
+    {
+      "id": "lin",
+      "name": "林晚",
+      "defaultImage": "lin_shadow",
+      "color": "#9ad7ff"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "lane.start",
+      "title": "回声巷口",
+      "scene": {
+        "background": "bg_station",
+        "music": "bgm_tension",
+        "characters": [
+          {
+            "character": "lin",
+            "image": "lin_shadow",
+            "slot": "center",
+            "expression": "hidden"
+          }
+        ],
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "line",
+          "text": "巷口的霓虹坏了一半，只剩下蓝色的字一闪一灭。"
+        },
+        {
+          "type": "sfx",
+          "audio": "sfx_knock"
+        },
+        {
+          "type": "line",
+          "speaker": "lin",
+          "voice": "voice_lin_001",
+          "text": "听见了吗？墙后有人用三短一长敲门。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "answer_signal",
+          "text": "用同样的节奏回应。",
+          "target": "lane.signal",
+          "effects": [
+            {
+              "type": "set",
+              "key": "heardSignal",
+              "value": true
+            }
+          ],
+          "hint": "打开暗门"
+        },
+        {
+          "id": "stay_quiet",
+          "text": "保持沉默，先观察巷尾。",
+          "target": "lane.watch",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "nerve",
+              "by": 1
+            }
+          ],
+          "hint": "提高胆量"
+        }
+      ]
+    },
+    {
+      "id": "lane.signal",
+      "title": "暗门",
+      "steps": [
+        {
+          "type": "line",
+          "text": "砖缝里透出一线暖光。有人在门后低声倒数。"
+        },
+        {
+          "type": "line",
+          "speaker": "lin",
+          "voice": "voice_lin_001",
+          "text": "这不是求救，是集合暗号。我们来对地方了。"
+        }
+      ]
+    },
+    {
+      "id": "lane.watch",
+      "title": "巷尾",
+      "steps": [
+        {
+          "type": "line",
+          "text": "你没有回应。巷尾的影子反而停了下来，像在等你先犯错。"
+        },
+        {
+          "type": "line",
+          "speaker": "lin",
+          "voice": "voice_lin_001",
+          "text": "胆子不错。现在，我们换一条路进去。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "defaultStory": "shadow-letters-demo",
+  "stories": [
+    {
+      "id": "shadow-letters-demo",
+      "title": "暗线：序章 Demo",
+      "description": "分支、变量、条件选项、BGM/SFX/VO 的完整示例。",
+      "storyUrl": "/game/story/shadow-letters-demo.story.json",
+      "manifestUrl": "/game/assets/manifest.json",
+      "tags": ["demo", "branching", "visual-novel"]
+    },
+    {
+      "id": "echo-lane-demo",
+      "title": "回声巷 Demo",
+      "description": "一个短篇文字冒险，用同一套框架和资源展示另一条故事入口。",
+      "storyUrl": "/game/story/echo-lane-demo.story.json",
+      "manifestUrl": "/game/assets/manifest.json",
+      "tags": ["demo", "short-story"]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extend Text Adventure Framework"
+  short_description: "Build stories and extensions for this framework"
+  default_prompt: "Use $extend-text-adventure-framework to add a new story to this repo."

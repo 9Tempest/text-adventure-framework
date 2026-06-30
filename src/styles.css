@@ -94,6 +94,7 @@ button {
 }
 
 .toolbar button,
+.toolbar select,
 .primary-button,
 .choice-button {
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -106,10 +107,20 @@ button {
 }
 
 .toolbar button:hover,
+.toolbar select:hover,
 .primary-button:hover,
 .choice-button:hover {
   border-color: rgba(245, 193, 93, 0.8);
   background: rgba(245, 193, 93, 0.18);
+}
+
+.toolbar select {
+  min-height: 40px;
+  max-width: min(300px, 100%);
+}
+
+.toolbar option {
+  color: #0d1117;
 }
 
 .toast {

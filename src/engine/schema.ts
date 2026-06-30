@@ -187,6 +187,32 @@ export const AssetManifestSchema = z.object({
   audio: z.record(z.string(), AudioAssetSchema).default({})
 });
 
+export const StoryCatalogEntrySchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  description: z.string().optional(),
+  storyUrl: z.string().min(1),
+  manifestUrl: z.string().min(1).default("/game/assets/manifest.json"),
+  tags: z.array(z.string()).default([]).optional()
+});
+
+export const StoryCatalogSchema = z
+  .object({
+    version: z.literal(1),
+    defaultStory: z.string().min(1),
+    stories: z.array(StoryCatalogEntrySchema).min(1)
+  })
+  .superRefine((catalog, ctx) => {
+    const storyIds = new Set(catalog.stories.map((story) => story.id));
+    if (!storyIds.has(catalog.defaultStory)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["defaultStory"],
+        message: `defaultStory '${catalog.defaultStory}' does not match any catalog story id`
+      });
+    }
+  });
+
 export type VariableValue = z.infer<typeof VariableValueSchema>;
 export type Condition = z.infer<typeof ConditionSchema>;
 export type Effect = z.infer<typeof EffectSchema>;
@@ -201,3 +227,5 @@ export type Story = z.infer<typeof StorySchema>;
 export type ImageAsset = z.infer<typeof ImageAssetSchema>;
 export type AudioAsset = z.infer<typeof AudioAssetSchema>;
 export type AssetManifest = z.infer<typeof AssetManifestSchema>;
+export type StoryCatalogEntry = z.infer<typeof StoryCatalogEntrySchema>;
+export type StoryCatalog = z.infer<typeof StoryCatalogSchema>;

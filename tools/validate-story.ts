@@ -1,32 +1,46 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { AssetManifestSchema, StorySchema, type AssetManifest, type Story } from "../src/engine/schema";
+import {
+  AssetManifestSchema,
+  StoryCatalogSchema,
+  StorySchema,
+  type AssetManifest,
+  type Story
+} from "../src/engine/schema";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(repoRoot, "public");
-const storyPath = path.join(publicRoot, "game/story/main.story.json");
-const manifestPath = path.join(publicRoot, "game/assets/manifest.json");
+const catalogPath = path.join(publicRoot, "game/catalog.json");
 
 type AssetRef = { kind: "image" | "audio"; id: string; where: string };
 
 async function main() {
-  const story = StorySchema.parse(await readJson(storyPath));
-  const manifest = AssetManifestSchema.parse(await readJson(manifestPath));
-
-  const refs = collectAssetRefs(story);
+  const catalog = StoryCatalogSchema.parse(await readJson(catalogPath));
   const errors: string[] = [];
+  const summaries: string[] = [];
 
-  for (const ref of refs) {
-    if (ref.kind === "image" && !manifest.images[ref.id]) {
-      errors.push(`Missing image asset '${ref.id}' used at ${ref.where}`);
+  for (const entry of catalog.stories) {
+    const story = StorySchema.parse(await readJson(resolvePublicFile(entry.storyUrl)));
+    const manifest = AssetManifestSchema.parse(await readJson(resolvePublicFile(entry.manifestUrl)));
+    const refs = collectAssetRefs(story);
+
+    if (story.id !== entry.id) {
+      errors.push(`Catalog entry '${entry.id}' points to story id '${story.id}'. These ids should match.`);
     }
-    if (ref.kind === "audio" && !manifest.audio[ref.id]) {
-      errors.push(`Missing audio asset '${ref.id}' used at ${ref.where}`);
+
+    for (const ref of refs) {
+      if (ref.kind === "image" && !manifest.images[ref.id]) {
+        errors.push(`Missing image asset '${ref.id}' used at ${story.id}:${ref.where}`);
+      }
+      if (ref.kind === "audio" && !manifest.audio[ref.id]) {
+        errors.push(`Missing audio asset '${ref.id}' used at ${story.id}:${ref.where}`);
+      }
     }
+
+    await validateAssetFiles(manifest, errors);
+    summaries.push(`'${story.title}' has ${story.nodes.length} nodes and ${refs.length} asset references`);
   }
-
-  await validateAssetFiles(manifest, errors);
 
   if (errors.length > 0) {
     console.error("Story validation failed:\n" + errors.map((error) => `  - ${error}`).join("\n"));
@@ -34,11 +48,18 @@ async function main() {
     return;
   }
 
-  console.log(`OK: '${story.title}' has ${story.nodes.length} nodes and ${refs.length} asset references.`);
+  console.log(`OK: catalog has ${catalog.stories.length} stories.`);
+  for (const summary of summaries) {
+    console.log(`  - ${summary}`);
+  }
 }
 
 async function readJson(filePath: string): Promise<unknown> {
   return JSON.parse(await readFile(filePath, "utf-8"));
+}
+
+function resolvePublicFile(src: string): string {
+  return path.join(publicRoot, src.replace(/^\//, ""));
 }
 
 function collectAssetRefs(story: Story): AssetRef[] {
@@ -80,9 +101,8 @@ async function validateAssetFiles(manifest: AssetManifest, errors: string[]): Pr
   ];
 
   for (const [kind, id, src] of entries) {
-    const filePath = path.join(publicRoot, src.replace(/^\//, ""));
     try {
-      await stat(filePath);
+      await stat(resolvePublicFile(src));
     } catch {
       errors.push(`Missing ${kind} file for '${id}': ${src}`);
     }

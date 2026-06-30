@@ -1,9 +1,9 @@
 {
-  "name": "text-adventure-vn-starter",
+  "name": "text-adventure-framework",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Data-driven visual novel / text adventure starter engine for iterative Mac development.",
+  "description": "Data-driven framework for running multiple visual novel and text adventure stories.",
   "engines": {
     "node": ">=20.19.0"
   },
