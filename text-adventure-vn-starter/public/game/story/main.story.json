@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "id": "shadow-letters-demo",
+  "title": "暗线：序章 Demo",
+  "startNode": "prologue.safehouse",
+  "variables": {
+    "trustHan": 0,
+    "hasCipher": false,
+    "liedToHan": false
+  },
+  "characters": [
+    {
+      "id": "han",
+      "name": "韩秋",
+      "defaultImage": "han_neutral",
+      "color": "#f5c15d"
+    },
+    {
+      "id": "lin",
+      "name": "林晚",
+      "defaultImage": "lin_shadow",
+      "color": "#9ad7ff"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "prologue.safehouse",
+      "title": "雨夜安全屋",
+      "scene": {
+        "background": "bg_safehouse",
+        "music": "bgm_tension",
+        "characters": [
+          {
+            "character": "han",
+            "image": "han_neutral",
+            "slot": "right",
+            "expression": "neutral"
+          }
+        ],
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "line",
+          "text": "雨从檐角落下，像一串断开的电报码。你把密封的纸袋藏进大衣内侧。"
+        },
+        {
+          "type": "sfx",
+          "audio": "sfx_knock"
+        },
+        {
+          "type": "line",
+          "speaker": "han",
+          "voice": "voice_han_001",
+          "text": "你迟到了七分钟。希望这七分钟值得我们冒险。"
+        },
+        {
+          "type": "line",
+          "text": "韩秋盯着你，桌上的台灯把他的影子切成两半。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell_truth",
+          "text": "交出纸袋：告诉他截获的密电。",
+          "target": "prologue.truth",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "trustHan",
+              "by": 2
+            },
+            {
+              "type": "set",
+              "key": "hasCipher",
+              "value": true
+            }
+          ],
+          "hint": "提高韩秋信任"
+        },
+        {
+          "id": "hide_cipher",
+          "text": "隐瞒纸袋：先试探他的立场。",
+          "target": "prologue.lie",
+          "effects": [
+            {
+              "type": "set",
+              "key": "liedToHan",
+              "value": true
+            }
+          ],
+          "hint": "保留主动权"
+        }
+      ]
+    },
+    {
+      "id": "prologue.truth",
+      "title": "明牌",
+      "scene": {
+        "characters": [
+          {
+            "character": "han",
+            "image": "han_neutral",
+            "slot": "right",
+            "expression": "focused"
+          },
+          {
+            "character": "lin",
+            "image": "lin_shadow",
+            "slot": "left",
+            "expression": "hidden"
+          }
+        ],
+        "transition": "dissolve"
+      },
+      "steps": [
+        {
+          "type": "line",
+          "text": "你把纸袋推到灯下。封蜡上有一道不属于你们组织的刻痕。"
+        },
+        {
+          "type": "line",
+          "speaker": "han",
+          "voice": "voice_han_001",
+          "text": "很好。至少今晚，我们还站在同一边。"
+        },
+        {
+          "type": "line",
+          "speaker": "lin",
+          "voice": "voice_lin_001",
+          "text": "别太快下结论。车站那边已经有人开始清场。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "go_station_with_han",
+          "text": "与韩秋同行，立刻赶往车站。",
+          "target": "prologue.station",
+          "conditions": [
+            {
+              "key": "trustHan",
+              "op": "gte",
+              "value": 2
+            }
+          ],
+          "hint": "需要韩秋信任 ≥ 2"
+        },
+        {
+          "id": "decode_first",
+          "text": "留下破译密电，先弄清目标。",
+          "target": "prologue.decode"
+        }
+      ]
+    },
+    {
+      "id": "prologue.lie",
+      "title": "暗藏",
+      "steps": [
+        {
+          "type": "line",
+          "text": "你移开视线，说路上只是遇到了巡逻。"
+        },
+        {
+          "type": "line",
+          "speaker": "han",
+          "voice": "voice_han_001",
+          "text": "巡逻？可你的袖口有封蜡的味道。"
+        },
+        {
+          "type": "inc",
+          "key": "trustHan",
+          "by": -1
+        },
+        {
+          "type": "line",
+          "text": "房间里安静下来。你知道，第一次裂痕已经出现。"
+        }
+      ],
+      "next": "prologue.decode"
+    },
+    {
+      "id": "prologue.decode",
+      "title": "破译",
+      "steps": [
+        {
+          "type": "set",
+          "key": "hasCipher",
+          "value": true
+        },
+        {
+          "type": "line",
+          "text": "你用铅笔在报纸边缘写下替换表。每一个字母都指向同一个地点：北站第三站台。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "go_station",
+          "text": "赶往北站。",
+          "target": "prologue.station"
+        }
+      ]
+    },
+    {
+      "id": "prologue.station",
+      "title": "北站第三站台",
+      "scene": {
+        "background": "bg_station",
+        "music": null,
+        "characters": [
+          {
+            "character": "lin",
+            "image": "lin_shadow",
+            "slot": "center",
+            "expression": "hidden"
+          }
+        ],
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "line",
+          "text": "站台空得不正常。最后一班列车的汽笛声被风扯碎。"
+        },
+        {
+          "type": "line",
+          "speaker": "lin",
+          "voice": "voice_lin_001",
+          "text": "从这里开始，你说的每一句话都会改变名单上的下一个名字。"
+        }
+      ]
+    }
+  ]
+}

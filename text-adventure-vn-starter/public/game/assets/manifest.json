@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "images": {
+    "bg_safehouse": {
+      "src": "/game/assets/images/bg_safehouse.svg",
+      "alt": "雨夜安全屋",
+      "tags": [
+        "background",
+        "night"
+      ]
+    },
+    "bg_station": {
+      "src": "/game/assets/images/bg_station.svg",
+      "alt": "旧火车站",
+      "tags": [
+        "background",
+        "night"
+      ]
+    },
+    "han_neutral": {
+      "src": "/game/assets/images/han_neutral.svg",
+      "alt": "韩秋",
+      "tags": [
+        "character",
+        "han"
+      ]
+    },
+    "lin_shadow": {
+      "src": "/game/assets/images/lin_shadow.svg",
+      "alt": "林晚",
+      "tags": [
+        "character",
+        "lin"
+      ]
+    }
+  },
+  "audio": {
+    "bgm_tension": {
+      "src": "/game/assets/audio/bgm_tension.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.28,
+      "tags": [
+        "music"
+      ]
+    },
+    "sfx_knock": {
+      "src": "/game/assets/audio/sfx_knock.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.65,
+      "tags": [
+        "sfx"
+      ]
+    },
+    "voice_han_001": {
+      "src": "/game/assets/audio/voice_han_001.wav",
+      "kind": "voice",
+      "loop": false,
+      "volume": 0.9,
+      "tags": [
+        "voice",
+        "han"
+      ]
+    },
+    "voice_lin_001": {
+      "src": "/game/assets/audio/voice_lin_001.wav",
+      "kind": "voice",
+      "loop": false,
+      "volume": 0.9,
+      "tags": [
+        "voice",
+        "lin"
+      ]
+    }
+  }
+}

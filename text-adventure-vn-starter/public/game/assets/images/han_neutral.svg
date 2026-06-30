@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="760" viewBox="0 0 480 760">
+  <defs>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#273449"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <radialGradient id="face" cx="50%" cy="35%" r="55%"><stop offset="0" stop-color="#f2c7a0"/><stop offset="1" stop-color="#ad765a"/></radialGradient>
+  </defs>
+  <ellipse cx="240" cy="720" rx="175" ry="38" fill="#000" opacity="0.25"/>
+  <path d="M112 716 C120 520 148 410 228 360 H252 C334 410 362 520 370 716 Z" fill="url(#coat)"/>
+  <path d="M190 370 L238 475 L288 370" fill="#d8dde6" opacity="0.9"/>
+  <path d="M208 392 L238 470 L266 392" fill="#5c1f27"/>
+  <circle cx="240" cy="230" r="112" fill="url(#face)"/>
+  <path d="M130 205 C150 90 340 70 362 212 C315 160 200 158 130 205" fill="#141923"/>
+  <path d="M168 244 Q204 226 234 244" stroke="#1c2430" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M282 244 Q312 226 344 244" stroke="#1c2430" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M222 300 Q240 314 258 300" stroke="#6b332a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="172" y="150" width="136" height="26" rx="13" fill="#0d1117" opacity="0.85"/>
+  <text x="240" y="690" text-anchor="middle" font-family="monospace" font-size="32" fill="#f5c15d">HAN QIU</text>
+</svg>
