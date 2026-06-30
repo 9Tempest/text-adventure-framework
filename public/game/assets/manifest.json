@@ -99,6 +99,96 @@
         "yun-tianming",
         "chapter-1"
       ]
+    },
+    "bg_t2_01": {
+      "src": "/game/assets/images/yun/T2_01.png",
+      "alt": "没有船归来的港口 - 拾声王国 / 南港 - 不要用原作饕餮鱼形象，改为黑色潮群。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_02": {
+      "src": "/game/assets/images/yun/T2_02.png",
+      "alt": "北陆货单 - 南港 / 破船税关 - 账册不写可读文字，只显示符号和空白标签。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_03": {
+      "src": "/game/assets/images/yun/T2_03.png",
+      "alt": "一块让人不想动的皂 - 王宫 / 废弃浴室 - 泡泡像微型宇宙泡，不要过分可爱。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_04": {
+      "src": "/game/assets/images/yun/T2_04.png",
+      "alt": "战舰的牙印 - 南港 / 军船码头 - 失败反馈：大船和武力不能解决。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_05": {
+      "src": "/game/assets/images/yun/T2_05.png",
+      "alt": "泡沫实验 - 南港 / 小码头 - 实验感强，泡沫让海面安静，不是杀戮。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_06": {
+      "src": "/game/assets/images/yun/T2_06.png",
+      "alt": "海商的谎账 - 南港 / 海商会馆 - 政治支线：失败源自贪婪与误用。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_07": {
+      "src": "/game/assets/images/yun/T2_07.png",
+      "alt": "不像船的船 - 南港 / 临时船坞 - 把伞、泡沫、帆船组合成关键视觉。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_08": {
+      "src": "/game/assets/images/yun/T2_08.png",
+      "alt": "白色尾迹 - 南港外海 / 试航区 - 尾迹要明显、美丽且危险。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_09": {
+      "src": "/game/assets/images/yun/T2_09.png",
+      "alt": "穿越饥潮 - 饥潮之海 / 夜航 - 本章高潮；构图要小船极小、海极大。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "bg_t2_10": {
+      "src": "/game/assets/images/yun/T2_10.png",
+      "alt": "错误的好消息 - 饥潮之海 / 船尾 - 好消息变成误导，暗示人类误读技术。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-2"
+      ]
     }
   },
   "audio": {
@@ -132,7 +222,8 @@
       "tags": [
         "music",
         "yun-tianming",
-        "chapter-1"
+        "chapter-1",
+        "chapter-2"
       ]
     },
     "BGM_05_alarm": {
@@ -143,7 +234,8 @@
       "tags": [
         "music",
         "yun-tianming",
-        "chapter-1"
+        "chapter-1",
+        "chapter-2"
       ]
     },
     "BGM_06_decode_soft": {
@@ -199,6 +291,424 @@
         "music",
         "yun-tianming",
         "chapter-1"
+      ]
+    },
+    "BGM_11_hungry_sea": {
+      "src": "/game/assets/audio/yun/BGM_11_hungry_sea.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_12_weightless_bubbles": {
+      "src": "/game/assets/audio/yun/BGM_12_weightless_bubbles.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_13_experiment": {
+      "src": "/game/assets/audio/yun/BGM_13_experiment.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_14_merchant_secret": {
+      "src": "/game/assets/audio/yun/BGM_14_merchant_secret.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_15_building_hope": {
+      "src": "/game/assets/audio/yun/BGM_15_building_hope.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_16_dangerous_beauty": {
+      "src": "/game/assets/audio/yun/BGM_16_dangerous_beauty.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_17_crossing": {
+      "src": "/game/assets/audio/yun/BGM_17_crossing.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "BGM_18_bad_news": {
+      "src": "/game/assets/audio/yun/BGM_18_bad_news.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-2"
+      ]
+    },
+    "SFX_brush_on_hull": {
+      "src": "/game/assets/audio/yun/SFX_brush_on_hull.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_bubbles": {
+      "src": "/game/assets/audio/yun/SFX_bubbles.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_bubbles_spread": {
+      "src": "/game/assets/audio/yun/SFX_bubbles_spread.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_clock_creak": {
+      "src": "/game/assets/audio/yun/SFX_clock_creak.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_data_lock": {
+      "src": "/game/assets/audio/yun/SFX_data_lock.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_distant_bells": {
+      "src": "/game/assets/audio/yun/SFX_distant_bells.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_distant_paper_rip": {
+      "src": "/game/assets/audio/yun/SFX_distant_paper_rip.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_flare": {
+      "src": "/game/assets/audio/yun/SFX_flare.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_glass_clink": {
+      "src": "/game/assets/audio/yun/SFX_glass_clink.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_hull_crack": {
+      "src": "/game/assets/audio/yun/SFX_hull_crack.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_lantern_swing": {
+      "src": "/game/assets/audio/yun/SFX_lantern_swing.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_low_rumble": {
+      "src": "/game/assets/audio/yun/SFX_low_rumble.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_map_unroll": {
+      "src": "/game/assets/audio/yun/SFX_map_unroll.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_paper_curling": {
+      "src": "/game/assets/audio/yun/SFX_paper_curling.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_paper_rip_slow": {
+      "src": "/game/assets/audio/yun/SFX_paper_rip_slow.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_paper_snap": {
+      "src": "/game/assets/audio/yun/SFX_paper_snap.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_running_boots": {
+      "src": "/game/assets/audio/yun/SFX_running_boots.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_seagulls": {
+      "src": "/game/assets/audio/yun/SFX_seagulls.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_signal_cut": {
+      "src": "/game/assets/audio/yun/SFX_signal_cut.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_snow_steps": {
+      "src": "/game/assets/audio/yun/SFX_snow_steps.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_soft_bells": {
+      "src": "/game/assets/audio/yun/SFX_soft_bells.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_soft_waves": {
+      "src": "/game/assets/audio/yun/SFX_soft_waves.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_star_map_slide": {
+      "src": "/game/assets/audio/yun/SFX_star_map_slide.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_tide_chitter": {
+      "src": "/game/assets/audio/yun/SFX_tide_chitter.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_tide_roar": {
+      "src": "/game/assets/audio/yun/SFX_tide_roar.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_tide_whisper": {
+      "src": "/game/assets/audio/yun/SFX_tide_whisper.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_umbrella_spin": {
+      "src": "/game/assets/audio/yun/SFX_umbrella_spin.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_umbrella_spin_unstable": {
+      "src": "/game/assets/audio/yun/SFX_umbrella_spin_unstable.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_water_drip": {
+      "src": "/game/assets/audio/yun/SFX_water_drip.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_water_silence": {
+      "src": "/game/assets/audio/yun/SFX_water_silence.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_wet_pages": {
+      "src": "/game/assets/audio/yun/SFX_wet_pages.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_wind_chimes": {
+      "src": "/game/assets/audio/yun/SFX_wind_chimes.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
+      ]
+    },
+    "SFX_wood_creak": {
+      "src": "/game/assets/audio/yun/SFX_wood_creak.wav",
+      "kind": "sfx",
+      "loop": false,
+      "volume": 0.8,
+      "tags": [
+        "sfx",
+        "yun-tianming"
       ]
     }
   }

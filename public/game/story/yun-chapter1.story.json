@@ -4,18 +4,30 @@
   "title": "折光三则：第一则 画页之城",
   "startNode": "T1_01",
   "variables": {
-    "trust": 0,
-    "science": 0,
-    "risk": 0,
+    "act1_done": 0,
+    "act3_done": 0,
+    "clue_blackdomain": 0,
+    "clue_common_origin": 0,
+    "clue_coordinate": 0,
+    "clue_curvature": 0,
+    "clue_escape": 0,
+    "clue_flatten": 0,
+    "clue_slowlight": 0,
+    "clue_spread_rate": 0,
+    "clue_umbrella": 0,
+    "clue_wake": 0,
+    "decode_balanced": 0,
+    "decode_blackdomain": 0,
+    "decode_escape": 0,
+    "decode_flatten": 0,
+    "defense_bias": 0,
+    "escape_bias": 0,
     "heat": 0,
     "politics": 0,
-    "worlds": 0,
-    "clue_flatten": 0,
-    "clue_umbrella": 0,
-    "clue_slowlight": 0,
-    "clue_coordinate": 0,
-    "clue_spread_rate": 0,
-    "act1_done": 0
+    "risk": 0,
+    "science": 0,
+    "trust": 0,
+    "worlds": 0
   },
   "characters": [
     {
@@ -47,16 +59,16 @@
       "name": "空伞师"
     },
     {
-      "id": "prince_li",
-      "name": "砾亲王"
-    },
-    {
       "id": "decoder",
       "name": "译码员"
     },
     {
       "id": "chengan",
       "name": "澄安"
+    },
+    {
+      "id": "prince_li",
+      "name": "砾亲王"
     }
   ],
   "nodes": [
@@ -70,27 +82,83 @@
       },
       "steps": [
         {
-          "type": "line",
-          "text": "拾声王国把每个人的一生都写进铃铛。风一吹，整座城就像在翻一本书。"
+          "type": "sfx",
+          "audio": "SFX_wind_chimes"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_seagulls"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "父王说，故事能让人记得自己是谁。可昨夜之后，王宫里少了三十九只铃。"
+          "id": "T1_01_L01",
+          "text": "拾声王国把每个人的一生都写进铃铛。孩子出生时铸一枚小铃，成年时添一道纹，死后挂上王城最高的檐角。"
         },
         {
           "type": "line",
-          "speaker": "huaiyi",
-          "text": "不是铃丢了，是铃的主人不见了。连影子都没留下。"
+          "id": "T1_01_L02",
+          "text": "清晨的风从海面吹来，千万只铃一起醒来。它们不说话，却让整座城像在翻一本会发光的书。"
         },
         {
           "type": "line",
-          "text": "远处，新来的宫廷匠人正把一张白纸铺在石板上。"
+          "id": "T1_01_L03",
+          "text": "父王说，故事能让人记得自己是谁。可昨夜之后，王宫里少了三十九只铃。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L04",
+          "text": "不是铃丢了，是铃的主人不见了。连影子都没留下。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L05",
+          "text": "露台下方，侍女们低着头擦洗石阶。她们不敢谈失踪者，只反复擦同一处不存在的污迹。"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L06",
+          "text": "名单给我。不要删掉职位低的人，也不要用‘暂缺’这种词。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L07",
+          "text": "殿下，名单最可怕的地方不在名字，而在旁边的空白。亲人们开始想不起他们的声音。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L08",
+          "text": "你望向王宫东侧的新画室。那里本该挂起庆典画像，此刻却安静得像一口被盖住的井。"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L09",
+          "text": "远处，新来的宫廷匠人正把一张白纸铺在黑石板上。纸角明明被压住，却像活物一样微微翘起。"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L10",
+          "text": "他什么时候进宫的？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L11",
+          "text": "砾亲王亲自请来的。理由是给先王画最后一幅像。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_01_L12",
+          "text": "三十九只无声铃在风里轻轻碰撞。你忽然觉得，整座王宫都在等待你先承认害怕。"
         }
       ],
       "choices": [
         {
-          "id": "T1_01_choice_1",
+          "id": "T1_01_C01",
           "text": "去看那张白纸",
           "target": "T1_02",
           "effects": [
@@ -99,10 +167,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：science +1"
         },
         {
-          "id": "T1_01_choice_2",
+          "id": "T1_01_C02",
           "text": "先清点失踪者名单",
           "target": "T1_03",
           "effects": [
@@ -111,10 +180,11 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：trust +1"
         },
         {
-          "id": "T1_01_choice_3",
+          "id": "T1_01_C03",
           "text": "命令卫队封锁画室",
           "target": "T1_04",
           "effects": [
@@ -128,7 +198,8 @@
               "key": "heat",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：risk +1, heat +1"
         }
       ]
     },
@@ -142,28 +213,81 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "folding_artisan",
-          "text": "殿下，纸不愿意变平，是因为世界本来不该只有一面。"
+          "type": "sfx",
+          "audio": "SFX_paper_curling"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "你昨夜画了谁？"
+          "id": "T1_02_L01",
+          "text": "新画室里没有颜料味，只有一种干净到刺鼻的寒意。窗外的海光落在地上，却在靠近白纸时突然变暗。"
         },
         {
           "type": "line",
-          "speaker": "folding_artisan",
-          "text": "我只画我看见的。至于他们是否还站在这里，那是纸的礼仪。"
+          "id": "T1_02_L02",
+          "text": "殿下，纸不愿意变平，是因为世界本来不该只有一面。",
+          "speaker": "folding_artisan"
         },
         {
           "type": "line",
-          "text": "白纸边缘轻轻抖动，像海岸线被看不见的潮水啃食。"
+          "id": "T1_02_L03",
+          "text": "王国请你作画，不是请你讲谜语。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L04",
+          "text": "谜语是最安全的礼节。直话会让人以为自己已经懂了。",
+          "speaker": "folding_artisan"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L05",
+          "text": "你昨夜画了谁？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L06",
+          "text": "我只画我看见的。至于他们是否还站在这里，那是纸的礼仪。",
+          "speaker": "folding_artisan"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L07",
+          "text": "白纸边缘轻轻抖动，像海岸线被看不见的潮水啃食。纸面没有图案，却让你想起被压扁的银鱼。"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L08",
+          "text": "纸上为什么没有人？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L09",
+          "text": "殿下总以为画像该像窗户。其实高级的画更像门。门打开后，谁还需要留在门框上？",
+          "speaker": "folding_artisan"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L10",
+          "text": "黑石板下传来极轻的摩擦声。你分不清那是纸张在滑动，还是整间房间在被某种平面缓慢丈量。"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L11",
+          "text": "请别靠太近。被看见是一种邀请。",
+          "speaker": "folding_artisan"
+        },
+        {
+          "type": "line",
+          "id": "T1_02_L12",
+          "text": "你第一次意识到，在这个童话里，凝视不是证据，而可能是灾害的入口。"
         }
       ],
       "choices": [
         {
-          "id": "T1_02_choice_1",
+          "id": "T1_02_C01",
           "text": "盯住纸的边缘：它像在吞空间",
           "target": "T1_05",
           "effects": [
@@ -177,10 +301,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_flatten +1, science +1"
         },
         {
-          "id": "T1_02_choice_2",
+          "id": "T1_02_C02",
           "text": "抢走黑石板",
           "target": "T1_04",
           "effects": [
@@ -194,10 +319,11 @@
               "key": "heat",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：risk +1, heat +1"
         },
         {
-          "id": "T1_02_choice_3",
+          "id": "T1_02_C03",
           "text": "假装赞美他的技艺，拖延时间",
           "target": "T1_03",
           "effects": [
@@ -206,7 +332,8 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：trust +1"
         }
       ]
     },
@@ -220,28 +347,81 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "huaiyi",
-          "text": "失踪的人没有血迹，没有脚印。连别人对他们的记忆都像被压薄了。"
+          "type": "sfx",
+          "audio": "SFX_soft_bells"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "只有画像还记得他们？"
+          "id": "T1_03_L01",
+          "text": "铃档馆像一座倒置的森林。无数铜铃从高处垂下，每只铃下面都系着一张写有生平的薄签。"
         },
         {
           "type": "line",
-          "speaker": "huaiyi",
-          "text": "不。画像不是记得，画像是在占有。"
+          "id": "T1_03_L02",
+          "text": "失踪的人没有血迹，没有脚印。连别人对他们的记忆都像被压薄了。",
+          "speaker": "huaiyi"
         },
         {
           "type": "line",
-          "text": "你在空钩下发现一小片亮粉，薄得像从世界表面刮下来的霜。"
+          "id": "T1_03_L03",
+          "text": "压薄？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L04",
+          "text": "像旧纸被水泡过，再被石头压干。还在，可字迹浅得让人怀疑自己是不是编出来的。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L05",
+          "text": "你走过一排空钩。那里的风声与别处不同，仿佛某些铃还在，只是被迫贴成了听不见的一层。"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L06",
+          "text": "只有画像还记得他们？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L07",
+          "text": "不。画像不是记得，画像是在占有。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L08",
+          "text": "槐姨把蜡烛举近。空钩下有一小片亮粉，薄得像从世界表面刮下来的霜。"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L09",
+          "text": "别用手碰。拿玻璃匣。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L10",
+          "text": "殿下，你从小最讨厌宫廷规矩。今天倒谨慎。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L11",
+          "text": "因为这不像刺客。刺客留下缺口，它留下的是更平整的东西。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_03_L12",
+          "text": "铃档馆深处，一只没有名字的铃忽然轻响。那声音很薄，薄得像从墙里传来。"
         }
       ],
       "choices": [
         {
-          "id": "T1_03_choice_1",
+          "id": "T1_03_C01",
           "text": "保存亮粉样本",
           "target": "T1_05",
           "effects": [
@@ -255,10 +435,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_flatten +1, science +1"
         },
         {
-          "id": "T1_03_choice_2",
+          "id": "T1_03_C02",
           "text": "追问砾亲王为何邀请折页匠",
           "target": "T1_06",
           "effects": [
@@ -267,10 +448,11 @@
               "key": "politics",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：politics +1"
         },
         {
-          "id": "T1_03_choice_3",
+          "id": "T1_03_C03",
           "text": "让槐姨带平民离宫",
           "target": "T1_07",
           "effects": [
@@ -279,7 +461,8 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：trust +1"
         }
       ]
     },
@@ -293,27 +476,83 @@
       },
       "steps": [
         {
-          "type": "line",
-          "text": "卫队冲进画室时，折页匠没有躲。他只是翻了一页。"
+          "type": "sfx",
+          "audio": "SFX_running_boots"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_paper_snap"
         },
         {
           "type": "line",
-          "speaker": "guard",
-          "text": "殿下，我们——"
+          "id": "T1_04_L01",
+          "text": "卫队冲进画室时，折页匠没有躲。他甚至没有抬头，只用指尖翻过白纸的一角。"
         },
         {
           "type": "line",
-          "text": "声音从立体变成薄薄一层，贴在墙上，像被雨水浸开的墨。"
+          "id": "T1_04_L02",
+          "text": "殿下，我们——",
+          "speaker": "guard"
         },
         {
           "type": "line",
-          "speaker": "monitor_voice",
-          "text": "警告：故事内暴力指数上升。请保持寓言形态。"
+          "id": "T1_04_L03",
+          "text": "后半句话没有抵达空气。声音从立体变成薄薄一层，贴在墙上，像被雨水浸开的墨。"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L04",
+          "text": "最前排的卫兵还保持奔跑的姿势。盔甲的反光先变成一条线，随后整个人像被夹进书页的昆虫。"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L05",
+          "text": "停下！所有人后退，不要看纸！",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L06",
+          "text": "殿下，命令来得太晚的时候，也是一种装饰。",
+          "speaker": "folding_artisan"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L07",
+          "text": "警告：故事内暴力指数上升。请保持寓言形态。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L08",
+          "text": "白塔的监察音突然插入，让画室像被针扎破的梦。你能感觉到现实中的译码舱也在降温。"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L09",
+          "text": "这不是武器对武器。我们越像一支军队，就越像纸上容易处理的图案。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L10",
+          "text": "殿下，西廊的影子也开始变薄了。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L11",
+          "text": "你看见墙上的人影缓慢向白纸方向倾斜。它们没有惨叫，正因此更加可怕。"
+        },
+        {
+          "type": "line",
+          "id": "T1_04_L12",
+          "text": "硬闯失败了。现在你必须承认：勇敢不是继续撞门，而是先弄明白门为什么会吃人。"
         }
       ],
       "choices": [
         {
-          "id": "T1_04_choice_1",
+          "id": "T1_04_C01",
           "text": "承认硬闯会触发灾害，转为观察机制",
           "target": "T1_05",
           "effects": [
@@ -327,10 +566,11 @@
               "key": "risk",
               "by": -1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_flatten +1, risk -1"
         },
         {
-          "id": "T1_04_choice_2",
+          "id": "T1_04_C02",
           "text": "继续派人夺取石板",
           "target": "chapter1.censored",
           "effects": [
@@ -339,10 +579,11 @@
               "key": "heat",
               "by": 2
             }
-          ]
+          ],
+          "hint": "变量影响：heat +2"
         },
         {
-          "id": "T1_04_choice_3",
+          "id": "T1_04_C03",
           "text": "撤退，寻找旧匠人",
           "target": "T1_07",
           "effects": [
@@ -351,7 +592,8 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：trust +1"
         }
       ]
     },
@@ -365,28 +607,82 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "luming",
-          "text": "他不是把人画进纸里。他是在把人的世界折成纸。"
+          "type": "sfx",
+          "audio": "SFX_star_map_slide"
         },
         {
           "type": "line",
-          "speaker": "sailor",
-          "text": "北陆白城的匠人都这样说：能被看见的东西，终有一天会被做成平面。"
+          "id": "T1_05_L01",
+          "text": "观星廊悬在王宫最高处，平日里用于测潮和祭星。今日，星图被摊开，亮粉样本被封在一枚透明小匣里。"
         },
         {
           "type": "line",
-          "speaker": "huaiyi",
-          "text": "那要怎么不被看见？"
+          "id": "T1_05_L02",
+          "text": "他不是把人画进纸里。他是在把人的世界折成纸。",
+          "speaker": "luming"
         },
         {
           "type": "line",
-          "text": "没有人回答。只有远处黑伞旋转的影子，在墙上像一枚缓慢的钟。"
+          "id": "T1_05_L03",
+          "text": "这句话听起来不像童话。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L04",
+          "text": "所以它才必须被说成童话。北陆白城的匠人都这样说：能被看见的东西，终有一天会被做成平面。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L05",
+          "text": "北陆白城知道这种灾害？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L06",
+          "text": "知道，使用过，也害怕过。每个把灾害当技艺的地方，最后都会给技艺换一个优雅名字。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L07",
+          "text": "那要怎么不被看见？",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L08",
+          "text": "没人立刻回答。海平线在远处显得异常笔直，像有人用尺子把世界的边缘修过一遍。"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L09",
+          "text": "有些人躲进慢光，有些人离开坐标，有些人假装自己只是在撑伞。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L10",
+          "text": "你顺着他的目光看去。废弃钟楼里，一柄黑伞正缓慢旋转，伞影在墙上像一枚走得很慢的钟。"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L11",
+          "text": "钟楼什么时候有人住了？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_05_L12",
+          "text": "从昨夜开始。或者说，从我们愿意承认昨夜开始。",
+          "speaker": "huaiyi"
         }
       ],
       "choices": [
         {
-          "id": "T1_05_choice_1",
+          "id": "T1_05_C01",
           "text": "追踪黑伞来源",
           "target": "T1_07",
           "effects": [
@@ -395,10 +691,11 @@
               "key": "clue_umbrella",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_umbrella +1"
         },
         {
-          "id": "T1_05_choice_2",
+          "id": "T1_05_C02",
           "text": "询问风帆卫士关于北陆白城",
           "target": "T1_06",
           "effects": [
@@ -407,10 +704,11 @@
               "key": "worlds",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：worlds +1"
         },
         {
-          "id": "T1_05_choice_3",
+          "id": "T1_05_C03",
           "text": "把‘被看见’标记为危险条件",
           "target": "T1_08",
           "effects": [
@@ -424,7 +722,8 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_flatten +1, science +1"
         }
       ]
     },
@@ -438,28 +737,81 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "sailor",
-          "text": "殿下，拾声王国的海图只画到灯塔。灯塔外还有岛，岛外还有大陆，大陆外还有从不点灯的港。"
+          "type": "sfx",
+          "audio": "SFX_map_unroll"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "那北陆为什么来我们这里？"
+          "id": "T1_06_L01",
+          "text": "地图厅的圆顶绘着旧王朝的航线。拾声王国被画在中央，像一枚被群星宠爱的纽扣。"
         },
         {
           "type": "line",
-          "speaker": "sailor",
-          "text": "也许是交易，也许是试验，也许只是因为我们亮着。"
+          "id": "T1_06_L02",
+          "text": "殿下，拾声王国的海图只画到灯塔。灯塔外还有岛，岛外还有大陆，大陆外还有从不点灯的港。",
+          "speaker": "sailor"
         },
         {
           "type": "line",
-          "text": "‘亮着’二字落在地图上，像一枚坐标。"
+          "id": "T1_06_L03",
+          "text": "我们的课本说灯塔外是无风区。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L04",
+          "text": "课本常把无知画成无风。这样船就不会想走太远。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L05",
+          "text": "他展开一张外乡海图。王国熟悉的海岸在图上只占角落，而大片空白处被细密暗线标注。"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L06",
+          "text": "那北陆为什么来我们这里？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L07",
+          "text": "也许是交易，也许是试验，也许只是因为我们亮着。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L08",
+          "text": "亮着也有罪？",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L09",
+          "text": "在黑海上，灯不是罪，却会告诉猎手哪里有岸。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L10",
+          "text": "‘亮着’二字落在地图上，像一枚坐标。你忽然明白，王国以为自己在庆典，其实也许一直在广播。"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L11",
+          "text": "如果被看见本身就是危险，那王城每一座钟楼都是信号塔。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_06_L12",
+          "text": "地图厅的烛火同时一晃，仿佛某个远方的视线刚刚越过海图边缘。"
         }
       ],
       "choices": [
         {
-          "id": "T1_06_choice_1",
+          "id": "T1_06_C01",
           "text": "记录：暴露位置本身即危险",
           "target": "T1_08",
           "effects": [
@@ -473,10 +825,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_coordinate +1, science +1"
         },
         {
-          "id": "T1_06_choice_2",
+          "id": "T1_06_C02",
           "text": "质疑风帆卫士是否另有目的",
           "target": "T1_09",
           "effects": [
@@ -490,10 +843,11 @@
               "key": "risk",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：trust -1, risk +1"
         },
         {
-          "id": "T1_06_choice_3",
+          "id": "T1_06_C03",
           "text": "让他带你寻找黑伞旧主",
           "target": "T1_07",
           "effects": [
@@ -502,7 +856,8 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：trust +1"
         }
       ]
     },
@@ -516,28 +871,85 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "umbrella_master",
-          "text": "别让伞停。停了，纸会想起我。"
+          "type": "sfx",
+          "audio": "SFX_umbrella_spin"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_clock_creak"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "你也会被折进去？"
+          "id": "T1_07_L01",
+          "text": "废弃钟楼比王宫任何房间都冷。齿轮停在多年前的午夜，灰尘却围着黑伞旋转成一圈细小星环。"
         },
         {
           "type": "line",
-          "speaker": "umbrella_master",
-          "text": "我已经被折了一半。旋转只是让另一半暂时忘记该往哪里倒。"
+          "id": "T1_07_L02",
+          "text": "别让伞停。停了，纸会想起我。",
+          "speaker": "umbrella_master"
         },
         {
           "type": "line",
-          "text": "伞骨每转一圈，周围烛火就暗一分，仿佛光走得越来越慢。"
+          "id": "T1_07_L03",
+          "text": "你也会被折进去？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L04",
+          "text": "我已经被折了一半。旋转只是让另一半暂时忘记该往哪里倒。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L05",
+          "text": "他的左肩像普通老人一样垂着，右侧身体却薄得几乎透光。你能隔着他看见后方的钟摆。"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L06",
+          "text": "这伞靠什么撑住你？骨架？咒语？",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L07",
+          "text": "靠慢。让光慢一点，让消息慢一点，让纸的命令在路上多迷失一会儿。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L08",
+          "text": "慢能救人？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L09",
+          "text": "慢不能救所有人。慢只是在追杀到来前，挖出一间暂时没有门的屋子。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L10",
+          "text": "伞骨每转一圈，周围烛火就暗一分。不是被遮住，而像火光必须穿过很长很长的路才抵达你的眼睛。"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L11",
+          "text": "记住，殿下。伞是盾，也是牢。忘记后半句的人，最后会把牢叫作故乡。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_07_L12",
+          "text": "你伸手时，伞柄在掌心传来心跳般的震动，仿佛握住了一小块被调慢的夜。"
         }
       ],
       "choices": [
         {
-          "id": "T1_07_choice_1",
+          "id": "T1_07_C01",
           "text": "记录：黑伞通过降低光与信息传播保护局部",
           "target": "T1_08",
           "effects": [
@@ -551,10 +963,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_slowlight +1, science +1"
         },
         {
-          "id": "T1_07_choice_2",
+          "id": "T1_07_C02",
           "text": "问他如何击败折页匠",
           "target": "T1_09",
           "effects": [
@@ -563,10 +976,11 @@
               "key": "risk",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：risk +1"
         },
         {
-          "id": "T1_07_choice_3",
+          "id": "T1_07_C03",
           "text": "接过黑伞，准备撤离",
           "target": "T1_10",
           "effects": [
@@ -580,7 +994,8 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_slowlight +1, trust +1"
         }
       ]
     },
@@ -594,28 +1009,82 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "decoder",
-          "text": "画页不是画；黑伞不是伞。一个代表空间被压成平面，一个代表局部光速被人为降低。"
+          "type": "sfx",
+          "audio": "SFX_data_lock"
         },
         {
           "type": "line",
-          "speaker": "chengan",
-          "text": "他说得这么明显，为什么监察还允许？"
+          "id": "T1_08_L01",
+          "text": "白塔译码舱强行插入一层现实画面。童话的钟楼悬在屏幕上，黑伞的旋转被拆成一串可疑的周期。"
         },
         {
           "type": "line",
-          "speaker": "monitor_voice",
-          "text": "伞、纸、铃、海：均为童话词汇。通信继续。"
+          "id": "T1_08_L02",
+          "text": "画页不是画；黑伞不是伞。一个代表空间被压成平面，一个代表局部信息传播速度被人为降低。",
+          "speaker": "decoder"
         },
         {
           "type": "line",
-          "text": "你明白了：故事不是藏得越深越安全，而是要藏在审查者不相信的地方。"
+          "id": "T1_08_L03",
+          "text": "他说得这么明显，为什么监察还允许？",
+          "speaker": "chengan"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L04",
+          "text": "伞、纸、铃、海：均为童话词汇。通信继续。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L05",
+          "text": "因为审查的是词，不是结构。只要结构足够像童话，它就会从缝里漏过来。",
+          "speaker": "decoder"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L06",
+          "text": "那我们现在是在翻译，还是在帮他继续撒谎？",
+          "speaker": "chengan"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L07",
+          "text": "我们在保留谎言的外壳，同时把里面的骨头数清楚。",
+          "speaker": "decoder"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L08",
+          "text": "你把第一组线索写入临时板：画页、被看见、坐标、扩散速度、黑伞、慢光。每个词都像一块薄冰。"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L09",
+          "text": "提醒：过度归纳可能触发中止。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L10",
+          "text": "那么就不归纳成公式，归纳成童话里的禁忌。不要被看见，不要忘记代价，不要把盾叫成胜利。",
+          "speaker": "decoder"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L11",
+          "text": "继续听吗？",
+          "speaker": "chengan"
+        },
+        {
+          "type": "line",
+          "id": "T1_08_L12",
+          "text": "你点头。译码舱重新下沉，现实的白光退去，钟楼的冷风再次吹到脸上。"
         }
       ],
       "choices": [
         {
-          "id": "T1_08_choice_1",
+          "id": "T1_08_C01",
           "text": "继续回到钟楼，听完黑伞的限制",
           "target": "T1_09",
           "effects": [
@@ -624,10 +1093,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：science +1"
         },
         {
-          "id": "T1_08_choice_2",
+          "id": "T1_08_C02",
           "text": "先标记为‘防御方案’",
           "target": "T1_10",
           "effects": [
@@ -636,10 +1106,11 @@
               "key": "clue_slowlight",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_slowlight +1"
         },
         {
-          "id": "T1_08_choice_3",
+          "id": "T1_08_C03",
           "text": "把这个解释说得更直白",
           "target": "chapter1.censored",
           "effects": [
@@ -648,7 +1119,8 @@
               "key": "heat",
               "by": 2
             }
-          ]
+          ],
+          "hint": "变量影响：heat +2"
         }
       ]
     },
@@ -662,28 +1134,82 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "umbrella_master",
-          "text": "伞快了，伞下的人会永远听不见外面的钟。伞慢了，外面的纸会先听见你。"
+          "type": "sfx",
+          "audio": "SFX_umbrella_spin_unstable"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "所以它既是盾，也是牢。"
+          "id": "T1_09_L01",
+          "text": "黑伞在钟楼中央旋转，伞面没有水迹，却不断滴落深蓝色的暗。每滴暗落地后都变成一秒钟的安静。"
         },
         {
           "type": "line",
-          "speaker": "umbrella_master",
-          "text": "每一种幸存都有价格。别让价格伪装成胜利。"
+          "id": "T1_09_L02",
+          "text": "伞快了，伞下的人会永远听不见外面的钟。伞慢了，外面的纸会先听见你。",
+          "speaker": "umbrella_master"
         },
         {
           "type": "line",
-          "text": "他把伞柄交给你。自己的身形随即薄成一片透明的影。"
+          "id": "T1_09_L03",
+          "text": "所以它既是盾，也是牢。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L04",
+          "text": "每一种幸存都有价格。别让价格伪装成胜利。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L05",
+          "text": "有没有刚刚好的速度？",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L06",
+          "text": "有。可刚刚好不是一个数字，而是一种纪律。守伞的人必须承认自己也可能把人关死。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L07",
+          "text": "北陆许多城邦撑过伞。后来，有的活下来，有的连求救信都传不出来。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L08",
+          "text": "如果王国需要它，我要谁来决定伞速？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L09",
+          "text": "不能只交给害怕的人，也不能只交给想赢的人。害怕会把伞转成坟墓，胜利会把伞停在庆典上。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L10",
+          "text": "他把伞柄交给你。自己的身形随即薄成一片透明的影，像终于允许自己被风带走。"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L11",
+          "text": "去海边。纸有边，海也有牙。你要在被折平前，学会让路弯开。",
+          "speaker": "umbrella_master"
+        },
+        {
+          "type": "line",
+          "id": "T1_09_L12",
+          "text": "钟楼的钟没有响。可你知道某个倒计时已经开始。"
         }
       ],
       "choices": [
         {
-          "id": "T1_09_choice_1",
+          "id": "T1_09_C01",
           "text": "带伞离开王宫",
           "target": "T1_10",
           "effects": [
@@ -697,10 +1223,11 @@
               "key": "trust",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_slowlight +1, trust +1"
         },
         {
-          "id": "T1_09_choice_2",
+          "id": "T1_09_C02",
           "text": "追击折页匠，验证伞的效果",
           "target": "T1_11",
           "effects": [
@@ -714,10 +1241,11 @@
               "key": "clue_flatten",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：risk +1, clue_flatten +1"
         },
         {
-          "id": "T1_09_choice_3",
+          "id": "T1_09_C03",
           "text": "留在钟楼继续问代价",
           "target": "T1_11",
           "effects": [
@@ -726,7 +1254,8 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：science +1"
         }
       ]
     },
@@ -740,28 +1269,85 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "prince_li",
-          "text": "姐姐，你带着一把破伞就想继承王国？"
+          "type": "sfx",
+          "audio": "SFX_snow_steps"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_distant_paper_rip"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "我不是去继承王国。我要先确认它还能不能被继承。"
+          "id": "T1_10_L01",
+          "text": "王宫后门的雪阶很窄，窄到王室逃亡时必须一个接一个走下去。鹿暝把黑伞收在臂弯，伞面仍在微微震动。"
         },
         {
           "type": "line",
+          "id": "T1_10_L02",
+          "text": "姐姐，你带着一把破伞就想继承王国？",
+          "speaker": "prince_li"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L03",
+          "text": "我不是去继承王国。我要先确认它还能不能被继承。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L04",
+          "text": "父王死后，所有人都在等一个能站上王座的人。你却往海边跑。",
+          "speaker": "prince_li"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L05",
+          "text": "王座太高，看不见纸边。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L06",
+          "text": "砾亲王的卫队举起火把，火光照在雪上，却没有照亮鹿暝的影子。她的影子被黑伞压得很慢。"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L07",
+          "text": "殿下，别跟他争。王宫西侧已经薄到能看见背后的日出。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L08",
           "text": "雪阶下方，整座王宫的侧影正在变薄，像有人从远处合上一册巨书。"
         },
         {
           "type": "line",
-          "speaker": "sailor",
-          "text": "去海边。若还有答案，它不会在宫墙里。"
+          "id": "T1_10_L09",
+          "text": "去海边。若还有答案，它不会在宫墙里。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L10",
+          "text": "逃走的人没有资格谈答案。",
+          "speaker": "prince_li"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L11",
+          "text": "留下来等死的人，也没有资格替所有人定义勇敢。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_10_L12",
+          "text": "你没有回头。只有铃声从身后追来，越来越轻，越来越像纸页摩擦。"
         }
       ],
       "choices": [
         {
-          "id": "T1_10_choice_1",
+          "id": "T1_10_C01",
           "text": "立刻前往海边",
           "target": "chapter1.to_chapter2",
           "effects": [
@@ -770,10 +1356,11 @@
               "key": "act1_done",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：act1_done +1"
         },
         {
-          "id": "T1_10_choice_2",
+          "id": "T1_10_C02",
           "text": "回头看最后一眼，确认画页扩散速度",
           "target": "T1_11",
           "effects": [
@@ -787,7 +1374,8 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_flatten +1, science +1"
         }
       ]
     },
@@ -801,28 +1389,85 @@
       },
       "steps": [
         {
-          "type": "line",
-          "speaker": "huaiyi",
-          "text": "它没有一下子吞掉城。它在长大。"
+          "type": "sfx",
+          "audio": "SFX_low_rumble"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_paper_rip_slow"
         },
         {
           "type": "line",
-          "speaker": "sailor",
-          "text": "灾害有速度，就意味着还有逃离窗口。"
+          "id": "T1_11_L01",
+          "text": "城墙高处能看见灾害的边缘。它不是火线，也不是潮水，而是一条安静的白，沿着宫墙一掌一掌地长。"
         },
         {
           "type": "line",
-          "speaker": "luming",
-          "text": "一掌宽，足够埋葬一个房间；一夜，足够埋葬一个王国。"
+          "id": "T1_11_L02",
+          "text": "它没有一下子吞掉城。它在长大。",
+          "speaker": "huaiyi"
         },
         {
           "type": "line",
-          "text": "你记住这句童话式的测量。"
+          "id": "T1_11_L03",
+          "text": "灾害有速度，就意味着还有逃离窗口。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L04",
+          "text": "窗口会关上吗？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L05",
+          "text": "所有窗口都会关上。区别只在于你是否在它关上前承认它是窗口。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L06",
+          "text": "你用匕首在城砖上刻下刻度。白边经过第一道线时，城内钟声仍清楚；经过第二道线时，钟声像从水底传来。"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L07",
+          "text": "一掌宽，已经够埋葬一间屋。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L08",
+          "text": "一夜，足够埋葬一个王国。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L09",
+          "text": "你记住这句童话式的测量。它不精确，却足够让后来的人知道：末日不是瞬间，它有一段被浪费不起的前奏。"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L10",
+          "text": "殿下，海风变了。饥潮要涨。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L11",
+          "text": "那就去海边。把纸的速度、伞的代价、王国的位置都带走。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T1_11_L12",
+          "text": "白边仍在身后生长。你终于明白，第一则故事不是告诉你如何胜利，而是告诉你时间还没有完全死去。"
         }
       ],
       "choices": [
         {
-          "id": "T1_11_choice_1",
+          "id": "T1_11_C01",
           "text": "把‘扩散速度’标记为关键警告",
           "target": "chapter1.to_chapter2",
           "effects": [
@@ -836,10 +1481,11 @@
               "key": "science",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_spread_rate +1, science +1"
         },
         {
-          "id": "T1_11_choice_2",
+          "id": "T1_11_C02",
           "text": "只记录‘画页危险’，不记录速度",
           "target": "chapter1.to_chapter2",
           "effects": [
@@ -848,17 +1494,41 @@
               "key": "clue_flatten",
               "by": 1
             }
-          ]
+          ],
+          "hint": "变量影响：clue_flatten +1"
         }
       ]
     },
     {
       "id": "chapter1.to_chapter2",
-      "title": "第一则终点",
+      "title": "通往饥潮之海",
+      "scene": {
+        "background": "bg_t2_01",
+        "music": "BGM_11_hungry_sea",
+        "transition": "fade"
+      },
       "steps": [
         {
           "type": "line",
+          "id": "chapter1_end_L01",
           "text": "第一则结束。鹿暝带着黑伞、画页灾害的警告与未完成的坐标，向南港继续前行。"
+        },
+        {
+          "type": "line",
+          "id": "chapter1_end_L02",
+          "speaker": "decoder",
+          "text": "译码记录：画页不是绘画，失踪不是谋杀，灾害有扩散速度。"
+        },
+        {
+          "type": "line",
+          "id": "chapter1_end_L03",
+          "speaker": "chengan",
+          "text": "如果这只是第一则，后面的故事大概不会更温柔。"
+        },
+        {
+          "type": "line",
+          "id": "chapter1_end_L04",
+          "text": "海声覆盖铃声。第二盏灯在远处亮起，像一张正在张开的嘴。"
         }
       ],
       "choices": []
@@ -868,8 +1538,42 @@
       "title": "通信中止",
       "steps": [
         {
+          "type": "sfx",
+          "audio": "SFX_signal_cut"
+        },
+        {
           "type": "line",
-          "text": "你把童话说得过于直白，监察音切断了这段译码。请回到上一处选择，用寓言继续传递消息。"
+          "id": "E_CENSOR_L01",
+          "text": "检测到直接技术规避。通信中止。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "E_CENSOR_L02",
+          "text": "不，等等，他还没有讲完——",
+          "speaker": "chengan"
+        },
+        {
+          "type": "line",
+          "id": "E_CENSOR_L03",
+          "text": "三盏灯同时熄灭。译码舱里的星光像被掐断的呼吸，一粒一粒坠入黑暗。"
+        },
+        {
+          "type": "line",
+          "id": "E_CENSOR_L04",
+          "text": "把缓存锁住。不要让它被自动清除。",
+          "speaker": "decoder"
+        },
+        {
+          "type": "line",
+          "id": "E_CENSOR_L05",
+          "text": "缓存封存。访问权限冻结。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "E_CENSOR_L06",
+          "text": "童话没有死，它只是再也不能抵达你这里。你终于明白，太直白有时不是勇敢，而是替敌人完成截断。"
         }
       ],
       "choices": []

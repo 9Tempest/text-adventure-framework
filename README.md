@@ -92,6 +92,6 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
 - JSON 剧情节点解释器
 - 条件分支、变量、自动跳转、存档/读档
 - Howler 音频管理：BGM、SFX、voice
-- 云天明童话 Chapter 1 背景和 BGM 资源
+- 云天明童话 Chapter 1/2 背景、BGM 和 SFX 资源
 - `npm run validate` catalog / story / resource 检查工具
 - Vitest runtime 单元测试样例

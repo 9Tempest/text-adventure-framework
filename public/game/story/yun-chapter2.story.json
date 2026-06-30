@@ -1,0 +1,1420 @@
+{
+  "version": 1,
+  "id": "yun-chapter2",
+  "title": "折光三则：第二则 饥潮之海",
+  "startNode": "T2_01",
+  "variables": {
+    "trust": 0,
+    "science": 0,
+    "risk": 0,
+    "heat": 0,
+    "politics": 0,
+    "clue_common_origin": 0,
+    "clue_curvature": 0,
+    "clue_slowlight": 0,
+    "clue_wake": 0,
+    "clue_coordinate": 0
+  },
+  "characters": [
+    {
+      "id": "luming",
+      "name": "鹿暝"
+    },
+    {
+      "id": "huaiyi",
+      "name": "槐姨"
+    },
+    {
+      "id": "sailor",
+      "name": "风帆卫士"
+    },
+    {
+      "id": "merchant_old",
+      "name": "老海商"
+    },
+    {
+      "id": "monitor_voice",
+      "name": "监察音"
+    },
+    {
+      "id": "guard",
+      "name": "卫兵"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "T2_01",
+      "title": "没有船归来的港口",
+      "scene": {
+        "background": "bg_t2_01",
+        "music": "BGM_11_hungry_sea",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_tide_chitter"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_wood_creak"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L01",
+          "text": "南港没有渔歌。吊臂停在半空，潮线处漂着木屑和被咬断的船名。海面像一张嚼动的嘴。"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L02",
+          "text": "它们叫饥潮鳞。不是鱼，更像海自己长出的牙。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L03",
+          "text": "牙为什么会长在海里？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L04",
+          "text": "因为有人把不该开箱的货箱扔进了水里。也因为海从不替陆地保守秘密。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L05",
+          "text": "港口的水兵站得很远。他们宁愿被指责怯懦，也不愿再看见一艘船被咬得没有声音。"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L06",
+          "text": "要去沉钟岛，就必须穿过它们。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L07",
+          "text": "我宁愿相信厨房还有比王室海军更有用的东西。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L08",
+          "text": "厨房？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L09",
+          "text": "灾难进宫时，常常先被贵族当成玩意儿。香料、药膏、浴皂——名字越无害，越没人问它从哪里来。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L10",
+          "text": "黑伞在你身后轻轻旋转，像一颗小型夜晚。远处的饥潮鳞被它的阴影触到，短暂地停了一下。"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L11",
+          "text": "别误会。伞只能让它们迟疑，不能让船变成不存在。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_01_L12",
+          "text": "港口的风带着盐、铁锈和恐惧。第二则童话从一片被咬碎的海开始。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_01_C01",
+          "text": "调查旧商船沉没记录",
+          "target": "T2_02",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：science +1"
+        },
+        {
+          "id": "T2_01_C02",
+          "text": "检查厨房与浴室库存",
+          "target": "T2_03",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：trust +1"
+        },
+        {
+          "id": "T2_01_C03",
+          "text": "强行征用最大战舰",
+          "target": "T2_04",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "heat",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1, heat +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_02",
+      "title": "北陆货单",
+      "scene": {
+        "background": "bg_t2_02",
+        "music": "BGM_04_archive",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_wet_pages"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L01",
+          "text": "破船税关的屋顶塌了一半，柜台上仍摆着旧印章。每一枚印章都曾把未知变成合法货物。"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L02",
+          "text": "许多年前，一艘北陆货船在近海裂开。它运来的东西，有些成了灾，有些被当作奢侈品。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L03",
+          "text": "同一个地方来的灾难和救命物？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L04",
+          "text": "贵族买东西从不问它本来是做什么的。只问稀不稀有，漂不漂亮，能不能显得自己见过世界。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L05",
+          "text": "你翻开货单。墨迹已经被潮气泡开，却仍能读出几个货名：饥潮鳞、轻泡晶、黑膜伞骨、无声盐。"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L06",
+          "text": "它们被分到哪里？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L07",
+          "text": "饥潮鳞落海。黑膜伞骨被旧匠人买走。轻泡晶进了王室浴室。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L08",
+          "text": "我记得那东西。王后夸它洗完像躺在云里，连悲伤都懒得动。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L09",
+          "text": "货单边缘还有一行小字：追泡需快马，捕获后勿久置光下。"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L10",
+          "text": "需要快马去追的浴皂？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L11",
+          "text": "这就是北陆商品最常见的谎言。它把危险写进浪漫里。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_02_L12",
+          "text": "你把货单收入怀中。第一则说灾害与防御同出一源；第二则似乎在补充，远航与副作用也可能同出一箱。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_02_C01",
+          "text": "记录：灾害与解法可能同源",
+          "target": "T2_05",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_common_origin",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_common_origin +1, science +1"
+        },
+        {
+          "id": "T2_02_C02",
+          "text": "去王室浴室寻找轻泡晶",
+          "target": "T2_03",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：trust +1"
+        },
+        {
+          "id": "T2_02_C03",
+          "text": "审问幸存海商",
+          "target": "T2_06",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "politics",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：politics +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_03",
+      "title": "一块让人不想动的皂",
+      "scene": {
+        "background": "bg_t2_03",
+        "music": "BGM_12_weightless_bubbles",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_bubbles"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_water_drip"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L01",
+          "text": "废弃浴室铺着蓝白相间的瓷砖，墙上的镜子蒙满盐雾。昔日香气散尽，只剩一种轻飘飘的冷甜。"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L02",
+          "text": "这种皂洗完，人会舒服得不想动。王后说它像把身体交给云。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L03",
+          "text": "不想动，还是不需要动？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L04",
+          "text": "槐姨撬开银盒。里面躺着一块半透明的轻泡晶，表面不断长出微小泡沫，又像害羞似的缩回去。"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L05",
+          "text": "一枚泡泡脱离皂面，竟没有落下。它在空中轻轻漂移，像忘记了重量。"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L06",
+          "text": "北陆骑最快的马去追这些泡。追上了，才能做成一小块。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L07",
+          "text": "马追泡沫，不是因为泡沫会跑，是因为泡沫让路变短？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L08",
+          "text": "也可能是让追的人以为自己没有在动。北陆的说法总有两层。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L09",
+          "text": "殿下，看水盆。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L10",
+          "text": "泡沫落进水中，水面没有荡开圆圈，反而向泡沫前方弯出一条细细的沟。像水主动给它让路。"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L11",
+          "text": "如果船首能让海先让路，就不必和饥潮鳞比牙齿。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_03_L12",
+          "text": "浴室忽然不再像浴室。它像一间被贵族无意间藏起来的小型实验室。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_03_C01",
+          "text": "记录：泡沫与惯性/重量异常有关",
+          "target": "T2_05",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_curvature",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_curvature +1, science +1"
+        },
+        {
+          "id": "T2_03_C02",
+          "text": "让槐姨试着把泡沫涂到船底",
+          "target": "T2_07",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "clue_curvature",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：trust +1, clue_curvature +1"
+        },
+        {
+          "id": "T2_03_C03",
+          "text": "把泡沫撒向饥潮鳞进行小范围测试",
+          "target": "T2_05",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_04",
+      "title": "战舰的牙印",
+      "scene": {
+        "background": "bg_t2_04",
+        "music": "BGM_05_alarm",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_hull_crack"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_tide_roar"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L01",
+          "text": "最大战舰被拖出船坞时，水兵们故意喊得很响，仿佛声音足够大就能替木板披上铁甲。"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L02",
+          "text": "所有弩机只做警戒，不准先射。我们观察它们怎么靠近。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L03",
+          "text": "第一波饥潮鳞没有跃出水面。它们让水纹排成细密的齿形，从船首两侧合拢。"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L04",
+          "text": "战舰只坚持了七次心跳。第八次，船头像一块饼干被海咬下。"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L05",
+          "text": "退！退桨！",
+          "speaker": "guard"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L06",
+          "text": "饥潮不怕大。大，只是更容易被发现。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L07",
+          "text": "那我们需要不是更强的船，而是更不像船的船。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L08",
+          "text": "王室最擅长把错误做得很壮观。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L09",
+          "text": "断裂的船头像一只空碗漂在水上。饥潮鳞围着它，却没有继续啃食，像已经完成一次示范。"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L10",
+          "text": "寓言稳定。继续。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L11",
+          "text": "把幸存水兵带回去。失败也要记录清楚。尤其记录我们为什么以为力量能解决一切。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_04_L12",
+          "text": "港口重新安静下来。安静不是安全，只是灾害暂时不需要发声。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_04_C01",
+          "text": "停止军事尝试，寻找低可见度方案",
+          "target": "T2_03",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": -1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk -1, science +1"
+        },
+        {
+          "id": "T2_04_C02",
+          "text": "继续用火攻海面",
+          "target": "chapter2.censored",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "heat",
+              "by": 2
+            }
+          ],
+          "hint": "变量影响：heat +2"
+        },
+        {
+          "id": "T2_04_C03",
+          "text": "回到税关查同源货物",
+          "target": "T2_02"
+        }
+      ]
+    },
+    {
+      "id": "T2_05",
+      "title": "泡沫实验",
+      "scene": {
+        "background": "bg_t2_05",
+        "music": "BGM_13_experiment",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_glass_clink"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_bubbles_spread"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L01",
+          "text": "小码头被临时清空。你们用木盆、短桨和一串细绳搭起一个简陋试验场。童话里的科学总先以玩具的样子出现。"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L02",
+          "text": "我把泡沫放进水里了。看那几片饥潮鳞。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L03",
+          "text": "它们不是死了，也不是逃走。它们在泡沫前方绕了一圈，像突然忘了该往哪里咬。"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L04",
+          "text": "泡沫不是毒。它改变的是路。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L05",
+          "text": "如果一艘船能让前方的海先忘记自己有重量，也许它就能滑过去。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L06",
+          "text": "听起来像作弊。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L07",
+          "text": "活下去的办法常像作弊。区别在于，作弊会留下什么账。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L08",
+          "text": "木盆前方的水面被轻泡晶推成一条柔软的弧。木盆没有用力，却向前滑出半尺。"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L09",
+          "text": "别高兴太早。船前的路弯开，船后的路也会记住自己被弯过。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L10",
+          "text": "尾迹？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L11",
+          "text": "有些尾迹比船更长寿。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_05_L12",
+          "text": "你的童话笔记上出现第二条线索：不是推开世界，而是让世界在船前弯开；但被弯开的世界，不一定会立刻复原。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_05_C01",
+          "text": "把轻泡晶用于船首，测试‘弯路’",
+          "target": "T2_07",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_curvature",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_curvature +1, science +1"
+        },
+        {
+          "id": "T2_05_C02",
+          "text": "把轻泡晶用于伞面，测试防御叠加",
+          "target": "T2_08",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_slowlight",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_slowlight +1, science +1"
+        },
+        {
+          "id": "T2_05_C03",
+          "text": "大量投放泡沫，试图清空海域",
+          "target": "T2_06",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_06",
+      "title": "海商的谎账",
+      "scene": {
+        "background": "bg_t2_06",
+        "music": "BGM_14_merchant_secret",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_lantern_swing"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L01",
+          "text": "海商会馆的窗户都用厚布遮住。里面的人曾靠远方发财，如今却怕听见任何来自远方的浪声。"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L02",
+          "text": "我们以为饥潮鳞能清理海盗，以为轻泡晶只是贵族玩物。谁会想到货箱会统治海？",
+          "speaker": "merchant_old"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L03",
+          "text": "你们把未知当作商品，把事故当作账损。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L04",
+          "text": "殿下，王室也盖过印。",
+          "speaker": "merchant_old"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L05",
+          "text": "盖印的人大多已经变成画像，别拿死人给自己垫脚。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L06",
+          "text": "这也是一种坐标。愚蠢会指向文明。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L07",
+          "text": "海商擦着汗，从账簿夹层里取出一张旧航线。纸边被盐咬得发白，像提前练习过消失。"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L08",
+          "text": "这条路能到沉钟岛。但别留下白色尾迹。我们当年就是看见尾迹才追上去的。",
+          "speaker": "merchant_old"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L09",
+          "text": "追上去之后呢？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L10",
+          "text": "追到一片变慢的海。船桨抬起时像举着整座山，回港时已经晚了一个季节。",
+          "speaker": "merchant_old"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L11",
+          "text": "旧航线旁写着：不要把能穿越的路，当成能公开的路。"
+        },
+        {
+          "type": "line",
+          "id": "T2_06_L12",
+          "text": "把这句话抄三遍，贴到船坞门口。",
+          "speaker": "luming"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_06_C01",
+          "text": "记录：航迹可能暴露或改变环境",
+          "target": "T2_08",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_wake",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_wake +1, science +1"
+        },
+        {
+          "id": "T2_06_C02",
+          "text": "没收海商库存，立刻造船",
+          "target": "T2_07",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1"
+        },
+        {
+          "id": "T2_06_C03",
+          "text": "安抚海商，换取更多航海细节",
+          "target": "T2_09",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：trust +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_07",
+      "title": "不像船的船",
+      "scene": {
+        "background": "bg_t2_07",
+        "music": "BGM_15_building_hope",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_brush_on_hull"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_soft_waves"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L01",
+          "text": "临时船坞用的是渔船残骸、王室礼舟的桅杆、税关拆下来的铜钉，以及一柄永远不该出现在船上的黑伞。"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L02",
+          "text": "它看上去不像能救一个王国。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L03",
+          "text": "能救王国的东西，通常先要承认自己救不了整个王国。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L04",
+          "text": "那它至少要救出一个答案。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L05",
+          "text": "船首抹上轻泡晶后，木板之间的缝隙像被月光填满。船身变轻，却不是向上浮，而像前方的水主动欠它一条路。"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L06",
+          "text": "伞绑在桅杆上会不会太显眼？",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L07",
+          "text": "它不是给岸上的人看的，是给纸和饥潮看的。让它们迟疑，让路来不及闭合。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L08",
+          "text": "迟疑能换来多久？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L09",
+          "text": "足够好的时候，是一条航线；不够好的时候，是墓志铭。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L10",
+          "text": "工匠们不敢问你要带多少人。这个问题比饥潮更会咬人。"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L11",
+          "text": "只带必要的人和全部记录。若有机会，再带更多人。若没有，至少别让后来者重复我们的蠢。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_07_L12",
+          "text": "它像一枚准备从童话里逃走的标点，小、轻、危险，且无法承诺所有人都能读懂它。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_07_C01",
+          "text": "选择夜航，降低被看见的概率",
+          "target": "T2_09",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_coordinate",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_coordinate +1, trust +1"
+        },
+        {
+          "id": "T2_07_C02",
+          "text": "选择白昼，便于观察航迹",
+          "target": "T2_08",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_wake",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_wake +1, science +1"
+        },
+        {
+          "id": "T2_07_C03",
+          "text": "带更多难民上船",
+          "target": "T2_10",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：trust +1, risk +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_08",
+      "title": "白色尾迹",
+      "scene": {
+        "background": "bg_t2_08",
+        "music": "BGM_16_dangerous_beauty",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_water_silence"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L01",
+          "text": "试航区的海被晨光照得发白。你们故意选择离港不远的地方，因为错误若发生，至少还能被岸上看见。"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L02",
+          "text": "看见了吗？泡沫让船前的海弯开，也让船后的海变慢。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L03",
+          "text": "这条尾迹像路，也像牢门。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L04",
+          "text": "孩子，能逃出去的办法，也可能把后来的人困住。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L05",
+          "text": "白色尾迹在船后展开。海鸟飞过那片白痕时，翅膀忽然慢了半拍，叫声也被拉长。"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L06",
+          "text": "尾迹不是泡沫，是被泡沫改过的海。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L07",
+          "text": "是路，也是伤口。伤口愈合得慢，追踪者就能顺着它找到你。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L08",
+          "text": "如果王城的船都沿着这道白痕出海呢？",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L09",
+          "text": "那他们会把自己的港口也拖进慢海。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L10",
+          "text": "你记下：航迹不是背景，而是技术的副作用。童话故意把它画得漂亮，免得听故事的人忘了漂亮也能害人。"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L11",
+          "text": "从现在起，任何好消息必须带上尾迹。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_08_L12",
+          "text": "远处港口仍在等你挥手。你第一次觉得，挥手也可能是一种不负责任。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_08_C01",
+          "text": "记录：高速航行会留下低速尾迹",
+          "target": "T2_09",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_wake",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "clue_slowlight",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_wake +1, clue_slowlight +1, science +1"
+        },
+        {
+          "id": "T2_08_C02",
+          "text": "忽略尾迹，专注如何穿过饥潮",
+          "target": "T2_09",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_curvature",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_curvature +1"
+        },
+        {
+          "id": "T2_08_C03",
+          "text": "尝试用黑伞抹除尾迹",
+          "target": "T2_10",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "science",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1, science +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_09",
+      "title": "穿越饥潮",
+      "scene": {
+        "background": "bg_t2_09",
+        "music": "BGM_17_crossing",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_umbrella_spin"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_tide_whisper"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L01",
+          "text": "夜航开始时，南港最后一盏灯被布罩住。船离岸，没有欢呼，只有黑伞的低鸣像另一颗心脏。"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L02",
+          "text": "饥潮没有退。它只是来不及决定你们在不在这里。每一次靠近，都被船首弯开的水路轻轻带偏。"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L03",
+          "text": "别让伞停。别让泡沫断。别让船尾的白痕被岸上的人误认为道路。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L04",
+          "text": "殿下，左舷有鳞影。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L05",
+          "text": "别看它。被看见的东西会互相看见。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L06",
+          "text": "你强迫自己看向前方。海面没有路，却不断让出路。船像在一张尚未写完的纸上滑行。"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L07",
+          "text": "如果这方法只能救一船人，它算答案吗？",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L08",
+          "text": "如果它能让一船人把警告带出去，它就不只是救一船人。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L09",
+          "text": "我看不见灯。我只看见海在我们身后合拢。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L10",
+          "text": "殿下，沉钟岛的灯在前方。很低，很慢，像不想被任何人发现。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L11",
+          "text": "你把航海日志压进防水匣。纸上写着：可以穿越，但不能炫耀穿越；可以留下航迹，但不能邀请世界追随航迹。"
+        },
+        {
+          "type": "line",
+          "id": "T2_09_L12",
+          "text": "第二则故事越过最危险的海，却没有给你胜利感。它只给了你一个更沉的选择。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_09_C01",
+          "text": "把航海日志密封，带给潜灯王子",
+          "target": "chapter2.to_chapter3",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_curvature",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "clue_wake",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_curvature +1, clue_wake +1, trust +1"
+        },
+        {
+          "id": "T2_09_C02",
+          "text": "向王城发回‘可以穿越’的信号",
+          "target": "T2_10",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "heat",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1, heat +1"
+        },
+        {
+          "id": "T2_09_C03",
+          "text": "熄灭所有灯，只保留心跳般的伞声",
+          "target": "chapter2.to_chapter3",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_coordinate",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_coordinate +1, trust +1"
+        }
+      ]
+    },
+    {
+      "id": "T2_10",
+      "title": "错误的好消息",
+      "scene": {
+        "background": "bg_t2_10",
+        "music": "BGM_18_bad_news",
+        "transition": "fade"
+      },
+      "steps": [
+        {
+          "type": "sfx",
+          "audio": "SFX_flare"
+        },
+        {
+          "type": "sfx",
+          "audio": "SFX_distant_bells"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L01",
+          "text": "信号升空时，你甚至能想象王城里的人如何抬头。母亲抱紧孩子，水兵松开拳头，砾亲王以为自己终于有了命令群众的词。"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L02",
+          "text": "王城的灯一盏接一盏亮起，仿佛整座岛都松了一口气。"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L03",
+          "text": "太早了。你告诉他们有路，却没告诉他们路会改变海。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L04",
+          "text": "我想给他们希望。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L05",
+          "text": "希望若少了警告，就会长得像陷阱。",
+          "speaker": "huaiyi"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L06",
+          "text": "船尾的白痕在月下美得惊人。美得足以让岸上的人误以为那是一条被神明允许的道路。"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L07",
+          "text": "补发第二条。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L08",
+          "text": "第二条会被怀疑，会被骂成胆怯。",
+          "speaker": "sailor"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L09",
+          "text": "那就让他们骂。被误解比被慢海吞掉好。",
+          "speaker": "luming"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L10",
+          "text": "你拿起信号灯，却犹豫了半秒。半秒足以让一道白痕延长，也足以让责任在心里扎根。"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L11",
+          "text": "提醒：详尽技术说明可能触发通信中止。",
+          "speaker": "monitor_voice"
+        },
+        {
+          "type": "line",
+          "id": "T2_10_L12",
+          "text": "你终于明白，童话最难的不是传递真相，而是在真相与可传递之间保留足够多的警告。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "T2_10_C01",
+          "text": "补发第二条：不要追随白色尾迹",
+          "target": "chapter2.to_chapter3",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "clue_wake",
+              "by": 1
+            },
+            {
+              "type": "inc",
+              "key": "trust",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：clue_wake +1, trust +1"
+        },
+        {
+          "id": "T2_10_C02",
+          "text": "保持沉默，先抵达沉钟岛",
+          "target": "chapter2.to_chapter3",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "risk",
+              "by": 1
+            }
+          ],
+          "hint": "变量影响：risk +1"
+        },
+        {
+          "id": "T2_10_C03",
+          "text": "继续发送详尽技术说明",
+          "target": "chapter2.censored",
+          "effects": [
+            {
+              "type": "inc",
+              "key": "heat",
+              "by": 2
+            }
+          ],
+          "hint": "变量影响：heat +2"
+        }
+      ]
+    },
+    {
+      "id": "chapter2.to_chapter3",
+      "title": "通往深灯王子",
+      "steps": [
+        {
+          "type": "line",
+          "text": "第二则结束。鹿暝带着轻泡晶、白色尾迹的警告与被饥潮改写的航海日志，驶向沉钟岛。"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "chapter2.censored",
+      "title": "通信中止",
+      "steps": [
+        {
+          "type": "line",
+          "text": "你把穿越饥潮的办法讲得过于直白，监察音切断了这段译码。请回到上一处选择，用童话继续绕开审查。"
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

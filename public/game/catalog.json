@@ -13,6 +13,18 @@
         "chapter-1",
         "visual-novel"
       ]
+    },
+    {
+      "id": "yun-chapter2",
+      "title": "折光三则：第二则 饥潮之海",
+      "description": "南港、轻泡晶、白色尾迹与穿越饥潮的第二章。",
+      "storyUrl": "/game/story/yun-chapter2.story.json",
+      "manifestUrl": "/game/assets/manifest.json",
+      "tags": [
+        "yun-tianming",
+        "chapter-2",
+        "visual-novel"
+      ]
     }
   ]
 }
