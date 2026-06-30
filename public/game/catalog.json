@@ -8,7 +8,11 @@
       "description": "分支、变量、条件选项、BGM/SFX/VO 的完整示例。",
       "storyUrl": "/game/story/shadow-letters-demo.story.json",
       "manifestUrl": "/game/assets/manifest.json",
-      "tags": ["demo", "branching", "visual-novel"]
+      "tags": [
+        "demo",
+        "branching",
+        "visual-novel"
+      ]
     },
     {
       "id": "echo-lane-demo",
@@ -16,7 +20,22 @@
       "description": "一个短篇文字冒险，用同一套框架和资源展示另一条故事入口。",
       "storyUrl": "/game/story/echo-lane-demo.story.json",
       "manifestUrl": "/game/assets/manifest.json",
-      "tags": ["demo", "short-story"]
+      "tags": [
+        "demo",
+        "short-story"
+      ]
+    },
+    {
+      "id": "yun-chapter1",
+      "title": "折光三则：第一则 画页之城",
+      "description": "拾声王国、画页灾害与黑伞防御的第一章。",
+      "storyUrl": "/game/story/yun-chapter1.story.json",
+      "manifestUrl": "/game/assets/manifest.json",
+      "tags": [
+        "yun-tianming",
+        "chapter-1",
+        "visual-novel"
+      ]
     }
   ]
 }

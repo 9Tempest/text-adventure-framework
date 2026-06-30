@@ -32,6 +32,105 @@
         "character",
         "lin"
       ]
+    },
+    "bg_t1_01": {
+      "src": "/game/assets/images/yun/T1_01.png",
+      "alt": "拾声王国的清晨 - 拾声王国 / 王城露台 - 童话感，但要带一点末世前的宁静。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_02": {
+      "src": "/game/assets/images/yun/T1_02.png",
+      "alt": "白纸不会平躺 - 王宫 / 新画室 - 纸张像活物一样卷曲；匠人的表情平静到危险。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_03": {
+      "src": "/game/assets/images/yun/T1_03.png",
+      "alt": "三十九只无声铃 - 王宫 / 铃档馆 - 档案馆要像宗庙与数据库的混合。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_04": {
+      "src": "/game/assets/images/yun/T1_04.png",
+      "alt": "封锁失败 - 王宫 / 西廊 - 表现‘二维化’但不血腥。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_05": {
+      "src": "/game/assets/images/yun/T1_05.png",
+      "alt": "折叠不是绘画 - 王宫 / 观星廊 - 观星廊暗示宏观宇宙；让远海有‘纸边’感。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_06": {
+      "src": "/game/assets/images/yun/T1_06.png",
+      "alt": "世界不止一座岛 - 王宫 / 地图厅 - 这场用于把童话扩展到宇宙尺度。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_07": {
+      "src": "/game/assets/images/yun/T1_07.png",
+      "alt": "旋转黑伞 - 王宫 / 废弃钟楼 - 黑伞不是魔法道具，而像维持物理条件的装置。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_08": {
+      "src": "/game/assets/images/yun/T1_08.png",
+      "alt": "童话中的第一条公式 - 白塔译码舱 / 临时插入 - 现实译码短切；画面不要出现公式文字。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_09": {
+      "src": "/game/assets/images/yun/T1_09.png",
+      "alt": "伞不能太快，也不能太慢 - 王宫 / 废弃钟楼 - 强调‘参数范围’：伞速不对就失败。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_10": {
+      "src": "/game/assets/images/yun/T1_10.png",
+      "alt": "离宫 - 王宫 / 后门雪阶 - 逃离场面，但节奏克制，不做动作大片。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "bg_t1_11": {
+      "src": "/game/assets/images/yun/T1_11.png",
+      "alt": "一掌宽的世界 - 王宫 / 城墙高处 - 让‘降维扩散需要时间’变成视觉线索。",
+      "tags": [
+        "background",
+        "yun-tianming",
+        "chapter-1"
+      ]
     }
   },
   "audio": {
@@ -71,6 +170,105 @@
       "tags": [
         "voice",
         "lin"
+      ]
+    },
+    "BGM_02_fairytale_morning": {
+      "src": "/game/assets/audio/yun/BGM_02_fairytale_morning.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_03_tension_strings": {
+      "src": "/game/assets/audio/yun/BGM_03_tension_strings.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_04_archive": {
+      "src": "/game/assets/audio/yun/BGM_04_archive.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_05_alarm": {
+      "src": "/game/assets/audio/yun/BGM_05_alarm.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_06_decode_soft": {
+      "src": "/game/assets/audio/yun/BGM_06_decode_soft.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_07_world_map": {
+      "src": "/game/assets/audio/yun/BGM_07_world_map.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_08_black_umbrella": {
+      "src": "/game/assets/audio/yun/BGM_08_black_umbrella.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_09_escape_low": {
+      "src": "/game/assets/audio/yun/BGM_09_escape_low.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
+      ]
+    },
+    "BGM_10_cosmic_fear": {
+      "src": "/game/assets/audio/yun/BGM_10_cosmic_fear.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32,
+      "tags": [
+        "music",
+        "yun-tianming",
+        "chapter-1"
       ]
     }
   }
