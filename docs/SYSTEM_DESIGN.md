@@ -255,9 +255,12 @@ UI 和插件应消费 events，而不是把副作用写进 runtime。例如：
 ```json
 {
   "audio": {
-    "bgm_tension": { "src": "/game/assets/audio/bgm_tension.wav", "kind": "music", "loop": true, "volume": 0.28 },
-    "voice_han_001": { "src": "/game/assets/audio/voice_han_001.wav", "kind": "voice" },
-    "sfx_knock": { "src": "/game/assets/audio/sfx_knock.wav", "kind": "sfx" }
+    "BGM_02_fairytale_morning": {
+      "src": "/game/assets/audio/yun/BGM_02_fairytale_morning.wav",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.32
+    }
   }
 }
 ```

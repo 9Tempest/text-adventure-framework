@@ -15,9 +15,9 @@ export type LoadedGameContent = {
 };
 
 const DEFAULT_STORY_ENTRY: StoryCatalogEntry = {
-  id: "shadow-letters-demo",
-  title: "暗线：序章 Demo",
-  storyUrl: "/game/story/shadow-letters-demo.story.json",
+  id: "yun-chapter1",
+  title: "折光三则：第一则 画页之城",
+  storyUrl: "/game/story/yun-chapter1.story.json",
   manifestUrl: "/game/assets/manifest.json"
 };
 

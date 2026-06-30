@@ -59,14 +59,12 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
 {
   "id": "chapter1.room",
   "scene": {
-    "background": "bg_room",
-    "music": "bgm_tension",
-    "characters": [{ "character": "han", "image": "han_neutral", "slot": "right" }]
+    "background": "bg_t1_01",
+    "music": "BGM_02_fairytale_morning"
   },
   "steps": [
-    { "type": "line", "speaker": "han", "voice": "voice_han_001", "text": "你迟到了。" },
-    { "type": "sfx", "audio": "sfx_knock" },
-    { "type": "inc", "key": "trustHan", "by": 1 }
+    { "type": "line", "speaker": "luming", "text": "父王说，故事能让人记得自己是谁。" },
+    { "type": "inc", "key": "science", "by": 1 }
   ],
   "choices": [
     { "id": "answer", "text": "解释原因", "target": "chapter1.answer" }
@@ -94,6 +92,6 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
 - JSON 剧情节点解释器
 - 条件分支、变量、自动跳转、存档/读档
 - Howler 音频管理：BGM、SFX、voice
-- 示例背景、角色 SVG、占位 WAV
+- 云天明童话 Chapter 1 背景和 BGM 资源
 - `npm run validate` catalog / story / resource 检查工具
 - Vitest runtime 单元测试样例
