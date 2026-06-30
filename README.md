@@ -12,6 +12,12 @@ npm run dev
 
 打开 Vite 输出的本地地址即可预览。页面顶部的故事下拉菜单会显示 `public/game/catalog.json` 里登记的所有 story。
 
+Codex app 中建议让 agent 直接输出可点击链接。当前 demo 如果跑在 5174 端口，可以点：
+
+[Open local demo](http://127.0.0.1:5174/)
+
+如果 Vite 输出了其他端口，使用终端里显示的实际地址。
+
 ## 目录结构
 
 ```text

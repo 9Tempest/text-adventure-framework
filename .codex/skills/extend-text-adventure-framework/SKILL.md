@@ -52,6 +52,18 @@ Use `src/App.tsx` for demo/player UI and keep it data-driven:
 
 Use `src/engine/audio.ts` for Howler integration and `src/engine/save.ts` for local save behavior.
 
+## Run The Demo
+
+When starting or restarting the dev server, report the actual Vite URL as a Markdown link so the user can open the app page directly. In the Codex app, prefer this over asking the user to click screenshots or browser-comment overlays.
+
+If Vite is running on port 5174, output:
+
+```markdown
+[Open local demo](http://127.0.0.1:5174/)
+```
+
+If Vite chooses another port, replace the URL with the exact `Local:` URL printed by Vite.
+
 ## Verification
 
 Run the narrowest useful checks:

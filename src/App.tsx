@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
 import { AudioManager } from "./engine/audio";
 import { getDefaultStoryEntry, loadGameContent, loadStoryCatalog } from "./engine/loader";
 import { RuntimeEngine, type RuntimeSnapshot } from "./engine/runtime";
@@ -252,7 +253,7 @@ export default function App() {
                 {line.voice && <span className="voice-chip">VOICE</span>}
               </div>
               <p className="dialogue-text">{line.text}</p>
-              <button className="primary-button" onClick={handleContinue}>继续 ⏎</button>
+              <button className="primary-button" type="button" {...actionButtonProps(handleContinue)}>继续 ⏎</button>
             </>
           ) : (
             <ChoicePanel snapshot={snapshot} onChoice={handleChoice} />
@@ -297,10 +298,10 @@ function TopBar(props: {
           ))}
         </select>
         {props.message && <span className="toast">{props.message}</span>}
-        <button onClick={props.onSave}>保存</button>
-        <button onClick={props.onLoad}>读取</button>
-        <button onClick={props.onNewGame}>新游戏</button>
-        <button onClick={props.onMuteToggle}>{props.muted ? "开声音" : "静音"}</button>
+        <button type="button" {...actionButtonProps(props.onSave)}>保存</button>
+        <button type="button" {...actionButtonProps(props.onLoad)}>读取</button>
+        <button type="button" {...actionButtonProps(props.onNewGame)}>新游戏</button>
+        <button type="button" {...actionButtonProps(props.onMuteToggle)}>{props.muted ? "开声音" : "静音"}</button>
       </div>
     </header>
   );
@@ -329,7 +330,12 @@ function ChoicePanel(props: { snapshot: RuntimeSnapshot; onChoice: (choiceId: st
   return (
     <div className="choice-list">
       {props.snapshot.availableChoices.map((choice) => (
-        <button className="choice-button" key={choice.id} onClick={() => props.onChoice(choice.id)}>
+        <button
+          className="choice-button"
+          key={choice.id}
+          type="button"
+          {...actionButtonProps(() => props.onChoice(choice.id))}
+        >
           <span>{choice.text}</span>
           {choice.hint && <small>{choice.hint}</small>}
         </button>
@@ -343,7 +349,7 @@ function EndingPanel({ onNewGame }: { onNewGame: () => void }) {
     <div>
       <div className="ending-title">故事结束</div>
       <p className="dialogue-text">你已经抵达当前故事的终点。添加更多节点即可继续扩展。</p>
-      <button className="primary-button" onClick={onNewGame}>重新开始</button>
+      <button className="primary-button" type="button" {...actionButtonProps(onNewGame)}>重新开始</button>
     </div>
   );
 }
@@ -357,4 +363,21 @@ function resolveImage(assets: AssetManifest, id: string | null | undefined) {
     return undefined;
   }
   return assets.images[id];
+}
+
+function actionButtonProps(action: () => void) {
+  return {
+    onPointerDown(event: ReactPointerEvent<HTMLButtonElement>) {
+      if (event.button !== 0) {
+        return;
+      }
+      event.preventDefault();
+      action();
+    },
+    onClick(event: ReactMouseEvent<HTMLButtonElement>) {
+      if (event.detail === 0) {
+        action();
+      }
+    }
+  };
 }
