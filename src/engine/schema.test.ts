@@ -29,7 +29,10 @@ describe("StorySchema", () => {
       startNode: "start",
       presentation: {
         kicker: "A quiet transmission",
-        clueLabels: { clue_light: { label: "Light", glyph: "◌" } }
+        clueLabels: { clue_light: { label: "Light", glyph: "◌" } },
+        highlightTerms: {
+          "The Listener": { tone: "person", description: "The one who hears the signal." }
+        }
       },
       nodes: [
         {
@@ -44,6 +47,7 @@ describe("StorySchema", () => {
     });
 
     expect(story.presentation?.clueLabels?.clue_light.label).toBe("Light");
+    expect(story.presentation?.highlightTerms?.["The Listener"].tone).toBe("person");
     expect(story.nodes[0].layer).toBe("reality");
   });
 

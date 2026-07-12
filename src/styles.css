@@ -692,6 +692,31 @@ button:disabled {
   text-shadow: 0 2px 13px rgba(0, 0, 0, 0.55);
 }
 
+.story-highlight {
+  --story-highlight-color: #e8c681;
+  display: inline;
+  margin: 0;
+  padding: 0 0.08em 0.02em;
+  border-radius: 0.12em;
+  color: color-mix(in srgb, var(--story-highlight-color) 88%, white);
+  background: linear-gradient(180deg, transparent 58%, color-mix(in srgb, var(--story-highlight-color) 22%, transparent) 58%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  font-weight: 650;
+  text-shadow: 0 0 16px color-mix(in srgb, var(--story-highlight-color) 30%, transparent);
+}
+
+.story-highlight--person { --story-highlight-color: #f1ce83; }
+.story-highlight--concept { --story-highlight-color: #83d9df; }
+.story-highlight--warning { --story-highlight-color: #ef948b; }
+.story-highlight--faction { --story-highlight-color: #c0a5e8; }
+
+.choice-copy .story-highlight,
+.backlog-entry .story-highlight {
+  padding-inline: 0.04em;
+  text-shadow: none;
+}
+
 .type-caret {
   display: inline-block;
   width: 0.52em;

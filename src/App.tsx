@@ -380,11 +380,16 @@ export default function App() {
               autoMode={autoMode}
               paused={dialoguePaused}
               actionRef={dialogueActionRef}
+              highlightTerms={story.presentation?.highlightTerms ?? {}}
               onTextTick={handleTextTick}
               onContinue={handleContinue}
             />
           ) : (
-            <ChoicePanel snapshot={snapshot} onChoice={handleChoice} />
+            <ChoicePanel
+              snapshot={snapshot}
+              highlightTerms={story.presentation?.highlightTerms ?? {}}
+              onChoice={handleChoice}
+            />
           )}
         </section>
 
@@ -635,6 +640,7 @@ function DialoguePanel(props: {
   autoMode: boolean;
   paused: boolean;
   actionRef: MutableRefObject<() => void>;
+  highlightTerms: NonNullable<StoryPresentation["highlightTerms"]>;
   onTextTick: (speakerId: string | undefined, glyph: string) => void;
   onContinue: () => void;
 }) {
@@ -643,6 +649,11 @@ function DialoguePanel(props: {
   const [visibleCharacters, setVisibleCharacters] = useState(() => reducedMotion ? characters.length : 0);
   const visibleRef = useRef(visibleCharacters);
   const complete = visibleCharacters >= characters.length;
+  const visibleText = characters.slice(0, visibleCharacters).join("");
+  const highlightedText = useMemo(
+    () => renderHighlightedText(visibleText, props.highlightTerms),
+    [props.highlightTerms, visibleText]
+  );
 
   useEffect(() => {
     if (reducedMotion) {
@@ -713,7 +724,7 @@ function DialoguePanel(props: {
           {props.line.voice && <span className="voice-chip">VOICE</span>}
         </span>
         <span className="dialogue-text" aria-hidden="true">
-          {characters.slice(0, visibleCharacters).join("")}
+          {highlightedText}
           {!complete && <span className="type-caret" />}
         </span>
         <span className="sr-only">{props.line.text}</span>
@@ -726,7 +737,11 @@ function DialoguePanel(props: {
   );
 }
 
-function ChoicePanel(props: { snapshot: RuntimeSnapshot; onChoice: (choiceId: string) => void }) {
+function ChoicePanel(props: {
+  snapshot: RuntimeSnapshot;
+  highlightTerms: NonNullable<StoryPresentation["highlightTerms"]>;
+  onChoice: (choiceId: string) => void;
+}) {
   if (props.snapshot.availableChoices.length === 0) {
     return (
       <div className="dialogue-panel choice-panel choice-panel--empty">
@@ -747,7 +762,7 @@ function ChoicePanel(props: { snapshot: RuntimeSnapshot; onChoice: (choiceId: st
           <button className="choice-button" key={choice.id} type="button" onClick={() => props.onChoice(choice.id)}>
             <kbd>{index < 9 ? index + 1 : "·"}</kbd>
             <span className="choice-copy">
-              <strong>{choice.text}</strong>
+              <strong>{renderHighlightedText(choice.text, props.highlightTerms)}</strong>
               {choice.hint && <small>{choice.hint}</small>}
             </span>
             <span className="choice-arrow" aria-hidden="true">→</span>
@@ -886,7 +901,7 @@ function BacklogDrawer(props: {
                 <span style={{ color: speaker?.color }}>{speaker?.name ?? entry.speaker ?? "旁白"}</span>
                 <small>{node?.title ?? node?.chapter ?? "未命名段落"}</small>
               </div>
-              <p>{entry.text}</p>
+              <p>{renderHighlightedText(entry.text, props.story.presentation?.highlightTerms ?? {})}</p>
             </article>
           );
         })}
@@ -934,6 +949,36 @@ function findCharacter(story: Story, id: string): Character | undefined {
 
 function resolveImage(assets: AssetManifest, id: string | null | undefined) {
   return id ? assets.images[id] : undefined;
+}
+
+function renderHighlightedText(
+  text: string,
+  terms: NonNullable<StoryPresentation["highlightTerms"]>
+): ReactNode {
+  const matchingTerms = Object.keys(terms)
+    .filter((term) => text.includes(term))
+    .sort((left, right) => right.length - left.length);
+  if (matchingTerms.length === 0) {
+    return text;
+  }
+
+  const pattern = new RegExp(`(${matchingTerms.map(escapeRegExp).join("|")})`, "g");
+  return text.split(pattern).map((part, index) => {
+    const meta = terms[part];
+    return meta ? (
+      <mark
+        className={`story-highlight story-highlight--${meta.tone}`}
+        key={`${part}:${index}`}
+        title={meta.description}
+      >
+        {part}
+      </mark>
+    ) : part;
+  });
+}
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function isActiveValue(value: VariableValue | undefined) {

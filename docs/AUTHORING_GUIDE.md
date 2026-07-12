@@ -196,3 +196,19 @@ Node 可声明当前章节、地点、叙事层级和总体进度：
 ```
 
 `tone` 可取 `hope / bittersweet / dark / secret / failure`。
+
+## 9. 重要人物与概念高亮（可选）
+
+在 `presentation.highlightTerms` 中登记词语，播放器会在对白、选项与回溯记录中统一高亮：
+
+```json
+{
+  "highlightTerms": {
+    "云天明": { "tone": "person", "description": "远航者Y的真实身份。" },
+    "黑伞": { "tone": "concept", "description": "慢光防御的童话隐喻。" },
+    "纸边": { "tone": "warning", "description": "正在推进的灾难边界。" }
+  }
+}
+```
+
+`tone` 可取 `person / concept / warning / faction`；`description` 会作为悬停提示显示。

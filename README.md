@@ -96,6 +96,6 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
 - Howler 音频管理：BGM、SFX、voice
 - 云天明童话 Chapter 1/2 背景、BGM 和 SFX 资源
 - 完整三幕《三盏灯熄灭之前》：52 节点、11 结局、面向新玩家的三段式背景与人物引言、跨章节线索与隐藏路线
-- 10 首 48 kHz 立体声 CC0 重混配乐（来源与加工记录见 `docs/AUDIO_SOURCES.md`）
+- 11 首 48 kHz 立体声 CC0 重混配乐（含低音量空灵童话主题；来源与加工记录见 `docs/AUDIO_SOURCES.md`）
 - `npm run validate` catalog / story / resource 检查工具
 - Vitest runtime 单元测试样例

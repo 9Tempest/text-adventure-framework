@@ -112,8 +112,7 @@ const backgroundById = {
 };
 
 function scoreFor(id) {
-  if (/^T1_0[1-3]$/.test(id)) return "SCORE_bells_before_paper";
-  if (/^T1_/.test(id)) return "SCORE_paper_edge";
+  if (/^T1_/.test(id)) return "SCORE_fairytale_air";
   if (/^T2_/.test(id)) return "SCORE_hungry_sea";
   if (/^T3_/.test(id)) return "SCORE_deep_lantern";
   if (id === "R06") return "SCORE_three_line_hearing";
@@ -657,6 +656,28 @@ const story = {
       science: "推演",
       risk: "冒险",
       heat: "监察"
+    },
+    highlightTerms: {
+      "云天明": { tone: "person", description: "被送往三体舰队、以童话向故乡传递警告的人。" },
+      "远航者Y": { tone: "person", description: "云天明在受监察通信中的代号。" },
+      "澄安": { tone: "person", description: "白塔通信负责人，守护话语中的人性与动机。" },
+      "鹿暝": { tone: "person", description: "画页之城的年轻王子，也是玩家在童话中的主要视角。" },
+      "槐姨": { tone: "person", description: "记住普通人姓名与生活的宫廷女官。" },
+      "风帆卫士": { tone: "person", description: "知道远方、航路与离岸代价的航海者。" },
+      "空伞师": { tone: "person", description: "掌握慢光防御，也理解庇护会变成牢笼的人。" },
+      "潜灯王子": { tone: "person", description: "守在深海，保管故事最后两条生路的人。" },
+      "折页匠": { tone: "warning", description: "让世界失去厚度的灾难所戴的人形面具。" },
+      "译码员": { tone: "faction", description: "你在现实层的身份：拆解童话并提交最终报告。" },
+      "监察音": { tone: "warning", description: "三体一方守在通信线路上的审查系统。" },
+      "三体文明": { tone: "faction", description: "来自三颗太阳下、技术远胜地球的异星文明。" },
+      "白塔": { tone: "faction", description: "接收通信并分析三则童话的地球译码机构。" },
+      "画页": { tone: "concept", description: "世界被压成平面的灾难隐喻。" },
+      "轻泡": { tone: "concept", description: "改变航路前方空间曲率的远航隐喻。" },
+      "黑伞": { tone: "concept", description: "通过降低光速隐藏文明的防御隐喻。" },
+      "慢灯": { tone: "concept", description: "让光与信息变慢的局部安全边界。" },
+      "白痕": { tone: "concept", description: "远航在世界后方留下的长期副作用。" },
+      "纸边": { tone: "warning", description: "降维灾难不断推进的边界。" },
+      "坐标": { tone: "warning", description: "宇宙猎手定位文明的危险信息。" }
     }
   },
   startNode: "P00",

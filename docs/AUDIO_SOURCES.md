@@ -33,6 +33,7 @@
 |---|---|---|
 | `SCORE_white_tower` | 地下白塔、译码舱 | Dark Basement |
 | `SCORE_bells_before_paper` | 拾声王国清晨 | Aetherbells |
+| `SCORE_fairytale_air` | 画页之城全章；轻柔、空灵、低音量童话底色 | Above the Clouds + Aetherbells（由 `SCORE_thousand_islands` 再均衡） |
 | `SCORE_paper_edge` | 画页灾害、纸背群星 | Aetherbells + Endgame |
 | `SCORE_hungry_sea` | 饥潮之海 | Blue Whale + Endgame |
 | `SCORE_deep_lantern` | 沉钟岛、深灯王子 | Blue Whale + Aetherbells |

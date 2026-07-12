@@ -10,6 +10,7 @@ const outputDir = path.join(root, "public/game/assets/audio/yun/score");
 
 mkdirSync(buildDir, { recursive: true });
 mkdirSync(outputDir, { recursive: true });
+const derivedOnly = process.argv.includes("--derived-only");
 
 const tracks = [
   {
@@ -75,18 +76,40 @@ const tracks = [
   }
 ];
 
-for (const track of tracks) {
-  const layers = track.layers.map((layer, index) => {
-    const output = path.join(buildDir, `${track.id}-${index}.wav`);
-    makeCircularLayer(layer, output);
-    return output;
-  });
-  const output = path.join(outputDir, `${track.id}.ogg`);
-  masterTrack(layers, output);
-  console.log(`built ${path.relative(root, output)}`);
+if (!derivedOnly) {
+  for (const track of tracks) {
+    const layers = track.layers.map((layer, index) => {
+      const output = path.join(buildDir, `${track.id}-${index}.wav`);
+      makeCircularLayer(layer, output);
+      return output;
+    });
+    const output = path.join(outputDir, `${track.id}.ogg`);
+    masterTrack(layers, output);
+    console.log(`built ${path.relative(root, output)}`);
+  }
 }
 
+buildFairytaleAir();
 rmSync(buildDir, { recursive: true, force: true });
+
+function buildFairytaleAir() {
+  const input = path.join(outputDir, "SCORE_thousand_islands.ogg");
+  const output = path.join(outputDir, "SCORE_fairytale_air.ogg");
+  run("ffmpeg", [
+    "-y", "-v", "error", "-i", input,
+    "-af", [
+      "aformat=sample_rates=48000:channel_layouts=stereo",
+      "highpass=f=95",
+      "lowpass=f=13000",
+      "equalizer=f=240:t=q:w=1:g=-3.2",
+      "equalizer=f=4800:t=q:w=0.8:g=1.4",
+      "volume=0.82",
+      "alimiter=limit=0.88"
+    ].join(","),
+    "-ar", "48000", "-ac", "2", "-c:a", "libvorbis", "-q:a", "5", output
+  ]);
+  console.log(`built ${path.relative(root, output)} (airy fairytale master)`);
+}
 
 function makeCircularLayer(layer, output) {
   const input = path.join(sourcesDir, layer.source);

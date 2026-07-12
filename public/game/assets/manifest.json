@@ -251,6 +251,13 @@
       "volume": 0.34,
       "tags": ["music", "yun-tianming", "score", "cc0-remix"]
     },
+    "SCORE_fairytale_air": {
+      "src": "/game/assets/audio/yun/score/SCORE_fairytale_air.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.22,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix", "fairytale", "airy"]
+    },
     "SCORE_paper_edge": {
       "src": "/game/assets/audio/yun/score/SCORE_paper_edge.ogg",
       "kind": "music",

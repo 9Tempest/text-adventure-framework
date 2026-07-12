@@ -77,7 +77,7 @@
       "title": "拾声王国的清晨",
       "scene": {
         "background": "bg_t1_01",
-        "music": "BGM_02_fairytale_morning",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -208,7 +208,7 @@
       "title": "白纸不会平躺",
       "scene": {
         "background": "bg_t1_02",
-        "music": "BGM_03_tension_strings",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -342,7 +342,7 @@
       "title": "三十九只无声铃",
       "scene": {
         "background": "bg_t1_03",
-        "music": "BGM_04_archive",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -471,7 +471,7 @@
       "title": "封锁失败",
       "scene": {
         "background": "bg_t1_04",
-        "music": "BGM_05_alarm",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -602,7 +602,7 @@
       "title": "折叠不是绘画",
       "scene": {
         "background": "bg_t1_05",
-        "music": "BGM_06_decode_soft",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -732,7 +732,7 @@
       "title": "世界不止一座岛",
       "scene": {
         "background": "bg_t1_06",
-        "music": "BGM_07_world_map",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -866,7 +866,7 @@
       "title": "旋转黑伞",
       "scene": {
         "background": "bg_t1_07",
-        "music": "BGM_08_black_umbrella",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -1004,7 +1004,7 @@
       "title": "童话中的第一条公式",
       "scene": {
         "background": "bg_t1_08",
-        "music": "BGM_06_decode_soft",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -1129,7 +1129,7 @@
       "title": "伞不能太快，也不能太慢",
       "scene": {
         "background": "bg_t1_09",
-        "music": "BGM_08_black_umbrella",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -1264,7 +1264,7 @@
       "title": "离宫",
       "scene": {
         "background": "bg_t1_10",
-        "music": "BGM_09_escape_low",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [
@@ -1384,7 +1384,7 @@
       "title": "一掌宽的世界",
       "scene": {
         "background": "bg_t1_11",
-        "music": "BGM_10_cosmic_fear",
+        "music": "SCORE_fairytale_air",
         "transition": "fade"
       },
       "steps": [

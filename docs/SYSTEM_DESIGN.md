@@ -156,6 +156,7 @@ type StoryNode = {
 - `steps` 顺序执行。
 - `line` step 会暂停并等待玩家继续。
 - `chapter/location/layer/progress/ending` 是纯展示元数据；runtime 保持确定性，播放器按 story 数据渲染 HUD 和结局页。
+- `presentation.highlightTerms` 由播放器用于人物、概念、危险词与阵营词的统一高亮，不改变 runtime 语义。
 - `set/inc/toggle/unset/sfx/jump` 会自动执行，直到遇到下一个 `line`、`choices` 或 ending。
 - `choices` 出现在 node 末尾。
 - 没有 `choices` 但有 `next` 时自动进入下一个 node。

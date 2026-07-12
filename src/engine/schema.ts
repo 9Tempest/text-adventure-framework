@@ -47,7 +47,14 @@ export const StoryPresentationSchema = z.object({
       glyph: z.string().optional()
     })
   ).default({}).optional(),
-  metricLabels: z.record(z.string(), z.string().min(1)).default({}).optional()
+  metricLabels: z.record(z.string(), z.string().min(1)).default({}).optional(),
+  highlightTerms: z.record(
+    z.string().min(1),
+    z.object({
+      tone: z.enum(["person", "concept", "warning", "faction"]),
+      description: z.string().optional()
+    })
+  ).default({}).optional()
 });
 
 export const EndingMetaSchema = z.object({
