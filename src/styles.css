@@ -669,6 +669,14 @@ button:disabled {
   text-shadow: 0 0 18px currentColor;
 }
 
+.speaker-role {
+  padding-left: 9px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
 .voice-chip {
   padding: 2px 5px;
   border: 1px solid rgba(var(--layer-accent-rgb), 0.42);
@@ -1230,6 +1238,43 @@ button:disabled {
 
 .backlog-list {
   padding: 17px 7px 24px 0;
+}
+
+.choice-history {
+  display: grid;
+  gap: 7px;
+  margin: 0 0 22px;
+  padding: 13px;
+  border: 1px solid rgba(var(--layer-accent-rgb), 0.22);
+  background: rgba(var(--layer-accent-rgb), 0.055);
+}
+
+.choice-history > span {
+  color: var(--layer-accent);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.choice-history > div {
+  display: grid;
+  gap: 2px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.choice-history small {
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+
+.choice-history strong {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.55;
 }
 
 .backlog-entry {

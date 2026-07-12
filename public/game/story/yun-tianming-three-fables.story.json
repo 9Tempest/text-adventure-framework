@@ -69,7 +69,7 @@
       },
       "鹿暝": {
         "tone": "person",
-        "description": "画页之城的年轻王子，也是玩家在童话中的主要视角。"
+        "description": "画页之城的年轻王女，也是玩家在童话中的主要视角。"
       },
       "槐姨": {
         "tone": "person",
@@ -168,81 +168,104 @@
     {
       "id": "luming",
       "name": "鹿暝",
+      "role": "拾声王国的年轻王女",
+      "bio": "替玩家追问童话里每一种生路的代价。",
       "color": "#f3d6a1"
     },
     {
       "id": "huaiyi",
       "name": "槐姨",
+      "role": "王子的照料者与民间记忆",
+      "bio": "总能把宏大方案重新落到具体的人身上。",
       "color": "#d8c4a7"
     },
     {
       "id": "sailor",
       "name": "风帆卫士",
+      "role": "来自王国之外的航海者",
+      "bio": "知道远航能保存文明，却带不走所有人。",
       "color": "#8fc7df"
     },
     {
       "id": "folding_artisan",
       "name": "折页匠",
+      "role": "带来异常白纸的神秘画师",
+      "bio": "他的人形之下，藏着让世界失去厚度的灾难。",
       "color": "#e6e8ef"
     },
     {
       "id": "umbrella_master",
       "name": "空伞师",
+      "role": "慢光黑伞的守护者",
+      "bio": "知道庇护与牢笼之间只差一个参数。",
       "color": "#99b7d2"
     },
     {
       "id": "prince_li",
       "name": "砾亲王",
+      "role": "把秩序看得比疑问更重的摄政者",
       "color": "#d29086"
     },
     {
       "id": "deep_prince",
       "name": "潜灯王子",
+      "role": "深海坐标与两条生路的守门人",
+      "bio": "保管远航与慢光，也保管二者不愿被说出的代价。",
       "color": "#82d8d0"
     },
     {
       "id": "decoder",
       "name": "译码员",
+      "role": "你 · 白塔报告的执笔者",
       "color": "#dbe8ff"
     },
     {
       "id": "chengan",
       "name": "澄安",
+      "role": "白塔通信负责人",
+      "bio": "保护云天明话语中的感情、动机与普通人。",
       "color": "#f0c9aa"
     },
     {
       "id": "monitor_voice",
       "name": "监察音",
+      "role": "守在线路上的异星审查系统",
       "color": "#ff8585"
     },
     {
       "id": "voyager_y",
       "name": "远航者Y",
+      "role": "云天明 · 受监察的讲述者",
       "color": "#f3df9e"
     },
     {
       "id": "guard",
       "name": "卫兵",
+      "role": "王宫守卫",
       "color": "#d5d8df"
     },
     {
       "id": "merchant_old",
       "name": "老海商",
+      "role": "南港幸存者",
       "color": "#c5a783"
     },
     {
       "id": "archive_voice",
       "name": "幸存者档案",
+      "role": "结局记录",
       "color": "#a9c7d8"
     },
     {
       "id": "reviewer",
       "name": "文学评审",
+      "role": "把警告当作作品的人",
       "color": "#c2bdc9"
     },
     {
       "id": "alien_archive",
       "name": "异星译文",
+      "role": "在遥远未来拆开故事的人",
       "color": "#a4f4dc"
     }
   ],
@@ -265,31 +288,19 @@
         },
         {
           "type": "line",
-          "text": "很久以前，人类仰望群星，以为黑暗只是距离。后来他们才知道，黑暗也是礼貌：活得足够久的文明，都懂得不让陌生目光找到自己的门。"
+          "text": "人类曾向群星发出问候，后来才知道：黑暗中有猎手，而坐标就是敲响自己家门的声音。"
         },
         {
           "type": "line",
-          "text": "四光年外，三颗太阳照着另一个世界。那里的文明听见了地球，地球也看见了他们。两边隔着漫长夜色，却像两个人同时在雪地里发现了对方的脚印。"
+          "text": "四光年外的三体文明听见了地球。战争与短暂和平之后，一个被送往他们舰队的地球人，获得了向故乡通话一次的机会。"
         },
         {
           "type": "line",
-          "text": "他们没有成为朋友。一个世界驶来舰队，另一个世界点亮武器；战争、威慑与短暂和平依次登场，每一次握手都藏着计算，每一次沉默都可能是一枚坐标。"
+          "text": "他不能直说武器、灾难或逃生路线，因为监察守着每一个字。于是，他只请求三盏灯，和讲完三个童话的时间。"
         },
         {
           "type": "line",
-          "text": "更远的宇宙里，还有从不询问善恶的猎手。它们只确认哪里亮着，然后让那里重新安静。于是，被看见不再等于被理解，有时只等于来不及逃。"
-        },
-        {
-          "type": "line",
-          "text": "和平最后薄得像一张纸。人类仍能生活、争论、爱人，却知道某些科学名词一旦说出口，通话就会中止；某些正确答案一旦太清楚，世界就会提前关门。"
-        },
-        {
-          "type": "line",
-          "text": "就在这样的年代，一个被送往敌人星海的地球人，请求同故乡说最后一次话。"
-        },
-        {
-          "type": "line",
-          "text": "他没有索要军队，也没有索要纪念碑。他只请求三盏灯，和讲完三个童话所需的一点时间。"
+          "text": "他的名字叫云天明。现在，他正在很远的地方等你听懂。"
         }
       ],
       "choices": [
@@ -321,123 +332,31 @@
         },
         {
           "type": "line",
-          "text": "在进入童话以前，先把现实里的名字说清楚。你不需要读过任何旧档案，也不需要认识此前发生过的故事。"
+          "text": "白塔把云天明在通信中的代号记作‘远航者Y’。屏幕另一端的他，和档案里的云天明，是同一个人。"
         },
         {
           "type": "line",
-          "text": "云天明，是一个出生在地球的人。身患绝症时，他参加了人类的‘阶梯计划’：身体留在故乡，大脑被装进探测器，送往正在逼近太阳系的三体舰队。那是一趟没有返航舱的远行。"
+          "text": "你是译码员：听出童话里的灾难、生路与代价，再决定向人类提交什么。澄安守护故事里的人心；监察音则等待你说错一个过于直白的词。"
         },
         {
           "type": "line",
-          "text": "三体文明来自四光年外一个被三颗太阳反复毁灭的世界。他们拥有远胜地球的技术，也曾派出舰队准备占领太阳系；后来，两个文明在威慑下维持着脆弱和平。"
+          "text": "现实层是白塔，童话层是云天明的故事。你不必先背人名——他们会在登场时，亲自让你认识。"
         },
         {
           "type": "line",
-          "text": "三体舰队在星海中找到了云天明，并用异星技术重新构造了他。多年以后，他获准向地球通话一次，但三体监察系统会监听每个字：公式、武器和逃生路线一旦说得太直白，通信就会立刻中止。"
-        },
-        {
-          "type": "line",
-          "text": "所以，‘远航者Y’不是另一个人。那是云天明在这次受监控通信中的代号；三则童话，都由他讲述。"
-        },
-        {
-          "type": "line",
-          "text": "澄安是白塔的通信负责人。她负责保护云天明话语中的感情、动机和对普通人的牵挂，防止技术分析把讲故事的人也一并删去。"
-        },
-        {
-          "type": "line",
-          "text": "你就是画面上所说的‘译码员’。你的工作是从童话里辨认宇宙灾难、逃生办法与防御方案，并决定最后向人类提交什么报告。你的选择会改变结局。"
-        },
-        {
-          "type": "line",
-          "text": "‘监察音’来自三体一方。它不是同伴，也不是童话角色，而是守在通信线路上的审查系统。界面中的‘监察’数值过高，通话会被切断。"
-        },
-        {
-          "type": "line",
-          "text": "这场游戏因此发生在两个地方：现实中的白塔译码舱，以及云天明讲述的三个童话王国。画面标为‘现实层’时，你在白塔；标为‘童话层’时，你正在故事内部。"
-        },
-        {
-          "type": "line",
-          "text": "现在，现实里的名字已经放稳。下一页档案，只介绍你即将在童话里遇见的人。"
+          "text": "记住一件事就够了：没有一条船能带走所有人，也没有一把伞只提供保护。"
         }
       ],
       "choices": [
         {
           "id": "P01_C01",
-          "text": "继续阅读童话人物索引",
-          "target": "P02",
-          "effects": [],
-          "hint": "先认识他们，再走进他们的命运"
-        }
-      ],
-      "progress": 0.024
-    },
-    {
-      "id": "P02",
-      "title": "灯亮以前的人名册",
-      "chapter": "引言 · 三则童话的人物",
-      "location": "白塔译码台 / 人物索引",
-      "layer": "reality",
-      "scene": {
-        "background": "bg_r00",
-        "music": "SCORE_white_tower",
-        "transition": "dissolve"
-      },
-      "steps": [
-        {
-          "type": "sfx",
-          "audio": "SFX_data_lock"
-        },
-        {
-          "type": "line",
-          "text": "鹿暝，是第一则童话《画页之城》的年轻王子，也是你进入童话后的主要视角。他并不知道世界将发生什么；他的职责，是替玩家发问并作出选择。"
-        },
-        {
-          "type": "line",
-          "text": "槐姨，是照料鹿暝长大的宫廷女官。她熟悉王城里的普通人，总会提醒王子：任何宏大的救亡方案，最后都要落在具体姓名和具体生活上。"
-        },
-        {
-          "type": "line",
-          "text": "折页匠，是突然进入王宫的神秘画师。他与人口失踪和异常白纸有关。在隐喻层面，他带来的不是普通魔法，而是一种能让整个世界失去厚度的灾难。"
-        },
-        {
-          "type": "line",
-          "text": "风帆卫士，是来自王国之外的航海者。他知道世界不只一座岛，也知道远航可以保存文明，却不可能让每个人同时离开。"
-        },
-        {
-          "type": "line",
-          "text": "空伞师，守着一把旋转黑伞。他掌握一种让光和信息变慢的保护方式；它能隐藏一座城，也可能把受到保护的人永远关在里面。"
-        },
-        {
-          "type": "line",
-          "text": "潜灯王子，在第三则童话中守候于深海。他知道如何熄灭一个世界的坐标，也保管着故事最后的两条生路：向外远航，或向内藏起灯火。"
-        },
-        {
-          "type": "line",
-          "text": "砾亲王、卫兵、老海商等人物会在登场时说明身份，你不必提前记住。真正需要记住的是：纸象征降维灾难，轻泡象征远航技术，黑伞与慢灯象征隐藏文明的防御。"
-        },
-        {
-          "type": "line",
-          "text": "这些角色不是现实人物的一一化名。云天明把人物、技术和文明揉在一起，是为了让真相穿过监察；你要寻找的不是标准答案，而是每个比喻同时保存了哪些事实与代价。"
-        },
-        {
-          "type": "line",
-          "text": "三盏灯已经放上译码台。第一盏属于画页，第二盏属于饥潮，第三盏沉在无人敢点亮的深海。"
-        },
-        {
-          "type": "line",
-          "text": "从下一刻开始，说明结束，故事开始。"
-        }
-      ],
-      "choices": [
-        {
-          "id": "P02_C01",
-          "text": "我明白了，走进白塔",
+          "text": "进入白塔，接通云天明",
           "target": "R00",
           "effects": [],
-          "hint": "听云天明亲自点亮第一盏灯"
+          "hint": "说明结束 · 接下来的人物会在登场时介绍"
         }
       ],
-      "progress": 0.049
+      "progress": 0.025
     },
     {
       "id": "R00",
@@ -466,7 +385,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "讯使没有发来公式，也没有发来坐标。他只说：请把它当作童话听完。"
+          "text": "讯使没有发来公式，也没有发来坐标。他只说：请把它当作童话听完。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -476,7 +396,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "那我们要先保证它活着抵达，再决定怎样把它拆开。"
+          "text": "那我们要先保证它活着抵达，再决定怎样把它拆开。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -490,7 +411,8 @@
         {
           "type": "line",
           "speaker": "voyager_y",
-          "text": "很久以前，有一座把人的一生写进铃铛的王国。"
+          "text": "很久以前，有一座把人的一生写进铃铛的王国。",
+          "portrait": "portrait_yun_tianming"
         },
         {
           "type": "line",
@@ -499,7 +421,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "答应我一件事。别急着证明自己聪明。先听他把故事讲完。"
+          "text": "答应我一件事。别急着证明自己聪明。先听他把故事讲完。",
+          "portrait": "portrait_chengan"
         }
       ],
       "choices": [
@@ -553,7 +476,7 @@
           "hint": "推演 · 童话可能因此变薄"
         }
       ],
-      "progress": 0.073
+      "progress": 0.05
     },
     {
       "id": "R01",
@@ -574,7 +497,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "它不像求救，更像遗嘱；不像谎言，更像只允许以谎言形式出现的真话。"
+          "text": "它不像求救，更像遗嘱；不像谎言，更像只允许以谎言形式出现的真话。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -593,7 +517,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "如果我们只听技术，会弄丢他为什么冒险；如果只听感情，会弄丢他冒险带来的东西。"
+          "text": "如果我们只听技术，会弄丢他为什么冒险；如果只听感情，会弄丢他冒险带来的东西。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -603,7 +528,8 @@
         {
           "type": "line",
           "speaker": "voyager_y",
-          "text": "第一盏灯亮起时，王国正迎来一个太过美丽的清晨。"
+          "text": "第一盏灯亮起时，王国正迎来一个太过美丽的清晨。",
+          "portrait": "portrait_yun_tianming"
         },
         {
           "type": "line",
@@ -619,7 +545,7 @@
           "hint": "画页灯亮起"
         }
       ],
-      "progress": 0.098
+      "progress": 0.075
     },
     {
       "id": "T1_01",
@@ -633,6 +559,10 @@
         {
           "type": "sfx",
           "audio": "SFX_wind_chimes"
+        },
+        {
+          "type": "line",
+          "text": "鹿暝是拾声王国最年轻的王女。今日陪她登上露台的槐姨，自幼照料她，也记得城里每一个容易被宫廷忘记的名字。"
         },
         {
           "type": "sfx",
@@ -652,13 +582,15 @@
           "type": "line",
           "id": "T1_01_L03",
           "text": "父王说，故事能让人记得自己是谁。可昨夜之后，王宫里少了三十九只铃。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_01_L04",
           "text": "不是铃丢了，是铃的主人不见了。连影子都没留下。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -669,13 +601,15 @@
           "type": "line",
           "id": "T1_01_L06",
           "text": "名单给我。不要删掉职位低的人，也不要用‘暂缺’这种词。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_01_L07",
           "text": "殿下，名单最可怕的地方不在名字，而在旁边的空白。亲人们开始想不起他们的声音。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -691,13 +625,15 @@
           "type": "line",
           "id": "T1_01_L10",
           "text": "他什么时候进宫的？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_01_L11",
           "text": "砾亲王亲自请来的。理由是给先王画最后一幅像。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -754,7 +690,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "拾声王国 / 王城露台",
       "layer": "fairytale",
-      "progress": 0.122
+      "progress": 0.1
     },
     {
       "id": "T1_02",
@@ -771,6 +707,10 @@
         },
         {
           "type": "line",
+          "text": "画室中央站着折页匠——一位来历不明的画师。他带来的白纸从不平躺，像有什么东西正从纸背向外呼吸。"
+        },
+        {
+          "type": "line",
           "id": "T1_02_L01",
           "text": "新画室里没有颜料味，只有一种干净到刺鼻的寒意。窗外的海光落在地上，却在靠近白纸时突然变暗。"
         },
@@ -778,31 +718,36 @@
           "type": "line",
           "id": "T1_02_L02",
           "text": "殿下，纸不愿意变平，是因为世界本来不该只有一面。",
-          "speaker": "folding_artisan"
+          "speaker": "folding_artisan",
+          "portrait": "portrait_folding_artisan"
         },
         {
           "type": "line",
           "id": "T1_02_L03",
           "text": "王国请你作画，不是请你讲谜语。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_02_L04",
           "text": "谜语是最安全的礼节。直话会让人以为自己已经懂了。",
-          "speaker": "folding_artisan"
+          "speaker": "folding_artisan",
+          "portrait": "portrait_folding_artisan"
         },
         {
           "type": "line",
           "id": "T1_02_L05",
           "text": "你昨夜画了谁？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_02_L06",
           "text": "我只画我看见的。至于他们是否还站在这里，那是纸的礼仪。",
-          "speaker": "folding_artisan"
+          "speaker": "folding_artisan",
+          "portrait": "portrait_folding_artisan"
         },
         {
           "type": "line",
@@ -813,13 +758,15 @@
           "type": "line",
           "id": "T1_02_L08",
           "text": "纸上为什么没有人？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_02_L09",
           "text": "殿下总以为画像该像窗户。其实高级的画更像门。门打开后，谁还需要留在门框上？",
-          "speaker": "folding_artisan"
+          "speaker": "folding_artisan",
+          "portrait": "portrait_folding_artisan"
         },
         {
           "type": "line",
@@ -830,7 +777,8 @@
           "type": "line",
           "id": "T1_02_L11",
           "text": "请别靠太近。被看见是一种邀请。",
-          "speaker": "folding_artisan"
+          "speaker": "folding_artisan",
+          "portrait": "portrait_folding_artisan"
         },
         {
           "type": "line",
@@ -892,7 +840,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 新画室",
       "layer": "fairytale",
-      "progress": 0.146
+      "progress": 0.125
     },
     {
       "id": "T1_03",
@@ -916,19 +864,22 @@
           "type": "line",
           "id": "T1_03_L02",
           "text": "失踪的人没有血迹，没有脚印。连别人对他们的记忆都像被压薄了。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_03_L03",
           "text": "压薄？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_03_L04",
           "text": "像旧纸被水泡过，再被石头压干。还在，可字迹浅得让人怀疑自己是不是编出来的。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -939,13 +890,15 @@
           "type": "line",
           "id": "T1_03_L06",
           "text": "只有画像还记得他们？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_03_L07",
           "text": "不。画像不是记得，画像是在占有。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -956,19 +909,22 @@
           "type": "line",
           "id": "T1_03_L09",
           "text": "别用手碰。拿玻璃匣。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_03_L10",
           "text": "殿下，你从小最讨厌宫廷规矩。今天倒谨慎。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_03_L11",
           "text": "因为这不像刺客。刺客留下缺口，它留下的是更平整的东西。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -1005,7 +961,8 @@
               "key": "politics",
               "by": 1
             }
-          ]
+          ],
+          "hint": "调查方向 · 追查灾害从何处来到王国"
         },
         {
           "id": "T1_03_C03",
@@ -1024,7 +981,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 铃档馆",
       "layer": "fairytale",
-      "progress": 0.171
+      "progress": 0.15
     },
     {
       "id": "T1_04",
@@ -1068,13 +1025,15 @@
           "type": "line",
           "id": "T1_04_L05",
           "text": "停下！所有人后退，不要看纸！",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_04_L06",
           "text": "殿下，命令来得太晚的时候，也是一种装饰。",
-          "speaker": "folding_artisan"
+          "speaker": "folding_artisan",
+          "portrait": "portrait_folding_artisan"
         },
         {
           "type": "line",
@@ -1091,13 +1050,15 @@
           "type": "line",
           "id": "T1_04_L09",
           "text": "这不是武器对武器。我们越像一支军队，就越像纸上容易处理的图案。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_04_L10",
           "text": "殿下，西廊的影子也开始变薄了。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -1159,7 +1120,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 西廊",
       "layer": "fairytale",
-      "progress": 0.195
+      "progress": 0.175
     },
     {
       "id": "T1_05",
@@ -1176,6 +1137,10 @@
         },
         {
           "type": "line",
+          "text": "槐姨推开观星廊的暗门，一名披着旧海蓝斗篷的男人正在等候。他叫风帆卫士，来自王国以外；他看过地图边缘的海，也知道一艘船能救下谁、又必然留下谁。"
+        },
+        {
+          "type": "line",
           "id": "T1_05_L01",
           "text": "观星廊悬在王宫最高处，平日里用于测潮和祭星。今日，星图被摊开，亮粉样本被封在一枚透明小匣里。"
         },
@@ -1183,37 +1148,43 @@
           "type": "line",
           "id": "T1_05_L02",
           "text": "他不是把人画进纸里。他是在把人的世界折成纸。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_05_L03",
           "text": "这句话听起来不像童话。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_05_L04",
           "text": "所以它才必须被说成童话。北陆白城的匠人都这样说：能被看见的东西，终有一天会被做成平面。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_05_L05",
           "text": "北陆白城知道这种灾害？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_05_L06",
           "text": "知道，使用过，也害怕过。每个把灾害当技艺的地方，最后都会给技艺换一个优雅名字。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_05_L07",
           "text": "那要怎么不被看见？",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -1224,7 +1195,8 @@
           "type": "line",
           "id": "T1_05_L09",
           "text": "有些人躲进慢光，有些人离开坐标，有些人假装自己只是在撑伞。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -1235,13 +1207,15 @@
           "type": "line",
           "id": "T1_05_L11",
           "text": "钟楼什么时候有人住了？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_05_L12",
           "text": "从昨夜开始。或者说，从我们愿意承认昨夜开始。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         }
       ],
       "choices": [
@@ -1255,7 +1229,8 @@
               "key": "clue_umbrella",
               "by": 1
             }
-          ]
+          ],
+          "hint": "防御方向 · 寻找旋转黑伞与它的守护者"
         },
         {
           "id": "T1_05_C02",
@@ -1267,7 +1242,8 @@
               "key": "worlds",
               "by": 1
             }
-          ]
+          ],
+          "hint": "调查方向 · 追查灾害从何处来到王国"
         },
         {
           "id": "T1_05_C03",
@@ -1291,7 +1267,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 观星廊",
       "layer": "fairytale",
-      "progress": 0.22
+      "progress": 0.2
     },
     {
       "id": "T1_06",
@@ -1315,19 +1291,22 @@
           "type": "line",
           "id": "T1_06_L02",
           "text": "殿下，拾声王国的海图只画到灯塔。灯塔外还有岛，岛外还有大陆，大陆外还有从不点灯的港。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_06_L03",
           "text": "我们的课本说灯塔外是无风区。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_06_L04",
           "text": "课本常把无知画成无风。这样船就不会想走太远。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -1338,25 +1317,29 @@
           "type": "line",
           "id": "T1_06_L06",
           "text": "那北陆为什么来我们这里？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_06_L07",
           "text": "也许是交易，也许是试验，也许只是因为我们亮着。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_06_L08",
           "text": "亮着也有罪？",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_06_L09",
           "text": "在黑海上，灯不是罪，却会告诉猎手哪里有岸。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -1367,7 +1350,8 @@
           "type": "line",
           "id": "T1_06_L11",
           "text": "如果被看见本身就是危险，那王城每一座钟楼都是信号塔。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -1429,7 +1413,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 地图厅",
       "layer": "fairytale",
-      "progress": 0.244
+      "progress": 0.225
     },
     {
       "id": "T1_07",
@@ -1445,6 +1429,10 @@
           "audio": "SFX_umbrella_spin"
         },
         {
+          "type": "line",
+          "text": "钟楼顶层住着空伞师。他守着一把能让光变慢的黑伞，也守着庇护何时会变成牢笼的秘密。"
+        },
+        {
           "type": "sfx",
           "audio": "SFX_clock_creak"
         },
@@ -1457,19 +1445,22 @@
           "type": "line",
           "id": "T1_07_L02",
           "text": "别让伞停。停了，纸会想起我。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
           "id": "T1_07_L03",
           "text": "你也会被折进去？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_07_L04",
           "text": "我已经被折了一半。旋转只是让另一半暂时忘记该往哪里倒。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
@@ -1480,25 +1471,29 @@
           "type": "line",
           "id": "T1_07_L06",
           "text": "这伞靠什么撑住你？骨架？咒语？",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_07_L07",
           "text": "靠慢。让光慢一点，让消息慢一点，让纸的命令在路上多迷失一会儿。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
           "id": "T1_07_L08",
           "text": "慢能救人？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_07_L09",
           "text": "慢不能救所有人。慢只是在追杀到来前，挖出一间暂时没有门的屋子。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
@@ -1509,7 +1504,8 @@
           "type": "line",
           "id": "T1_07_L11",
           "text": "记住，殿下。伞是盾，也是牢。忘记后半句的人，最后会把牢叫作故乡。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
@@ -1571,7 +1567,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 废弃钟楼",
       "layer": "fairytale",
-      "progress": 0.268
+      "progress": 0.25
     },
     {
       "id": "T1_08",
@@ -1601,7 +1597,8 @@
           "type": "line",
           "id": "T1_08_L03",
           "text": "他说得这么明显，为什么监察还允许？",
-          "speaker": "chengan"
+          "speaker": "chengan",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -1619,7 +1616,8 @@
           "type": "line",
           "id": "T1_08_L06",
           "text": "那我们现在是在翻译，还是在帮他继续撒谎？",
-          "speaker": "chengan"
+          "speaker": "chengan",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -1648,7 +1646,8 @@
           "type": "line",
           "id": "T1_08_L11",
           "text": "继续听吗？",
-          "speaker": "chengan"
+          "speaker": "chengan",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -1700,7 +1699,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "白塔译码舱 / 临时插入",
       "layer": "decode",
-      "progress": 0.293
+      "progress": 0.275
     },
     {
       "id": "T1_09",
@@ -1724,49 +1723,57 @@
           "type": "line",
           "id": "T1_09_L02",
           "text": "伞快了，伞下的人会永远听不见外面的钟。伞慢了，外面的纸会先听见你。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
           "id": "T1_09_L03",
           "text": "所以它既是盾，也是牢。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_09_L04",
           "text": "每一种幸存都有价格。别让价格伪装成胜利。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
           "id": "T1_09_L05",
           "text": "有没有刚刚好的速度？",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_09_L06",
           "text": "有。可刚刚好不是一个数字，而是一种纪律。守伞的人必须承认自己也可能把人关死。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
           "id": "T1_09_L07",
           "text": "北陆许多城邦撑过伞。后来，有的活下来，有的连求救信都传不出来。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_09_L08",
           "text": "如果王国需要它，我要谁来决定伞速？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_09_L09",
           "text": "不能只交给害怕的人，也不能只交给想赢的人。害怕会把伞转成坟墓，胜利会把伞停在庆典上。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
@@ -1777,7 +1784,8 @@
           "type": "line",
           "id": "T1_09_L11",
           "text": "去海边。纸有边，海也有牙。你要在被折平前，学会让路弯开。",
-          "speaker": "umbrella_master"
+          "speaker": "umbrella_master",
+          "portrait": "portrait_umbrella_master"
         },
         {
           "type": "line",
@@ -1839,7 +1847,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 废弃钟楼",
       "layer": "fairytale",
-      "progress": 0.317
+      "progress": 0.3
     },
     {
       "id": "T1_10",
@@ -1873,7 +1881,8 @@
           "type": "line",
           "id": "T1_10_L03",
           "text": "我不是去继承王国。我要先确认它还能不能被继承。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -1885,7 +1894,8 @@
           "type": "line",
           "id": "T1_10_L05",
           "text": "王座太高，看不见纸边。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -1896,7 +1906,8 @@
           "type": "line",
           "id": "T1_10_L07",
           "text": "殿下，别跟他争。王宫西侧已经薄到能看见背后的日出。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -1907,7 +1918,8 @@
           "type": "line",
           "id": "T1_10_L09",
           "text": "去海边。若还有答案，它不会在宫墙里。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -1919,7 +1931,8 @@
           "type": "line",
           "id": "T1_10_L11",
           "text": "留下来等死的人，也没有资格替所有人定义勇敢。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -1938,7 +1951,8 @@
               "key": "act1_done",
               "by": 1
             }
-          ]
+          ],
+          "hint": "进入第二则 · 从画页之城转向饥潮之海"
         },
         {
           "id": "T1_10_C02",
@@ -1962,7 +1976,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 后门雪阶",
       "layer": "fairytale",
-      "progress": 0.341
+      "progress": 0.325
     },
     {
       "id": "T1_11",
@@ -1990,25 +2004,29 @@
           "type": "line",
           "id": "T1_11_L02",
           "text": "它没有一下子吞掉城。它在长大。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_11_L03",
           "text": "灾害有速度，就意味着还有逃离窗口。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_11_L04",
           "text": "窗口会关上吗？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T1_11_L05",
           "text": "所有窗口都会关上。区别只在于你是否在它关上前承认它是窗口。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2019,13 +2037,15 @@
           "type": "line",
           "id": "T1_11_L07",
           "text": "一掌宽，已经够埋葬一间屋。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T1_11_L08",
           "text": "一夜，足够埋葬一个王国。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2036,13 +2056,15 @@
           "type": "line",
           "id": "T1_11_L10",
           "text": "殿下，海风变了。饥潮要涨。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T1_11_L11",
           "text": "那就去海边。把纸的速度、伞的代价、王国的位置都带走。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2086,7 +2108,7 @@
       "chapter": "第一则 · 画页之城",
       "location": "王宫 / 城墙高处",
       "layer": "fairytale",
-      "progress": 0.366
+      "progress": 0.35
     },
     {
       "id": "T2_01",
@@ -2114,19 +2136,22 @@
           "type": "line",
           "id": "T2_01_L02",
           "text": "它们叫饥潮鳞。不是鱼，更像海自己长出的牙。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_01_L03",
           "text": "牙为什么会长在海里？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_01_L04",
           "text": "因为有人把不该开箱的货箱扔进了水里。也因为海从不替陆地保守秘密。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2137,25 +2162,29 @@
           "type": "line",
           "id": "T2_01_L06",
           "text": "要去沉钟岛，就必须穿过它们。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_01_L07",
           "text": "我宁愿相信厨房还有比王室海军更有用的东西。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_01_L08",
           "text": "厨房？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_01_L09",
           "text": "灾难进宫时，常常先被贵族当成玩意儿。香料、药膏、浴皂——名字越无害，越没人问它从哪里来。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -2166,7 +2195,8 @@
           "type": "line",
           "id": "T2_01_L11",
           "text": "别误会。伞只能让它们迟疑，不能让船变成不存在。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2223,7 +2253,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "拾声王国 / 南港",
       "layer": "fairytale",
-      "progress": 0.39
+      "progress": 0.375
     },
     {
       "id": "T2_02",
@@ -2247,19 +2277,22 @@
           "type": "line",
           "id": "T2_02_L02",
           "text": "许多年前，一艘北陆货船在近海裂开。它运来的东西，有些成了灾，有些被当作奢侈品。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_02_L03",
           "text": "同一个地方来的灾难和救命物？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_02_L04",
           "text": "贵族买东西从不问它本来是做什么的。只问稀不稀有，漂不漂亮，能不能显得自己见过世界。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -2270,19 +2303,22 @@
           "type": "line",
           "id": "T2_02_L06",
           "text": "它们被分到哪里？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_02_L07",
           "text": "饥潮鳞落海。黑膜伞骨被旧匠人买走。轻泡晶进了王室浴室。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_02_L08",
           "text": "我记得那东西。王后夸它洗完像躺在云里，连悲伤都懒得动。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -2293,13 +2329,15 @@
           "type": "line",
           "id": "T2_02_L10",
           "text": "需要快马去追的浴皂？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_02_L11",
           "text": "这就是北陆商品最常见的谎言。它把危险写进浪漫里。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2349,13 +2387,14 @@
               "key": "politics",
               "by": 1
             }
-          ]
+          ],
+          "hint": "责任方向 · 追问是谁把危险当作商品"
         }
       ],
       "chapter": "第二则 · 饥潮之海",
       "location": "南港 / 破船税关",
       "layer": "fairytale",
-      "progress": 0.415
+      "progress": 0.4
     },
     {
       "id": "T2_03",
@@ -2383,13 +2422,15 @@
           "type": "line",
           "id": "T2_03_L02",
           "text": "这种皂洗完，人会舒服得不想动。王后说它像把身体交给云。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_03_L03",
           "text": "不想动，还是不需要动？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2405,25 +2446,29 @@
           "type": "line",
           "id": "T2_03_L06",
           "text": "北陆骑最快的马去追这些泡。追上了，才能做成一小块。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_03_L07",
           "text": "马追泡沫，不是因为泡沫会跑，是因为泡沫让路变短？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_03_L08",
           "text": "也可能是让追的人以为自己没有在动。北陆的说法总有两层。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_03_L09",
           "text": "殿下，看水盆。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -2434,7 +2479,8 @@
           "type": "line",
           "id": "T2_03_L11",
           "text": "如果船首能让海先让路，就不必和饥潮鳞比牙齿。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2496,7 +2542,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "王宫 / 废弃浴室",
       "layer": "fairytale",
-      "progress": 0.439
+      "progress": 0.425
     },
     {
       "id": "T2_04",
@@ -2524,7 +2570,8 @@
           "type": "line",
           "id": "T2_04_L02",
           "text": "所有弩机只做警戒，不准先射。我们观察它们怎么靠近。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2546,19 +2593,22 @@
           "type": "line",
           "id": "T2_04_L06",
           "text": "饥潮不怕大。大，只是更容易被发现。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_04_L07",
           "text": "那我们需要不是更强的船，而是更不像船的船。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_04_L08",
           "text": "王室最擅长把错误做得很壮观。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -2575,7 +2625,8 @@
           "type": "line",
           "id": "T2_04_L11",
           "text": "把幸存水兵带回去。失败也要记录清楚。尤其记录我们为什么以为力量能解决一切。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2618,13 +2669,14 @@
         {
           "id": "T2_04_C03",
           "text": "回到税关查同源货物",
-          "target": "T2_02"
+          "target": "T2_02",
+          "hint": "调查方向 · 追查北陆货物与灾害源头"
         }
       ],
       "chapter": "第二则 · 饥潮之海",
       "location": "南港 / 军船码头",
       "layer": "fairytale",
-      "progress": 0.463
+      "progress": 0.45
     },
     {
       "id": "T2_05",
@@ -2652,7 +2704,8 @@
           "type": "line",
           "id": "T2_05_L02",
           "text": "我把泡沫放进水里了。看那几片饥潮鳞。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -2663,25 +2716,29 @@
           "type": "line",
           "id": "T2_05_L04",
           "text": "泡沫不是毒。它改变的是路。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_05_L05",
           "text": "如果一艘船能让前方的海先忘记自己有重量，也许它就能滑过去。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_05_L06",
           "text": "听起来像作弊。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_05_L07",
           "text": "活下去的办法常像作弊。区别在于，作弊会留下什么账。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2692,19 +2749,22 @@
           "type": "line",
           "id": "T2_05_L09",
           "text": "别高兴太早。船前的路弯开，船后的路也会记住自己被弯过。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_05_L10",
           "text": "尾迹？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_05_L11",
           "text": "有些尾迹比船更长寿。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2766,7 +2826,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "南港 / 小码头",
       "layer": "fairytale",
-      "progress": 0.488
+      "progress": 0.475
     },
     {
       "id": "T2_06",
@@ -2796,7 +2856,8 @@
           "type": "line",
           "id": "T2_06_L03",
           "text": "你们把未知当作商品，把事故当作账损。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2808,13 +2869,15 @@
           "type": "line",
           "id": "T2_06_L05",
           "text": "盖印的人大多已经变成画像，别拿死人给自己垫脚。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_06_L06",
           "text": "这也是一种坐标。愚蠢会指向文明。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2831,7 +2894,8 @@
           "type": "line",
           "id": "T2_06_L09",
           "text": "追上去之后呢？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2848,7 +2912,8 @@
           "type": "line",
           "id": "T2_06_L12",
           "text": "把这句话抄三遍，贴到船坞门口。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         }
       ],
       "choices": [
@@ -2900,7 +2965,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "南港 / 海商会馆",
       "layer": "fairytale",
-      "progress": 0.512
+      "progress": 0.5
     },
     {
       "id": "T2_07",
@@ -2928,19 +2993,22 @@
           "type": "line",
           "id": "T2_07_L02",
           "text": "它看上去不像能救一个王国。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_07_L03",
           "text": "能救王国的东西，通常先要承认自己救不了整个王国。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_07_L04",
           "text": "那它至少要救出一个答案。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -2951,25 +3019,29 @@
           "type": "line",
           "id": "T2_07_L06",
           "text": "伞绑在桅杆上会不会太显眼？",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_07_L07",
           "text": "它不是给岸上的人看的，是给纸和饥潮看的。让它们迟疑，让路来不及闭合。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_07_L08",
           "text": "迟疑能换来多久？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_07_L09",
           "text": "足够好的时候，是一条航线；不够好的时候，是墓志铭。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -2980,7 +3052,8 @@
           "type": "line",
           "id": "T2_07_L11",
           "text": "只带必要的人和全部记录。若有机会，再带更多人。若没有，至少别让后来者重复我们的蠢。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -3047,7 +3120,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "南港 / 临时船坞",
       "layer": "fairytale",
-      "progress": 0.537
+      "progress": 0.525
     },
     {
       "id": "T2_08",
@@ -3071,19 +3144,22 @@
           "type": "line",
           "id": "T2_08_L02",
           "text": "看见了吗？泡沫让船前的海弯开，也让船后的海变慢。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_08_L03",
           "text": "这条尾迹像路，也像牢门。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_08_L04",
           "text": "孩子，能逃出去的办法，也可能把后来的人困住。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -3094,25 +3170,29 @@
           "type": "line",
           "id": "T2_08_L06",
           "text": "尾迹不是泡沫，是被泡沫改过的海。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_08_L07",
           "text": "是路，也是伤口。伤口愈合得慢，追踪者就能顺着它找到你。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_08_L08",
           "text": "如果王城的船都沿着这道白痕出海呢？",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_08_L09",
           "text": "那他们会把自己的港口也拖进慢海。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -3123,7 +3203,8 @@
           "type": "line",
           "id": "T2_08_L11",
           "text": "从现在起，任何好消息必须带上尾迹。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -3190,7 +3271,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "南港外海 / 试航区",
       "layer": "fairytale",
-      "progress": 0.561
+      "progress": 0.55
     },
     {
       "id": "T2_09",
@@ -3223,19 +3304,22 @@
           "type": "line",
           "id": "T2_09_L03",
           "text": "别让伞停。别让泡沫断。别让船尾的白痕被岸上的人误认为道路。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_09_L04",
           "text": "殿下，左舷有鳞影。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_09_L05",
           "text": "别看它。被看见的东西会互相看见。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -3246,25 +3330,29 @@
           "type": "line",
           "id": "T2_09_L07",
           "text": "如果这方法只能救一船人，它算答案吗？",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_09_L08",
           "text": "如果它能让一船人把警告带出去，它就不只是救一船人。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_09_L09",
           "text": "我看不见灯。我只看见海在我们身后合拢。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "id": "T2_09_L10",
           "text": "殿下，沉钟岛的灯在前方。很低，很慢，像不想被任何人发现。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -3341,7 +3429,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "饥潮之海 / 夜航",
       "layer": "fairytale",
-      "progress": 0.585
+      "progress": 0.575
     },
     {
       "id": "T2_10",
@@ -3374,19 +3462,22 @@
           "type": "line",
           "id": "T2_10_L03",
           "text": "太早了。你告诉他们有路，却没告诉他们路会改变海。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_10_L04",
           "text": "我想给他们希望。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_10_L05",
           "text": "希望若少了警告，就会长得像陷阱。",
-          "speaker": "huaiyi"
+          "speaker": "huaiyi",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -3397,19 +3488,22 @@
           "type": "line",
           "id": "T2_10_L07",
           "text": "补发第二条。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "id": "T2_10_L08",
           "text": "第二条会被怀疑，会被骂成胆怯。",
-          "speaker": "sailor"
+          "speaker": "sailor",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "id": "T2_10_L09",
           "text": "那就让他们骂。被误解比被慢海吞掉好。",
-          "speaker": "luming"
+          "speaker": "luming",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -3477,7 +3571,7 @@
       "chapter": "第二则 · 饥潮之海",
       "location": "饥潮之海 / 船尾",
       "layer": "fairytale",
-      "progress": 0.61
+      "progress": 0.6
     },
     {
       "id": "T3_01",
@@ -3502,17 +3596,20 @@
         {
           "type": "line",
           "speaker": "luming",
-          "text": "潜灯王子真的在这里？"
+          "text": "潜灯王子真的在这里？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "sailor",
-          "text": "他在海下。不是被囚禁，是在守一座不会浮起来的图书馆。"
+          "text": "他在海下。不是被囚禁，是在守一座不会浮起来的图书馆。",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "speaker": "huaiyi",
-          "text": "会把家建在海底的人，要么疯了，要么早知道地面靠不住。"
+          "text": "会把家建在海底的人，要么疯了，要么早知道地面靠不住。",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -3521,12 +3618,14 @@
         {
           "type": "line",
           "speaker": "luming",
-          "text": "如果他一直在等，为什么不让钟响得更大？"
+          "text": "如果他一直在等，为什么不让钟响得更大？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "sailor",
-          "text": "因为真正想藏起来的人，连等待也不能发出坐标。"
+          "text": "因为真正想藏起来的人，连等待也不能发出坐标。",
+          "portrait": "portrait_sailor"
         }
       ],
       "choices": [
@@ -3570,7 +3669,7 @@
           "hint": "冒险 · 代价不会立刻出现"
         }
       ],
-      "progress": 0.634
+      "progress": 0.625
     },
     {
       "id": "T3_02",
@@ -3590,18 +3689,25 @@
         },
         {
           "type": "line",
+          "text": "最小的钟声沉入水底，一道水墙随之亮起。墙后出现潜灯王子——鹿暝离家多年的弟弟。他守着一座不敢发出坐标的深海王国，也守着两条都不完美的生路。"
+        },
+        {
+          "type": "line",
           "speaker": "deep_prince",
-          "text": "姐姐，你终于带着一把会变成牢的伞、一艘会留下路的船来了。"
+          "text": "姐姐，你终于带着一把会变成牢的伞、一艘会留下路的船来了。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "你知道王城发生了什么？"
+          "text": "你知道王城发生了什么？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "我知道得太早，所以回不去。回去会让灾害也知道那条路。"
+          "text": "我知道得太早，所以回不去。回去会让灾害也知道那条路。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -3614,12 +3720,14 @@
         {
           "type": "line",
           "speaker": "huaiyi",
-          "text": "殿下，他不是怕回家。他是怕自己成为回家的那条路。"
+          "text": "殿下，他不是怕回家。他是怕自己成为回家的那条路。",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "姐姐，王国最贵重的东西不是王位，是还有人不知道它在哪里。"
+          "text": "姐姐，王国最贵重的东西不是王位，是还有人不知道它在哪里。",
+          "portrait": "portrait_deep_prince"
         }
       ],
       "choices": [
@@ -3633,7 +3741,8 @@
               "key": "clue_coordinate",
               "by": 1
             }
-          ]
+          ],
+          "hint": "核心抉择 · 比较远航与慢灯两种幸存"
         },
         {
           "id": "T3_02_C02",
@@ -3658,10 +3767,11 @@
               "key": "politics",
               "by": 1
             }
-          ]
+          ],
+          "hint": "人物方向 · 追问潜灯王子为何拒绝王位"
         }
       ],
-      "progress": 0.659
+      "progress": 0.65
     },
     {
       "id": "T3_03",
@@ -3682,17 +3792,20 @@
         {
           "type": "line",
           "speaker": "sailor",
-          "text": "白痕经过的地方，浪变慢，声音也变慢。"
+          "text": "白痕经过的地方，浪变慢，声音也变慢。",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "如果王国的人全沿着白痕出海，他们会不会把自己的海也变成慢海？"
+          "text": "如果王国的人全沿着白痕出海，他们会不会把自己的海也变成慢海？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "huaiyi",
-          "text": "慢到再也没有船能回来，慢到消息出不去。"
+          "text": "慢到再也没有船能回来，慢到消息出不去。",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
@@ -3705,12 +3818,14 @@
         {
           "type": "line",
           "speaker": "luming",
-          "text": "我们每一次逃离，都可能在身后造出另一座监狱。"
+          "text": "我们每一次逃离，都可能在身后造出另一座监狱。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "sailor",
-          "text": "所以船长必须记得尾迹，而英雄最爱忘记。"
+          "text": "所以船长必须记得尾迹，而英雄最爱忘记。",
+          "portrait": "portrait_sailor"
         }
       ],
       "choices": [
@@ -3747,7 +3862,8 @@
               "key": "defense_bias",
               "by": 1
             }
-          ]
+          ],
+          "hint": "慢灯方向 · 检查保护故乡的长期代价"
         },
         {
           "id": "T3_03_C03",
@@ -3759,10 +3875,11 @@
               "key": "trust",
               "by": -1
             }
-          ]
+          ],
+          "hint": "人物方向 · 追问潜灯王子为何拒绝王位"
         }
       ],
-      "progress": 0.683
+      "progress": 0.675
     },
     {
       "id": "T3_04",
@@ -3783,17 +3900,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "王位是给地面的人准备的。海底只保存问题，不保存命令。"
+          "text": "王位是给地面的人准备的。海底只保存问题，不保存命令。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "父王说只有你能不被折进画页。"
+          "text": "父王说只有你能不被折进画页。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "因为我早已不在画师的纸面上。他看不见我，不等于他永远看不见路。"
+          "text": "因为我早已不在画师的纸面上。他看不见我，不等于他永远看不见路。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -3806,17 +3926,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "如果我戴上它，所有人会记住我的脸；而猎手最擅长顺着被记住的脸寻找世界。"
+          "text": "如果我戴上它，所有人会记住我的脸；而猎手最擅长顺着被记住的脸寻找世界。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "那我带来的不是继承人。是一位守门人。"
+          "text": "那我带来的不是继承人。是一位守门人。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "不，是一扇学会假装自己不存在的门。"
+          "text": "不，是一扇学会假装自己不存在的门。",
+          "portrait": "portrait_deep_prince"
         }
       ],
       "choices": [
@@ -3870,7 +3993,7 @@
           "hint": "推演 · 把结构留在词语之后"
         }
       ],
-      "progress": 0.707
+      "progress": 0.7
     },
     {
       "id": "T3_05",
@@ -3891,22 +4014,26 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "有两种活法。第一种，把船造到足够快，离开所有会被画到纸上的地方。"
+          "text": "有两种活法。第一种，把船造到足够快，离开所有会被画到纸上的地方。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "第二种，把灯熄到足够慢，让外面的画师觉得这里已经没有值得画的东西。"
+          "text": "第二种，把灯熄到足够慢，让外面的画师觉得这里已经没有值得画的东西。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "第一种会失去家。第二种会把家变成笼。"
+          "text": "第一种会失去家。第二种会把家变成笼。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "所以童话必须把二者都说出来。只说一种，就是替死亡选择了语气。"
+          "text": "所以童话必须把二者都说出来。只说一种，就是替死亡选择了语气。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -3915,17 +4042,20 @@
         {
           "type": "line",
           "speaker": "huaiyi",
-          "text": "为什么每条活路看上去都像失去什么？"
+          "text": "为什么每条活路看上去都像失去什么？",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "因为没有代价的生存，只存在于还没讲完的童话里。"
+          "text": "因为没有代价的生存，只存在于还没讲完的童话里。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "那就把代价也讲完。哪怕听的人因此不再爱这个答案。"
+          "text": "那就把代价也讲完。哪怕听的人因此不再爱这个答案。",
+          "portrait": "portrait_luming"
         }
       ],
       "choices": [
@@ -3944,7 +4074,8 @@
               "key": "clue_escape",
               "by": 1
             }
-          ]
+          ],
+          "hint": "远航方向 · 检查离开故乡的条件与代价"
         },
         {
           "id": "T3_05_C02",
@@ -3961,7 +4092,8 @@
               "key": "clue_blackdomain",
               "by": 1
             }
-          ]
+          ],
+          "hint": "慢灯方向 · 检查保护故乡的长期代价"
         },
         {
           "id": "T3_05_C03",
@@ -3987,7 +4119,7 @@
           "hint": "倾听 · 有人会记住你的方式"
         }
       ],
-      "progress": 0.732
+      "progress": 0.725
     },
     {
       "id": "T3_06",
@@ -4008,17 +4140,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "这里有王国的歌谱、农书、法律、笑话，还有尚未出生的人可能需要的错误清单。"
+          "text": "这里有王国的歌谱、农书、法律、笑话，还有尚未出生的人可能需要的错误清单。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "huaiyi",
-          "text": "错误也要保存？"
+          "text": "错误也要保存？",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "尤其是错误。胜利会被后人庆祝，错误才会被后人重复。"
+          "text": "尤其是错误。胜利会被后人庆祝，错误才会被后人重复。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -4031,17 +4166,20 @@
         {
           "type": "line",
           "speaker": "huaiyi",
-          "text": "这里为什么收着一锅失败的冬汤配方？"
+          "text": "这里为什么收着一锅失败的冬汤配方？",
+          "portrait": "portrait_huaiyi"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "因为文明若只保存伟大，就会在醒来后不知道怎样吃一顿不好吃的晚饭。"
+          "text": "因为文明若只保存伟大，就会在醒来后不知道怎样吃一顿不好吃的晚饭。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "把笑话也装船。末日之后，第一个会笑的人，才真正证明我们抵达了。"
+          "text": "把笑话也装船。末日之后，第一个会笑的人，才真正证明我们抵达了。",
+          "portrait": "portrait_luming"
         }
       ],
       "choices": [
@@ -4105,7 +4243,7 @@
           "hint": "观察 · 一个隐喻开始发光"
         }
       ],
-      "progress": 0.756
+      "progress": 0.75
     },
     {
       "id": "T3_07",
@@ -4126,17 +4264,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "慢灯能让画师错过你，也能让朋友永远等不到你。"
+          "text": "慢灯能让画师错过你，也能让朋友永远等不到你。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "如果全王国都躲进慢灯呢？"
+          "text": "如果全王国都躲进慢灯呢？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "他们会活着，直到忘记外面曾经有海。"
+          "text": "他们会活着，直到忘记外面曾经有海。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -4149,12 +4290,14 @@
         {
           "type": "line",
           "speaker": "luming",
-          "text": "他们会知道自己被保护了吗？"
+          "text": "他们会知道自己被保护了吗？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "第一代知道。第二代纪念。第三代会说，外面的星空只是危险分子编出的传说。"
+          "text": "第一代知道。第二代纪念。第三代会说，外面的星空只是危险分子编出的传说。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -4195,7 +4338,8 @@
               "key": "defense_bias",
               "by": 2
             }
-          ]
+          ],
+          "hint": "返回现实 · 汇总三则童话的共同线索"
         },
         {
           "id": "T3_07_C03",
@@ -4207,10 +4351,11 @@
               "key": "escape_bias",
               "by": 1
             }
-          ]
+          ],
+          "hint": "远航方向 · 检查离开故乡的条件与代价"
         }
       ],
-      "progress": 0.78
+      "progress": 0.775
     },
     {
       "id": "T3_08",
@@ -4231,17 +4376,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "离岸之后，不要沿着白痕回头。回头会把猎手引向家，也会把家变成慢海。"
+          "text": "离岸之后，不要沿着白痕回头。回头会把猎手引向家，也会把家变成慢海。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "那离开的人还算王国的人吗？"
+          "text": "那离开的人还算王国的人吗？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "如果他们还保存王国的错误、歌和名字，就算。"
+          "text": "如果他们还保存王国的错误、歌和名字，就算。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -4254,12 +4402,14 @@
         {
           "type": "line",
           "speaker": "luming",
-          "text": "如果永远不能回头，谁来证明我们曾经属于这里？"
+          "text": "如果永远不能回头，谁来证明我们曾经属于这里？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "不是坐标。是你愿意带走哪些无用的东西。名字、口音、错误，还有没人鼓掌的善意。"
+          "text": "不是坐标。是你愿意带走哪些无用的东西。名字、口音、错误，还有没人鼓掌的善意。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
@@ -4322,7 +4472,7 @@
           "hint": "倾听 · 有人会记住你的方式"
         }
       ],
-      "progress": 0.805
+      "progress": 0.8
     },
     {
       "id": "T3_09",
@@ -4343,17 +4493,20 @@
         {
           "type": "line",
           "speaker": "luming",
-          "text": "为什么不把答案写成命令？"
+          "text": "为什么不把答案写成命令？",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "命令会被审查者看见，也会被后来的人误用。童话留下选择，选择留下责任。"
+          "text": "命令会被审查者看见，也会被后来的人误用。童话留下选择，选择留下责任。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "sailor",
-          "text": "殿下，王城的钟声停了。"
+          "text": "殿下，王城的钟声停了。",
+          "portrait": "portrait_sailor"
         },
         {
           "type": "line",
@@ -4366,17 +4519,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "完整的命令会制造服从，不完整的童话才会迫使后来的人继续判断。"
+          "text": "完整的命令会制造服从，不完整的童话才会迫使后来的人继续判断。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "可判断会犯错。"
+          "text": "可判断会犯错。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "对。那正是自由最不体面的部分。"
+          "text": "对。那正是自由最不体面的部分。",
+          "portrait": "portrait_deep_prince"
         }
       ],
       "choices": [
@@ -4435,7 +4591,7 @@
           "hint": "冒险 · 代价不会立刻出现"
         }
       ],
-      "progress": 0.829
+      "progress": 0.825
     },
     {
       "id": "T3_10",
@@ -4456,17 +4612,20 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "告诉那个听故事的人：我把最锋利的话磨成了圆石，这样它才可能从怪物的喉咙里滚过去。"
+          "text": "告诉那个听故事的人：我把最锋利的话磨成了圆石，这样它才可能从怪物的喉咙里滚过去。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "如果她只听见童话，就让她保留童话。如果她听见了警告，就请她不要独自承担它。"
+          "text": "如果她只听见童话，就让她保留童话。如果她听见了警告，就请她不要独自承担它。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "我会转告。"
+          "text": "我会转告。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -4479,12 +4638,14 @@
         {
           "type": "line",
           "speaker": "deep_prince",
-          "text": "还有一句，不写进报告。若听故事的人仍在，就告诉她：我没有把她当作答案，我只把选择交给她。"
+          "text": "还有一句，不写进报告。若听故事的人仍在，就告诉她：我没有把她当作答案，我只把选择交给她。",
+          "portrait": "portrait_deep_prince"
         },
         {
           "type": "line",
           "speaker": "luming",
-          "text": "她会听见。"
+          "text": "她会听见。",
+          "portrait": "portrait_luming"
         },
         {
           "type": "line",
@@ -4511,7 +4672,7 @@
           "hint": "倾听 · 有人会记住你的方式"
         }
       ],
-      "progress": 0.854
+      "progress": 0.85
     },
     {
       "id": "R02",
@@ -4532,7 +4693,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "画页、轻泡、黑伞。它们不是道具，是三条生存条件。"
+          "text": "画页、轻泡、黑伞。它们不是道具，是三条生存条件。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4555,7 +4717,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "委员会会逼我们给出唯一答案。"
+          "text": "委员会会逼我们给出唯一答案。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4659,7 +4822,7 @@
           "hint": "困难路径 · 不删去矛盾"
         }
       ],
-      "progress": 0.878
+      "progress": 0.875
     },
     {
       "id": "R03",
@@ -4685,7 +4848,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "如果我们只证明灾害，委员会会要求更多证据。"
+          "text": "如果我们只证明灾害，委员会会要求更多证据。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4703,7 +4867,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "模型里那些还没离开的人呢？"
+          "text": "模型里那些还没离开的人呢？",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4716,7 +4881,8 @@
           "id": "R03_C01",
           "text": "提交紧急灾害警告",
           "target": "E_WARNING_ONLY",
-          "effects": []
+          "effects": [],
+          "hint": "结局倾向 · 只发出警报，不提供生路"
         },
         {
           "id": "R03_C02",
@@ -4728,16 +4894,18 @@
               "key": "decode_balanced",
               "by": 1
             }
-          ]
+          ],
+          "hint": "完整报告 · 把灾害、远航与慢灯放在一起判断"
         },
         {
           "id": "R03_C03",
           "text": "为避免恐慌，改写为文学分析",
           "target": "E_MISSED",
-          "effects": []
+          "effects": [],
+          "hint": "结局倾向 · 把警告继续当作文学"
         }
       ],
-      "progress": 0.902
+      "progress": 0.9
     },
     {
       "id": "R04",
@@ -4763,7 +4931,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "少数人走，许多人留。这个报告会被骂成背叛。"
+          "text": "少数人走，许多人留。这个报告会被骂成背叛。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4781,7 +4950,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "不要让速度替我们伪装成公平。"
+          "text": "不要让速度替我们伪装成公平。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4794,7 +4964,8 @@
           "id": "R04_C01",
           "text": "建议立即建设远航方舟",
           "target": "E_ESCAPE",
-          "effects": []
+          "effects": [],
+          "hint": "结局倾向 · 只保全少数远航者"
         },
         {
           "id": "R04_C02",
@@ -4806,16 +4977,18 @@
               "key": "decode_balanced",
               "by": 1
             }
-          ]
+          ],
+          "hint": "完整报告 · 把灾害、远航与慢灯放在一起判断"
         },
         {
           "id": "R04_C03",
           "text": "删除副作用，以便方案通过",
           "target": "E_ESCAPE_FLAWED",
-          "effects": []
+          "effects": [],
+          "hint": "危险结局 · 隐瞒尾迹副作用"
         }
       ],
-      "progress": 0.927
+      "progress": 0.925
     },
     {
       "id": "R05",
@@ -4841,7 +5014,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "这听起来像活着，也像自我埋葬。"
+          "text": "这听起来像活着，也像自我埋葬。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4859,7 +5033,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "如果活着的人再也不能说自己活着，这算成功吗？"
+          "text": "如果活着的人再也不能说自己活着，这算成功吗？",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4878,22 +5053,25 @@
               "key": "decode_balanced",
               "by": 1
             }
-          ]
+          ],
+          "hint": "完整报告 · 把灾害、远航与慢灯放在一起判断"
         },
         {
           "id": "R05_C02",
           "text": "推荐全域慢灯防御",
           "target": "E_BLACKDOMAIN",
-          "effects": []
+          "effects": [],
+          "hint": "结局倾向 · 所有人留下，文明与外界隔绝"
         },
         {
           "id": "R05_C03",
           "text": "淡化代价，争取政治通过",
           "target": "E_BLACKDOMAIN_FLAWED",
-          "effects": []
+          "effects": [],
+          "hint": "危险结局 · 隐瞒慢灯的控制边界"
         }
       ],
-      "progress": 0.951
+      "progress": 0.95
     },
     {
       "id": "R06",
@@ -4929,7 +5107,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "你没有把它翻译成答案。你把它翻译成选择。"
+          "text": "你没有把它翻译成答案。你把它翻译成选择。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -4943,7 +5122,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "别替童话选择语气。把每一种活法连同它的伤口一起说出来。"
+          "text": "别替童话选择语气。把每一种活法连同它的伤口一起说出来。",
+          "portrait": "portrait_chengan"
         }
       ],
       "choices": [
@@ -5169,7 +5349,7 @@
         },
         {
           "id": "R06_TRUE",
-          "text": "提交双轨黎明：远航备份 + 有限慢灯 + 公开代价",
+          "text": "提交双轨方案：少数人乘船远航，其余城市进入有限慢光，并公开两边代价",
           "target": "E_TRUE",
           "conditions": [
             {
@@ -5208,27 +5388,27 @@
         },
         {
           "id": "R06_BLACK",
-          "text": "为求一致，删去远航，只留慢灯",
+          "text": "只选慢光：所有人留下并隐藏太阳系，不再允许远航",
           "target": "E_BLACKDOMAIN",
           "effects": [],
-          "hint": "单轨方案 · 安全会拿走远方"
+          "hint": "结局倾向 · 人类安全地活着，也可能永远失去外部世界"
         },
         {
           "id": "R06_ESCAPE",
-          "text": "为求自由，删去慢灯，只留远航",
+          "text": "只选远航：让少数人乘船离开，放弃留守城市的慢光防御",
           "target": "E_ESCAPE",
           "effects": [],
-          "hint": "单轨方案 · 船不会带走所有人"
+          "hint": "结局倾向 · 船保存少数人，绝大多数人不会得到船票"
         },
         {
           "id": "R06_MISSED",
-          "text": "不提交，保留童话原文等待更多证据",
+          "text": "暂不提交：等待更多证据，但可能错过最后窗口",
           "target": "E_MISSED",
           "effects": [],
-          "hint": "延迟决定 · 纸边不会等待"
+          "hint": "结局倾向 · 不作选择本身也会成为选择"
         }
       ],
-      "progress": 0.976
+      "progress": 0.975
     },
     {
       "id": "E_TRUE",
@@ -5259,7 +5439,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "至少童话没有被当成童话埋掉。"
+          "text": "至少童话没有被当成童话埋掉。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5277,7 +5458,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "他没有给我们天堂。"
+          "text": "他没有给我们天堂。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5320,7 +5502,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "我们让他们看见纸边，却没给他们船。"
+          "text": "我们让他们看见纸边，却没给他们船。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5338,7 +5521,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "我们争取到了恐惧。却没有替恐惧争取方向。"
+          "text": "我们争取到了恐惧。却没有替恐惧争取方向。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5581,7 +5765,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "最安全的误读，是把所有警告都赞美得很美。"
+          "text": "最安全的误读，是把所有警告都赞美得很美。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5620,7 +5805,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "不，等等，他还没有讲完——"
+          "text": "不，等等，他还没有讲完——",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5671,7 +5857,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "技术报告已经结束了。你还想翻译什么？"
+          "text": "技术报告已经结束了。你还想翻译什么？",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5690,12 +5877,14 @@
         {
           "type": "line",
           "speaker": "voyager_y",
-          "text": "原来童话抵达的时候，讲故事的人也会被找到。"
+          "text": "原来童话抵达的时候，讲故事的人也会被找到。",
+          "portrait": "portrait_yun_tianming"
         },
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "你听见了吗？我们没有把你留下的选择变成纪念碑。我们让它继续被选择。"
+          "text": "你听见了吗？我们没有把你留下的选择变成纪念碑。我们让它继续被选择。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5759,7 +5948,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "他们不是离开的人，也不是留下的人。"
+          "text": "他们不是离开的人，也不是留下的人。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",
@@ -5811,7 +6001,8 @@
         {
           "type": "line",
           "speaker": "chengan",
-          "text": "这不算活下去。"
+          "text": "这不算活下去。",
+          "portrait": "portrait_chengan"
         },
         {
           "type": "line",

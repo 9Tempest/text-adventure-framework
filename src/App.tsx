@@ -3,7 +3,7 @@ import type { MutableRefObject, ReactNode } from "react";
 import { AudioManager } from "./engine/audio";
 import { getDefaultStoryEntry, loadGameContent, loadStoryCatalog } from "./engine/loader";
 import { createDebugLoggerPlugin } from "./engine/plugins";
-import { RuntimeEngine, type RuntimeLineHistoryEntry, type RuntimeSnapshot } from "./engine/runtime";
+import { RuntimeEngine, type RuntimeHistoryEntry, type RuntimeLineHistoryEntry, type RuntimeSnapshot } from "./engine/runtime";
 import { clearGameSave, loadGameSave, saveGame } from "./engine/save";
 import type {
   AssetManifest,
@@ -117,9 +117,13 @@ export default function App() {
   const handleChoice = useCallback((choiceId: string) => {
     if (session) {
       session.audio.unlock();
+      const choice = snapshot?.availableChoices.find((candidate) => candidate.id === choiceId);
+      if (choice) {
+        setMessage(`已选择 · ${choice.text}`);
+      }
       setSnapshot(session.engine.choose(choiceId));
     }
-  }, [session]);
+  }, [session, snapshot]);
 
   const handleTextTick = useCallback((speakerId: string | undefined, glyph: string) => {
     session?.audio.playTextTick(speakerId, glyph);
@@ -418,6 +422,7 @@ export default function App() {
         {drawer === "backlog" && (
           <BacklogDrawer
             history={snapshot.lineHistory}
+            choices={snapshot.choiceHistory}
             story={story}
             onClose={() => setDrawer(null)}
           />
@@ -721,6 +726,7 @@ function DialoguePanel(props: {
       <span className="dialogue-body">
         <span className="speaker-row">
           <span className="speaker-name" style={{ color: props.speaker?.color }}>{props.speakerName}</span>
+          {props.speaker?.role && <span className="speaker-role" title={props.speaker.bio}>{props.speaker.role}</span>}
           {props.line.voice && <span className="voice-chip">VOICE</span>}
         </span>
         <span className="dialogue-text" aria-hidden="true">
@@ -755,7 +761,7 @@ function ChoicePanel(props: {
     <div className="dialogue-panel choice-panel">
       <div className="choice-heading">
         <span className="choice-kicker">DECISION</span>
-        <span>选择会成为故事的一部分</span>
+        <span>先看清会发生什么，再作选择</span>
       </div>
       <div className="choice-list">
         {props.snapshot.availableChoices.map((choice, index) => (
@@ -875,6 +881,7 @@ function ClueDrawer(props: {
 
 function BacklogDrawer(props: {
   history: RuntimeLineHistoryEntry[];
+  choices: RuntimeHistoryEntry[];
   story: Story;
   onClose: () => void;
 }) {
@@ -892,6 +899,21 @@ function BacklogDrawer(props: {
   return (
     <OverlayDrawer title="声音回溯" eyebrow="BACKLOG" onClose={props.onClose}>
       <div className="backlog-list" ref={listRef}>
+        {props.choices.length > 0 && (
+          <section className="choice-history" aria-label="你的选择记录">
+            <span>YOUR DECISIONS · 你的选择</span>
+            {props.choices.map((entry) => {
+              const node = props.story.nodes.find((candidate) => candidate.id === entry.nodeId);
+              const choice = node?.choices?.find((candidate) => candidate.id === entry.choiceId);
+              return (
+                <div key={`${entry.nodeId}:${entry.choiceId}:${entry.at}`}>
+                  <small>{node?.title ?? entry.nodeId}</small>
+                  <strong>{choice?.text ?? entry.choiceId}</strong>
+                </div>
+              );
+            })}
+          </section>
+        )}
         {props.history.map((entry, index) => {
           const speaker = entry.speaker ? findCharacter(props.story, entry.speaker) : undefined;
           const node = props.story.nodes.find((candidate) => candidate.id === entry.nodeId);

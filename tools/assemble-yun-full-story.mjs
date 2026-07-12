@@ -32,23 +32,23 @@ const speakerIds = {
 };
 
 const characters = [
-  ["luming", "鹿暝", "#f3d6a1"],
-  ["huaiyi", "槐姨", "#d8c4a7"],
-  ["sailor", "风帆卫士", "#8fc7df"],
-  ["folding_artisan", "折页匠", "#e6e8ef"],
-  ["umbrella_master", "空伞师", "#99b7d2"],
-  ["prince_li", "砾亲王", "#d29086"],
-  ["deep_prince", "潜灯王子", "#82d8d0"],
-  ["decoder", "译码员", "#dbe8ff"],
-  ["chengan", "澄安", "#f0c9aa"],
-  ["monitor_voice", "监察音", "#ff8585"],
-  ["voyager_y", "远航者Y", "#f3df9e"],
-  ["guard", "卫兵", "#d5d8df"],
-  ["merchant_old", "老海商", "#c5a783"],
-  ["archive_voice", "幸存者档案", "#a9c7d8"],
-  ["reviewer", "文学评审", "#c2bdc9"],
-  ["alien_archive", "异星译文", "#a4f4dc"]
-].map(([id, name, color]) => ({ id, name, color }));
+  { id: "luming", name: "鹿暝", role: "拾声王国的年轻王女", bio: "替玩家追问童话里每一种生路的代价。", color: "#f3d6a1" },
+  { id: "huaiyi", name: "槐姨", role: "王子的照料者与民间记忆", bio: "总能把宏大方案重新落到具体的人身上。", color: "#d8c4a7" },
+  { id: "sailor", name: "风帆卫士", role: "来自王国之外的航海者", bio: "知道远航能保存文明，却带不走所有人。", color: "#8fc7df" },
+  { id: "folding_artisan", name: "折页匠", role: "带来异常白纸的神秘画师", bio: "他的人形之下，藏着让世界失去厚度的灾难。", color: "#e6e8ef" },
+  { id: "umbrella_master", name: "空伞师", role: "慢光黑伞的守护者", bio: "知道庇护与牢笼之间只差一个参数。", color: "#99b7d2" },
+  { id: "prince_li", name: "砾亲王", role: "把秩序看得比疑问更重的摄政者", color: "#d29086" },
+  { id: "deep_prince", name: "潜灯王子", role: "深海坐标与两条生路的守门人", bio: "保管远航与慢光，也保管二者不愿被说出的代价。", color: "#82d8d0" },
+  { id: "decoder", name: "译码员", role: "你 · 白塔报告的执笔者", color: "#dbe8ff" },
+  { id: "chengan", name: "澄安", role: "白塔通信负责人", bio: "保护云天明话语中的感情、动机与普通人。", color: "#f0c9aa" },
+  { id: "monitor_voice", name: "监察音", role: "守在线路上的异星审查系统", color: "#ff8585" },
+  { id: "voyager_y", name: "远航者Y", role: "云天明 · 受监察的讲述者", color: "#f3df9e" },
+  { id: "guard", name: "卫兵", role: "王宫守卫", color: "#d5d8df" },
+  { id: "merchant_old", name: "老海商", role: "南港幸存者", color: "#c5a783" },
+  { id: "archive_voice", name: "幸存者档案", role: "结局记录", color: "#a9c7d8" },
+  { id: "reviewer", name: "文学评审", role: "把警告当作作品的人", color: "#c2bdc9" },
+  { id: "alien_archive", name: "异星译文", role: "在遥远未来拆开故事的人", color: "#a4f4dc" }
+];
 
 const variables = {
   trust: 0,
@@ -80,7 +80,6 @@ const variables = {
 const backgroundById = {
   P00: "bg_r00",
   P01: "bg_r01",
-  P02: "bg_r00",
   R00: "bg_r00",
   R01: "bg_r01",
   T3_01: "bg_t3_01",
@@ -127,7 +126,6 @@ function scoreFor(id) {
 const sfxById = {
   P00: "SFX_low_rumble",
   P01: "SFX_soft_bells",
-  P02: "SFX_data_lock",
   R00: "SFX_low_rumble",
   R01: "SFX_soft_bells",
   T3_01: "SFX_distant_bells",
@@ -282,6 +280,48 @@ const extraText = {
   ]
 };
 
+const arrivalText = {
+  T1_01: [
+    ["旁白", "鹿暝是拾声王国最年轻的王女。今日陪她登上露台的槐姨，自幼照料她，也记得城里每一个容易被宫廷忘记的名字。"]
+  ],
+  T1_02: [
+    ["旁白", "画室中央站着折页匠——一位来历不明的画师。他带来的白纸从不平躺，像有什么东西正从纸背向外呼吸。"]
+  ],
+  T1_05: [
+    ["旁白", "槐姨推开观星廊的暗门，一名披着旧海蓝斗篷的男人正在等候。他叫风帆卫士，来自王国以外；他看过地图边缘的海，也知道一艘船能救下谁、又必然留下谁。"]
+  ],
+  T1_07: [
+    ["旁白", "钟楼顶层住着空伞师。他守着一把能让光变慢的黑伞，也守着庇护何时会变成牢笼的秘密。"]
+  ],
+  T3_02: [
+    ["旁白", "最小的钟声沉入水底，一道水墙随之亮起。墙后出现潜灯王子——鹿暝离家多年的弟弟。他守着一座不敢发出坐标的深海王国，也守着两条都不完美的生路。"]
+  ]
+};
+
+const routeHints = {
+  T1_06: "调查方向 · 追查灾害从何处来到王国",
+  T1_07: "防御方向 · 寻找旋转黑伞与它的守护者",
+  T2_01: "进入第二则 · 从画页之城转向饥潮之海",
+  T2_02: "调查方向 · 追查北陆货物与灾害源头",
+  T2_03: "实验方向 · 寻找被当作日用品的轻泡晶",
+  T2_06: "责任方向 · 追问是谁把危险当作商品",
+  T3_01: "进入第三则 · 携带远航线索抵达沉钟岛",
+  T3_04: "人物方向 · 追问潜灯王子为何拒绝王位",
+  T3_05: "核心抉择 · 比较远航与慢灯两种幸存",
+  T3_06: "文明方向 · 追问活下去究竟要保存什么",
+  T3_07: "慢灯方向 · 检查保护故乡的长期代价",
+  T3_08: "远航方向 · 检查离开故乡的条件与代价",
+  R02: "返回现实 · 汇总三则童话的共同线索",
+  R06: "完整报告 · 把灾害、远航与慢灯放在一起判断",
+  E_CENSOR: "高风险 · 过于直白会使通信立刻中止",
+  E_WARNING_ONLY: "结局倾向 · 只发出警报，不提供生路",
+  E_ESCAPE: "结局倾向 · 只保全少数远航者",
+  E_ESCAPE_FLAWED: "危险结局 · 隐瞒尾迹副作用",
+  E_BLACKDOMAIN: "结局倾向 · 所有人留下，文明与外界隔绝",
+  E_BLACKDOMAIN_FLAWED: "危险结局 · 隐瞒慢灯的控制边界",
+  E_MISSED: "结局倾向 · 把警告继续当作文学"
+};
+
 const endingMeta = {
   E_TRUE: ["A", "双轨黎明", "没有完美幸存，只有被诚实保留的两种未来。", "hope"],
   E_WARNING_ONLY: ["B", "纸边警报", "你让世界看见末日，却没来得及给它一条路。", "bittersweet"],
@@ -296,14 +336,14 @@ const endingMeta = {
   E_PAPER_STARS: ["J · 隐藏", "纸背群星", "无法离开的人，也拥有决定如何被未来读到的权利。", "secret"]
 };
 
-function effectHint(effects = []) {
+function effectHint(effects = [], target) {
   const keys = new Set(effects.filter((effect) => effect.type === "inc" && effect.by > 0).map((effect) => effect.key));
   if (keys.has("heat")) return "危险表达 · 监察正在靠近";
   if (keys.has("clue_wake") || keys.has("clue_flatten") || keys.has("clue_slowlight") || keys.has("clue_curvature")) return "观察 · 一个隐喻开始发光";
   if (keys.has("trust")) return "倾听 · 有人会记住你的方式";
   if (keys.has("risk")) return "冒险 · 代价不会立刻出现";
   if (keys.has("science")) return "推演 · 把结构留在词语之后";
-  return undefined;
+  return routeHints[target];
 }
 
 function enrichLegacyNode(node, chapter) {
@@ -324,10 +364,15 @@ function enrichLegacyNode(node, chapter) {
     music: scoreFor(node.id),
     transition: node.id === "T1_08" ? "cut" : "dissolve"
   };
+  const introduction = arrivalText[node.id] ?? [];
+  if (introduction.length) {
+    const insertionIndex = nextNode.steps[0]?.type === "sfx" ? 1 : 0;
+    nextNode.steps.splice(insertionIndex, 0, ...introduction.map(makeLine));
+  }
   nextNode.choices = (nextNode.choices ?? []).map((choice) => ({
     ...choice,
     target: replacements[choice.target] ?? choice.target,
-    hint: effectHint(choice.effects)
+    hint: effectHint(choice.effects, replacements[choice.target] ?? choice.target)
   }));
   if (nextNode.next) nextNode.next = replacements[nextNode.next] ?? nextNode.next;
   return nextNode;
@@ -363,6 +408,7 @@ function makeSourceNode(id, override = {}) {
   const steps = [];
   const sfx = override.sfx ?? sfxById[id];
   if (sfx) steps.push({ type: "sfx", audio: sfx });
+  steps.push(...(arrivalText[id] ?? []).map(makeLine));
   steps.push(...text.map(makeLine));
 
   const choices = override.choices ?? (source?.choices ?? []).map((choice, index) => {
@@ -372,7 +418,7 @@ function makeSourceNode(id, override = {}) {
       text: choice.text,
       target: choice.to,
       effects,
-      hint: effectHint(effects)
+      hint: effectHint(effects, choice.to)
     };
   });
 
@@ -401,13 +447,10 @@ const prologue = [
     location: "太阳系 / 一段尚未结束的历史",
     layer: "reality",
     text: [
-      ["旁白", "很久以前，人类仰望群星，以为黑暗只是距离。后来他们才知道，黑暗也是礼貌：活得足够久的文明，都懂得不让陌生目光找到自己的门。"],
-      ["旁白", "四光年外，三颗太阳照着另一个世界。那里的文明听见了地球，地球也看见了他们。两边隔着漫长夜色，却像两个人同时在雪地里发现了对方的脚印。"],
-      ["旁白", "他们没有成为朋友。一个世界驶来舰队，另一个世界点亮武器；战争、威慑与短暂和平依次登场，每一次握手都藏着计算，每一次沉默都可能是一枚坐标。"],
-      ["旁白", "更远的宇宙里，还有从不询问善恶的猎手。它们只确认哪里亮着，然后让那里重新安静。于是，被看见不再等于被理解，有时只等于来不及逃。"],
-      ["旁白", "和平最后薄得像一张纸。人类仍能生活、争论、爱人，却知道某些科学名词一旦说出口，通话就会中止；某些正确答案一旦太清楚，世界就会提前关门。"],
-      ["旁白", "就在这样的年代，一个被送往敌人星海的地球人，请求同故乡说最后一次话。"],
-      ["旁白", "他没有索要军队，也没有索要纪念碑。他只请求三盏灯，和讲完三个童话所需的一点时间。"]
+      ["旁白", "人类曾向群星发出问候，后来才知道：黑暗中有猎手，而坐标就是敲响自己家门的声音。"],
+      ["旁白", "四光年外的三体文明听见了地球。战争与短暂和平之后，一个被送往他们舰队的地球人，获得了向故乡通话一次的机会。"],
+      ["旁白", "他不能直说武器、灾难或逃生路线，因为监察守着每一个字。于是，他只请求三盏灯，和讲完三个童话的时间。"],
+      ["旁白", "他的名字叫云天明。现在，他正在很远的地方等你听懂。"]
     ],
     choices: [
       { id: "P00_C01", text: "翻开那位远航者留下的档案", target: "P01", effects: [], hint: "有些名字，要走很远才会回到故乡" }
@@ -419,40 +462,13 @@ const prologue = [
     location: "白塔档案层 / 身份记录",
     layer: "reality",
     text: [
-      ["旁白", "在进入童话以前，先把现实里的名字说清楚。你不需要读过任何旧档案，也不需要认识此前发生过的故事。"],
-      ["旁白", "云天明，是一个出生在地球的人。身患绝症时，他参加了人类的‘阶梯计划’：身体留在故乡，大脑被装进探测器，送往正在逼近太阳系的三体舰队。那是一趟没有返航舱的远行。"],
-      ["旁白", "三体文明来自四光年外一个被三颗太阳反复毁灭的世界。他们拥有远胜地球的技术，也曾派出舰队准备占领太阳系；后来，两个文明在威慑下维持着脆弱和平。"],
-      ["旁白", "三体舰队在星海中找到了云天明，并用异星技术重新构造了他。多年以后，他获准向地球通话一次，但三体监察系统会监听每个字：公式、武器和逃生路线一旦说得太直白，通信就会立刻中止。"],
-      ["旁白", "所以，‘远航者Y’不是另一个人。那是云天明在这次受监控通信中的代号；三则童话，都由他讲述。"],
-      ["旁白", "澄安是白塔的通信负责人。她负责保护云天明话语中的感情、动机和对普通人的牵挂，防止技术分析把讲故事的人也一并删去。"],
-      ["旁白", "你就是画面上所说的‘译码员’。你的工作是从童话里辨认宇宙灾难、逃生办法与防御方案，并决定最后向人类提交什么报告。你的选择会改变结局。"],
-      ["旁白", "‘监察音’来自三体一方。它不是同伴，也不是童话角色，而是守在通信线路上的审查系统。界面中的‘监察’数值过高，通话会被切断。"],
-      ["旁白", "这场游戏因此发生在两个地方：现实中的白塔译码舱，以及云天明讲述的三个童话王国。画面标为‘现实层’时，你在白塔；标为‘童话层’时，你正在故事内部。"],
-      ["旁白", "现在，现实里的名字已经放稳。下一页档案，只介绍你即将在童话里遇见的人。"]
+      ["旁白", "白塔把云天明在通信中的代号记作‘远航者Y’。屏幕另一端的他，和档案里的云天明，是同一个人。"],
+      ["旁白", "你是译码员：听出童话里的灾难、生路与代价，再决定向人类提交什么。澄安守护故事里的人心；监察音则等待你说错一个过于直白的词。"],
+      ["旁白", "现实层是白塔，童话层是云天明的故事。你不必先背人名——他们会在登场时，亲自让你认识。"],
+      ["旁白", "记住一件事就够了：没有一条船能带走所有人，也没有一把伞只提供保护。"]
     ],
     choices: [
-      { id: "P01_C01", text: "继续阅读童话人物索引", target: "P02", effects: [], hint: "先认识他们，再走进他们的命运" }
-    ]
-  }),
-  makeSourceNode("P02", {
-    title: "灯亮以前的人名册",
-    chapter: "引言 · 三则童话的人物",
-    location: "白塔译码台 / 人物索引",
-    layer: "reality",
-    text: [
-      ["旁白", "鹿暝，是第一则童话《画页之城》的年轻王子，也是你进入童话后的主要视角。他并不知道世界将发生什么；他的职责，是替玩家发问并作出选择。"],
-      ["旁白", "槐姨，是照料鹿暝长大的宫廷女官。她熟悉王城里的普通人，总会提醒王子：任何宏大的救亡方案，最后都要落在具体姓名和具体生活上。"],
-      ["旁白", "折页匠，是突然进入王宫的神秘画师。他与人口失踪和异常白纸有关。在隐喻层面，他带来的不是普通魔法，而是一种能让整个世界失去厚度的灾难。"],
-      ["旁白", "风帆卫士，是来自王国之外的航海者。他知道世界不只一座岛，也知道远航可以保存文明，却不可能让每个人同时离开。"],
-      ["旁白", "空伞师，守着一把旋转黑伞。他掌握一种让光和信息变慢的保护方式；它能隐藏一座城，也可能把受到保护的人永远关在里面。"],
-      ["旁白", "潜灯王子，在第三则童话中守候于深海。他知道如何熄灭一个世界的坐标，也保管着故事最后的两条生路：向外远航，或向内藏起灯火。"],
-      ["旁白", "砾亲王、卫兵、老海商等人物会在登场时说明身份，你不必提前记住。真正需要记住的是：纸象征降维灾难，轻泡象征远航技术，黑伞与慢灯象征隐藏文明的防御。"],
-      ["旁白", "这些角色不是现实人物的一一化名。云天明把人物、技术和文明揉在一起，是为了让真相穿过监察；你要寻找的不是标准答案，而是每个比喻同时保存了哪些事实与代价。"],
-      ["旁白", "三盏灯已经放上译码台。第一盏属于画页，第二盏属于饥潮，第三盏沉在无人敢点亮的深海。"],
-      ["旁白", "从下一刻开始，说明结束，故事开始。"]
-    ],
-    choices: [
-      { id: "P02_C01", text: "我明白了，走进白塔", target: "R00", effects: [], hint: "听云天明亲自点亮第一盏灯" }
+      { id: "P01_C01", text: "进入白塔，接通云天明", target: "R00", effects: [], hint: "说明结束 · 接下来的人物会在登场时介绍" }
     ]
   }),
   makeSourceNode("R00", {
@@ -563,7 +579,7 @@ decodeNodes[4].choices = [
   },
   {
     id: "R06_TRUE",
-    text: "提交双轨黎明：远航备份 + 有限慢灯 + 公开代价",
+    text: "提交双轨方案：少数人乘船远航，其余城市进入有限慢光，并公开两边代价",
     target: "E_TRUE",
     conditions: [
       ...["clue_flatten", "clue_curvature", "clue_wake", "clue_slowlight", "clue_coordinate"].map((key) => ({ key, op: "truthy" })),
@@ -573,9 +589,9 @@ decodeNodes[4].choices = [
     effects: [],
     hint: "完整报告 · 没有一种幸存被伪装成胜利"
   },
-  { id: "R06_BLACK", text: "为求一致，删去远航，只留慢灯", target: "E_BLACKDOMAIN", effects: [], hint: "单轨方案 · 安全会拿走远方" },
-  { id: "R06_ESCAPE", text: "为求自由，删去慢灯，只留远航", target: "E_ESCAPE", effects: [], hint: "单轨方案 · 船不会带走所有人" },
-  { id: "R06_MISSED", text: "不提交，保留童话原文等待更多证据", target: "E_MISSED", effects: [], hint: "延迟决定 · 纸边不会等待" }
+  { id: "R06_BLACK", text: "只选慢光：所有人留下并隐藏太阳系，不再允许远航", target: "E_BLACKDOMAIN", effects: [], hint: "结局倾向 · 人类安全地活着，也可能永远失去外部世界" },
+  { id: "R06_ESCAPE", text: "只选远航：让少数人乘船离开，放弃留守城市的慢光防御", target: "E_ESCAPE", effects: [], hint: "结局倾向 · 船保存少数人，绝大多数人不会得到船票" },
+  { id: "R06_MISSED", text: "暂不提交：等待更多证据，但可能错过最后窗口", target: "E_MISSED", effects: [], hint: "结局倾向 · 不作选择本身也会成为选择" }
 ];
 
 const standardEndingIds = ["E_TRUE", "E_WARNING_ONLY", "E_ESCAPE", "E_ESCAPE_FLAWED", "E_BLACKDOMAIN", "E_BLACKDOMAIN_FLAWED", "E_MISSED", "E_CENSOR"];
@@ -629,6 +645,25 @@ endings.push(
 );
 
 const nodes = [...prologue, ...actOne, ...actTwo, ...actThree, ...decodeNodes, ...endings];
+
+const portraitBySpeaker = {
+  luming: "portrait_luming",
+  huaiyi: "portrait_huaiyi",
+  sailor: "portrait_sailor",
+  folding_artisan: "portrait_folding_artisan",
+  umbrella_master: "portrait_umbrella_master",
+  deep_prince: "portrait_deep_prince",
+  chengan: "portrait_chengan",
+  voyager_y: "portrait_yun_tianming"
+};
+
+for (const node of nodes) {
+  for (const step of node.steps) {
+    if (step.type === "line" && step.speaker && portraitBySpeaker[step.speaker]) {
+      step.portrait = portraitBySpeaker[step.speaker];
+    }
+  }
+}
 for (const [index, node] of nodes.entries()) {
   node.progress = node.layer === "ending" ? 1 : Number((index / (nodes.length - endings.length)).toFixed(3));
 }
@@ -661,7 +696,7 @@ const story = {
       "云天明": { tone: "person", description: "被送往三体舰队、以童话向故乡传递警告的人。" },
       "远航者Y": { tone: "person", description: "云天明在受监察通信中的代号。" },
       "澄安": { tone: "person", description: "白塔通信负责人，守护话语中的人性与动机。" },
-      "鹿暝": { tone: "person", description: "画页之城的年轻王子，也是玩家在童话中的主要视角。" },
+      "鹿暝": { tone: "person", description: "画页之城的年轻王女，也是玩家在童话中的主要视角。" },
       "槐姨": { tone: "person", description: "记住普通人姓名与生活的宫廷女官。" },
       "风帆卫士": { tone: "person", description: "知道远方、航路与离岸代价的航海者。" },
       "空伞师": { tone: "person", description: "掌握慢光防御，也理解庇护会变成牢笼的人。" },

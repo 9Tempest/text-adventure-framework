@@ -2,7 +2,7 @@
   "version": 1,
   "images": {
     "bg_t1_01": {
-      "src": "/game/assets/images/yun/T1_01.png",
+      "src": "/game/assets/images/yun/T1_01-clean-v2.png",
       "alt": "拾声王国的清晨 - 拾声王国 / 王城露台 - 童话感，但要带一点末世前的宁静。",
       "tags": [
         "background",
@@ -11,13 +11,53 @@
       ]
     },
     "bg_t1_02": {
-      "src": "/game/assets/images/yun/T1_02.png",
+      "src": "/game/assets/images/yun/T1_02-clean-v2.png",
       "alt": "白纸不会平躺 - 王宫 / 新画室 - 纸张像活物一样卷曲；匠人的表情平静到危险。",
       "tags": [
         "background",
         "yun-tianming",
         "chapter-1"
       ]
+    },
+    "portrait_luming": {
+      "src": "/game/assets/images/yun/portraits/luming.png",
+      "alt": "鹿暝，拾声王国的年轻王女",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_huaiyi": {
+      "src": "/game/assets/images/yun/portraits/huaiyi.png",
+      "alt": "槐姨，守护普通人记忆的宫廷女官",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_folding_artisan": {
+      "src": "/game/assets/images/yun/portraits/folding-artisan.png",
+      "alt": "折页匠，带来异常白纸的神秘画师",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_sailor": {
+      "src": "/game/assets/images/yun/portraits/sailor.png",
+      "alt": "风帆卫士，来自王国之外的航海者",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_umbrella_master": {
+      "src": "/game/assets/images/yun/portraits/umbrella-master.png",
+      "alt": "空伞师，慢光黑伞的守护者",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_deep_prince": {
+      "src": "/game/assets/images/yun/portraits/deep-prince.png",
+      "alt": "潜灯王子，深海王国的守门人",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_chengan": {
+      "src": "/game/assets/images/yun/portraits/chengan.png",
+      "alt": "澄安，白塔通信负责人",
+      "tags": ["portrait", "yun-tianming", "character"]
+    },
+    "portrait_yun_tianming": {
+      "src": "/game/assets/images/yun/portraits/yun-tianming.png",
+      "alt": "云天明，代号远航者Y的受监察讲述者",
+      "tags": ["portrait", "yun-tianming", "character"]
     },
     "bg_t1_03": {
       "src": "/game/assets/images/yun/T1_03.png",

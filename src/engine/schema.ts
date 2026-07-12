@@ -146,6 +146,8 @@ export const StoryNodeSchema = z.object({
 export const CharacterSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  role: z.string().optional(),
+  bio: z.string().optional(),
   defaultImage: z.string().optional(),
   color: z.string().optional()
 });

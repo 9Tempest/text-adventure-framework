@@ -34,6 +34,9 @@ describe("StorySchema", () => {
           "The Listener": { tone: "person", description: "The one who hears the signal." }
         }
       },
+      characters: [
+        { id: "listener", name: "The Listener", role: "Signal keeper", bio: "Remembers what the archive omits." }
+      ],
       nodes: [
         {
           id: "start",
@@ -48,6 +51,7 @@ describe("StorySchema", () => {
 
     expect(story.presentation?.clueLabels?.clue_light.label).toBe("Light");
     expect(story.presentation?.highlightTerms?.["The Listener"].tone).toBe("person");
+    expect(story.characters[0].role).toBe("Signal keeper");
     expect(story.nodes[0].layer).toBe("reality");
   });
 
