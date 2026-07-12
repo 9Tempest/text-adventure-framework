@@ -31,6 +31,7 @@ describe("RuntimeEngine", () => {
   it("advances lines, applies actions, and reveals conditional choices", () => {
     const engine = new RuntimeEngine(story);
     expect(engine.snapshot().currentLine?.text).toBe("hello");
+    expect(engine.snapshot().lineHistory.map((line) => line.text)).toEqual(["hello"]);
 
     const afterLine = engine.continue();
     expect(afterLine.variables.trust).toBe(1);
@@ -39,5 +40,7 @@ describe("RuntimeEngine", () => {
     const afterChoice = engine.choose("go");
     expect(afterChoice.nodeId).toBe("end");
     expect(afterChoice.currentLine?.text).toBe("done");
+    expect(afterChoice.choiceHistory).toHaveLength(1);
+    expect(afterChoice.lineHistory.map((line) => line.text)).toEqual(["hello", "done"]);
   });
 });

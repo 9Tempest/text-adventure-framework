@@ -22,7 +22,7 @@ const DEFAULT_STORY_ENTRY: StoryCatalogEntry = {
 };
 
 export async function loadStoryCatalog(catalogUrl = "/game/catalog.json"): Promise<StoryCatalog> {
-  return StoryCatalogSchema.parse(await fetchJson(catalogUrl));
+  return StoryCatalogSchema.parse(await fetchJson(resolvePublicUrl(catalogUrl)));
 }
 
 export function getDefaultStoryEntry(catalog: StoryCatalog): StoryCatalogEntry {
@@ -31,15 +31,37 @@ export function getDefaultStoryEntry(catalog: StoryCatalog): StoryCatalogEntry {
 
 export async function loadGameContent(entry: StoryCatalogEntry = DEFAULT_STORY_ENTRY): Promise<LoadedGameContent> {
   const [storyRaw, manifestRaw] = await Promise.all([
-    fetchJson(entry.storyUrl),
-    fetchJson(entry.manifestUrl)
+    fetchJson(resolvePublicUrl(entry.storyUrl)),
+    fetchJson(resolvePublicUrl(entry.manifestUrl))
   ]);
+
+  const manifest = AssetManifestSchema.parse(manifestRaw);
 
   return {
     story: StorySchema.parse(storyRaw),
-    assets: AssetManifestSchema.parse(manifestRaw),
+    assets: {
+      ...manifest,
+      images: Object.fromEntries(
+        Object.entries(manifest.images).map(([id, asset]) => [id, { ...asset, src: resolvePublicUrl(asset.src) }])
+      ),
+      audio: Object.fromEntries(
+        Object.entries(manifest.audio).map(([id, asset]) => [id, { ...asset, src: resolvePublicUrl(asset.src) }])
+      )
+    },
     catalogEntry: entry
   };
+}
+
+export function resolvePublicUrl(url: string, baseUrl = import.meta.env.BASE_URL): string {
+  if (/^(?:[a-z]+:)?\/\//i.test(url) || /^(?:data|blob):/i.test(url)) {
+    return url;
+  }
+
+  const normalizedBase = `/${baseUrl.replace(/^\/+|\/+$/g, "")}/`.replace("//", "/");
+  if (normalizedBase !== "/" && url.startsWith(normalizedBase)) {
+    return url;
+  }
+  return `${normalizedBase}${url.replace(/^\/+/, "")}`;
 }
 
 async function fetchJson(url: string): Promise<unknown> {

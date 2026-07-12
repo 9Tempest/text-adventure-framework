@@ -138,6 +138,11 @@ type Story = {
 type StoryNode = {
   id: string;
   title?: string;
+  chapter?: string;
+  location?: string;
+  layer?: "reality" | "fairytale" | "decode" | "ending";
+  progress?: number;
+  ending?: EndingMeta;
   scene?: Scene;
   steps: Step[];
   choices?: Choice[];
@@ -150,6 +155,7 @@ type StoryNode = {
 - `scene` 缺省时沿用上一 node 的背景/音乐/角色。
 - `steps` 顺序执行。
 - `line` step 会暂停并等待玩家继续。
+- `chapter/location/layer/progress/ending` 是纯展示元数据；runtime 保持确定性，播放器按 story 数据渲染 HUD 和结局页。
 - `set/inc/toggle/unset/sfx/jump` 会自动执行，直到遇到下一个 `line`、`choices` 或 ending。
 - `choices` 出现在 node 末尾。
 - 没有 `choices` 但有 `next` 时自动进入下一个 node。
@@ -245,6 +251,8 @@ type RuntimeEvent =
 UI 和插件应消费 events，而不是把副作用写进 runtime。例如：
 
 - `AudioManager` 根据 `scene.music` 播放/停止 BGM，根据 `sfx` event 播放音效。
+- `AudioManager` 独立管理 BGM 与 ambience，并在场景换轨时交叉淡化。
+- 打字机逐字显示时，播放器调用 `AudioManager.playTextTick()` 合成短促文本音；音色由 speaker id 稳定映射，标点自动静音，真实 VO 存在时不叠加文本音。
 - Analytics plugin 监听 `choiceSelected`。
 - Gallery plugin 监听特定变量或 `showCg` step。
 
@@ -270,6 +278,7 @@ UI 和插件应消费 events，而不是把副作用写进 runtime。例如：
 - BGM/ambience 通常 loop。
 - SFX one-shot。
 - VO 建议一条对白一个文件，方便后期替换和 localization。
+- 文本音由 Web Audio 实时合成并接入 Howler 主音量总线，无需在 manifest 为每个人物准备碎片采样。
 - 大项目可以升级为 audio sprite 或 voice bundle，但剧情层仍引用稳定 id。
 
 ## 8. 存档设计

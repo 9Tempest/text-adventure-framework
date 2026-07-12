@@ -1,0 +1,2215 @@
+{
+  "title": "折光三则：静默童话译码案",
+  "version": "0.1",
+  "characters": {
+    "译码员": "玩家角色；在‘白塔听证室’里为每段童话选择解读路径。性格由玩家选择塑形。",
+    "澄安": "童话接收者；负责向玩家复述远方讯使传来的三则寓言。理性克制，但对讯使抱有私人情感。",
+    "远航者Y": "被未知文明监视的讯使；不能直说技术，只能用童话和重复意象绕过审查。",
+    "监察音": "通讯中的审查回声；当玩家解读过于直白时出现，提醒风险。",
+    "鹿暝公主": "童话一、二、三的主视角；继承王国但不确定自己是否有权决定所有人的命运。",
+    "砾亲王": "童话中的夺权者；相信恐惧比故事更有效。",
+    "潜灯王子": "远离王国、在深海档案馆守灯的人；象征流亡、远航与备份文明。",
+    "折页匠": "来自北陆白城的匠人；能把立体生命折入二维画页，是‘不可逆降维灾害’的童话化表达。",
+    "空伞师": "折页匠的老师；借旋转黑伞暂时保持形体，提供关键但不完整的解谜线索。",
+    "风帆卫士": "护送鹿暝离宫的外乡人；知道海图，也知道世界不止一座岛。",
+    "槐姨": "公主的乳母；负责从日常物品中发现技术线索，提醒玩家不要只相信宏大叙事。"
+  },
+  "scenes": [
+    {
+      "id": "R00",
+      "act": "序章",
+      "title": "白塔听证室",
+      "location": "白塔地下三层 / 童话译码舱",
+      "pov": "译码员",
+      "image_prompt": "a silent underground decoding chamber, curved white walls, one glass console glowing with a starfield, a single chair facing a black transmission window, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "冷色、密闭、无明显国家符号；画面核心是‘听见童话的机器’。",
+      "bgm": "BGM_01_low_pulse",
+      "sfx": "SFX_air_conditioner, SFX_distant_radio",
+      "text": [
+        [
+          "旁白",
+          "白塔的窗户在地下。这里没有风，只有被机器模拟出来的星光。"
+        ],
+        [
+          "澄安",
+          "讯使没有发来公式，也没有发来坐标。他只说：‘请把它当作童话听完。’"
+        ],
+        [
+          "监察音",
+          "提示：直接技术传输将被中止。隐喻、民谣、寓言可继续。"
+        ],
+        [
+          "旁白",
+          "你把手放在译码台上。三盏灯亮起：画页、饥潮、深灯。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "要求澄安保持原始童话顺序",
+          "to": "R01",
+          "set": {
+            "trust": 1
+          }
+        },
+        {
+          "text": "先询问审查机制的边界",
+          "to": "R01",
+          "set": {
+            "science": 1,
+            "heat": 1
+          }
+        },
+        {
+          "text": "把所有比喻都当作情报处理",
+          "to": "R01",
+          "set": {
+            "risk": 1,
+            "science": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "R01",
+      "act": "序章",
+      "title": "被允许的谎言",
+      "location": "白塔地下三层 / 童话译码舱",
+      "pov": "译码员",
+      "image_prompt": "close-up of a glass console showing three encrypted fairy-tale icons: folded paper, hungry tide, deep lantern, floating in holographic dust, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "三个图标要抽象，不出现原作专有名词。",
+      "bgm": "BGM_01_low_pulse",
+      "sfx": "SFX_console_beep",
+      "text": [
+        [
+          "澄安",
+          "它不像求救，更像遗嘱；不像谎言，更像只允许以谎言形式出现的真话。"
+        ],
+        [
+          "译码员",
+          "每个童话都可能有三层：表层故事、技术暗号、情感遗言。"
+        ],
+        [
+          "监察音",
+          "通信稳定。请勿使用未经许可的科学名词。"
+        ],
+        [
+          "旁白",
+          "你选择先进入第一盏灯：画页。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "播放第一则：画页之城",
+          "to": "T1_01",
+          "set": {}
+        }
+      ]
+    },
+    {
+      "id": "T1_01",
+      "act": "第一则：画页之城",
+      "title": "拾声王国的清晨",
+      "location": "拾声王国 / 王城露台",
+      "pov": "鹿暝公主",
+      "image_prompt": "an island kingdom at dawn, white terraces above a turquoise sea, thousands of wind chimes hanging from roofs, a young princess in a simple cloak overlooking the harbor, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "童话感，但要带一点末世前的宁静。",
+      "bgm": "BGM_02_fairytale_morning",
+      "sfx": "SFX_wind_chimes, SFX_seagulls",
+      "text": [
+        [
+          "旁白",
+          "拾声王国把每个人的一生都写进铃铛。风一吹，整座城就像在翻一本书。"
+        ],
+        [
+          "鹿暝",
+          "父王说，故事能让人记得自己是谁。可昨夜之后，王宫里少了三十九只铃。"
+        ],
+        [
+          "槐姨",
+          "不是铃丢了，是铃的主人不见了。连影子都没留下。"
+        ],
+        [
+          "旁白",
+          "远处，新来的宫廷匠人正把一张白纸铺在石板上。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "去看那张白纸",
+          "to": "T1_02",
+          "set": {
+            "science": 1
+          }
+        },
+        {
+          "text": "先清点失踪者名单",
+          "to": "T1_03",
+          "set": {
+            "trust": 1
+          }
+        },
+        {
+          "text": "命令卫队封锁画室",
+          "to": "T1_04",
+          "set": {
+            "risk": 1,
+            "heat": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_02",
+      "act": "第一则：画页之城",
+      "title": "白纸不会平躺",
+      "location": "王宫 / 新画室",
+      "pov": "鹿暝公主",
+      "image_prompt": "a royal painting studio with a curling sheet of luminous white paper pinned under a black stone slab, strange brushes in a lacquer box, an elegant artisan with calm eyes, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "纸张像活物一样卷曲；匠人的表情平静到危险。",
+      "bgm": "BGM_03_tension_strings",
+      "sfx": "SFX_paper_curling",
+      "text": [
+        [
+          "折页匠",
+          "殿下，纸不愿意变平，是因为世界本来不该只有一面。"
+        ],
+        [
+          "鹿暝",
+          "你昨夜画了谁？"
+        ],
+        [
+          "折页匠",
+          "我只画我看见的。至于他们是否还站在这里，那是纸的礼仪。"
+        ],
+        [
+          "旁白",
+          "白纸边缘轻轻抖动，像海岸线被看不见的潮水啃食。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "盯住纸的边缘：它像在吞空间",
+          "to": "T1_05",
+          "set": {
+            "clue_flatten": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "抢走黑石板",
+          "to": "T1_04",
+          "set": {
+            "risk": 1,
+            "heat": 1
+          }
+        },
+        {
+          "text": "假装赞美他的技艺，拖延时间",
+          "to": "T1_03",
+          "set": {
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_03",
+      "act": "第一则：画页之城",
+      "title": "三十九只无声铃",
+      "location": "王宫 / 铃档馆",
+      "pov": "鹿暝公主",
+      "image_prompt": "a vast archive of hanging bells and parchment tags, empty hooks glowing faintly where bells are missing, an elderly nurse holding a candle, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "档案馆要像宗庙与数据库的混合。",
+      "bgm": "BGM_04_archive",
+      "sfx": "SFX_soft_bells",
+      "text": [
+        [
+          "槐姨",
+          "失踪的人没有血迹，没有脚印。连别人对他们的记忆都像被压薄了。"
+        ],
+        [
+          "鹿暝",
+          "只有画像还记得他们？"
+        ],
+        [
+          "槐姨",
+          "不。画像不是记得，画像是在占有。"
+        ],
+        [
+          "旁白",
+          "你在空钩下发现一小片亮粉，薄得像从世界表面刮下来的霜。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "保存亮粉样本",
+          "to": "T1_05",
+          "set": {
+            "clue_flatten": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "追问砾亲王为何邀请折页匠",
+          "to": "T1_06",
+          "set": {
+            "politics": 1
+          }
+        },
+        {
+          "text": "让槐姨带平民离宫",
+          "to": "T1_07",
+          "set": {
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_04",
+      "act": "第一则：画页之城",
+      "title": "封锁失败",
+      "location": "王宫 / 西廊",
+      "pov": "鹿暝公主",
+      "image_prompt": "palace guards rushing through a marble corridor as their shadows stretch into flat ink silhouettes on the wall, panic and candlelight, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "表现‘二维化’但不血腥。",
+      "bgm": "BGM_05_alarm",
+      "sfx": "SFX_running_boots, SFX_paper_snap",
+      "text": [
+        [
+          "旁白",
+          "卫队冲进画室时，折页匠没有躲。他只是翻了一页。"
+        ],
+        [
+          "卫兵",
+          "殿下，我们——"
+        ],
+        [
+          "旁白",
+          "声音从立体变成薄薄一层，贴在墙上，像被雨水浸开的墨。"
+        ],
+        [
+          "监察音",
+          "警告：故事内暴力指数上升。请保持寓言形态。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "承认硬闯会触发灾害，转为观察机制",
+          "to": "T1_05",
+          "set": {
+            "clue_flatten": 1,
+            "risk": -1
+          }
+        },
+        {
+          "text": "继续派人夺取石板",
+          "to": "E_CENSOR",
+          "set": {
+            "heat": 2
+          }
+        },
+        {
+          "text": "撤退，寻找旧匠人",
+          "to": "T1_07",
+          "set": {
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_05",
+      "act": "第一则：画页之城",
+      "title": "折叠不是绘画",
+      "location": "王宫 / 观星廊",
+      "pov": "鹿暝公主",
+      "image_prompt": "a balcony observatory with star charts, a princess comparing a thin crystal dust sample to a star map, the sea horizon looks unnaturally flat, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "观星廊暗示宏观宇宙；让远海有‘纸边’感。",
+      "bgm": "BGM_06_decode_soft",
+      "sfx": "SFX_star_map_slide",
+      "text": [
+        [
+          "鹿暝",
+          "他不是把人画进纸里。他是在把人的世界折成纸。"
+        ],
+        [
+          "风帆卫士",
+          "北陆白城的匠人都这样说：能被看见的东西，终有一天会被做成平面。"
+        ],
+        [
+          "槐姨",
+          "那要怎么不被看见？"
+        ],
+        [
+          "旁白",
+          "没有人回答。只有远处黑伞旋转的影子，在墙上像一枚缓慢的钟。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "追踪黑伞来源",
+          "to": "T1_07",
+          "set": {
+            "clue_umbrella": 1
+          }
+        },
+        {
+          "text": "询问风帆卫士关于北陆白城",
+          "to": "T1_06",
+          "set": {
+            "worlds": 1
+          }
+        },
+        {
+          "text": "把‘被看见’标记为危险条件",
+          "to": "T1_08",
+          "set": {
+            "clue_flatten": 1,
+            "science": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_06",
+      "act": "第一则：画页之城",
+      "title": "世界不止一座岛",
+      "location": "王宫 / 地图厅",
+      "pov": "鹿暝公主",
+      "image_prompt": "a circular map room filled with island charts, unknown continents sketched beyond the sea, a foreign sailor in dark blue armor points to blank spaces, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "这场用于把童话扩展到宇宙尺度。",
+      "bgm": "BGM_07_world_map",
+      "sfx": "SFX_map_unroll",
+      "text": [
+        [
+          "风帆卫士",
+          "殿下，拾声王国的海图只画到灯塔。灯塔外还有岛，岛外还有大陆，大陆外还有从不点灯的港。"
+        ],
+        [
+          "鹿暝",
+          "那北陆为什么来我们这里？"
+        ],
+        [
+          "风帆卫士",
+          "也许是交易，也许是试验，也许只是因为我们亮着。"
+        ],
+        [
+          "旁白",
+          "‘亮着’二字落在地图上，像一枚坐标。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：暴露位置本身即危险",
+          "to": "T1_08",
+          "set": {
+            "clue_coordinate": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "质疑风帆卫士是否另有目的",
+          "to": "T1_09",
+          "set": {
+            "trust": -1,
+            "risk": 1
+          }
+        },
+        {
+          "text": "让他带你寻找黑伞旧主",
+          "to": "T1_07",
+          "set": {
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_07",
+      "act": "第一则：画页之城",
+      "title": "旋转黑伞",
+      "location": "王宫 / 废弃钟楼",
+      "pov": "鹿暝公主",
+      "image_prompt": "an abandoned clock tower at night, an old master holding a black umbrella spinning with a faint blue halo, gears frozen behind him, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "黑伞不是魔法道具，而像维持物理条件的装置。",
+      "bgm": "BGM_08_black_umbrella",
+      "sfx": "SFX_umbrella_spin, SFX_clock_creak",
+      "text": [
+        [
+          "空伞师",
+          "别让伞停。停了，纸会想起我。"
+        ],
+        [
+          "鹿暝",
+          "你也会被折进去？"
+        ],
+        [
+          "空伞师",
+          "我已经被折了一半。旋转只是让另一半暂时忘记该往哪里倒。"
+        ],
+        [
+          "旁白",
+          "伞骨每转一圈，周围烛火就暗一分，仿佛光走得越来越慢。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：黑伞通过降低光与信息传播保护局部",
+          "to": "T1_08",
+          "set": {
+            "clue_slowlight": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "问他如何击败折页匠",
+          "to": "T1_09",
+          "set": {
+            "risk": 1
+          }
+        },
+        {
+          "text": "接过黑伞，准备撤离",
+          "to": "T1_10",
+          "set": {
+            "clue_slowlight": 1,
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_08",
+      "act": "第一则：画页之城",
+      "title": "童话中的第一条公式",
+      "location": "白塔译码舱 / 临时插入",
+      "pov": "译码员",
+      "image_prompt": "split image: a fairy-tale black umbrella on one side, a scientific diagram of shrinking light cones on a glass console on the other, no readable text, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "现实译码短切；画面不要出现公式文字。",
+      "bgm": "BGM_06_decode_soft",
+      "sfx": "SFX_data_lock",
+      "text": [
+        [
+          "译码员",
+          "画页不是画；黑伞不是伞。一个代表空间被压成平面，一个代表局部光速被人为降低。"
+        ],
+        [
+          "澄安",
+          "他说得这么明显，为什么监察还允许？"
+        ],
+        [
+          "监察音",
+          "伞、纸、铃、海：均为童话词汇。通信继续。"
+        ],
+        [
+          "旁白",
+          "你明白了：故事不是藏得越深越安全，而是要藏在审查者不相信的地方。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "继续回到钟楼，听完黑伞的限制",
+          "to": "T1_09",
+          "set": {
+            "science": 1
+          }
+        },
+        {
+          "text": "先标记为‘防御方案’",
+          "to": "T1_10",
+          "set": {
+            "clue_slowlight": 1
+          }
+        },
+        {
+          "text": "把这个解释说得更直白",
+          "to": "E_CENSOR",
+          "set": {
+            "heat": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_09",
+      "act": "第一则：画页之城",
+      "title": "伞不能太快，也不能太慢",
+      "location": "王宫 / 废弃钟楼",
+      "pov": "鹿暝公主",
+      "image_prompt": "old master and princess under a spinning black umbrella, candle flames leaning inward, the tower window shows a paper-thin moon, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "强调‘参数范围’：伞速不对就失败。",
+      "bgm": "BGM_08_black_umbrella",
+      "sfx": "SFX_umbrella_spin_unstable",
+      "text": [
+        [
+          "空伞师",
+          "伞快了，伞下的人会永远听不见外面的钟。伞慢了，外面的纸会先听见你。"
+        ],
+        [
+          "鹿暝",
+          "所以它既是盾，也是牢。"
+        ],
+        [
+          "空伞师",
+          "每一种幸存都有价格。别让价格伪装成胜利。"
+        ],
+        [
+          "旁白",
+          "他把伞柄交给你。自己的身形随即薄成一片透明的影。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "带伞离开王宫",
+          "to": "T1_10",
+          "set": {
+            "clue_slowlight": 1,
+            "trust": 1
+          }
+        },
+        {
+          "text": "追击折页匠，验证伞的效果",
+          "to": "T1_11",
+          "set": {
+            "risk": 1,
+            "clue_flatten": 1
+          }
+        },
+        {
+          "text": "留在钟楼继续问代价",
+          "to": "T1_11",
+          "set": {
+            "science": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_10",
+      "act": "第一则：画页之城",
+      "title": "离宫",
+      "location": "王宫 / 后门雪阶",
+      "pov": "鹿暝公主",
+      "image_prompt": "a princess, an elderly nurse, and a foreign sailor escaping through a snowy palace back gate under a spinning black umbrella, distant windows flattening into pale rectangles, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "逃离场面，但节奏克制，不做动作大片。",
+      "bgm": "BGM_09_escape_low",
+      "sfx": "SFX_snow_steps, SFX_distant_paper_rip",
+      "text": [
+        [
+          "砾亲王",
+          "姐姐，你带着一把破伞就想继承王国？"
+        ],
+        [
+          "鹿暝",
+          "我不是去继承王国。我要先确认它还能不能被继承。"
+        ],
+        [
+          "旁白",
+          "雪阶下方，整座王宫的侧影正在变薄，像有人从远处合上一册巨书。"
+        ],
+        [
+          "风帆卫士",
+          "去海边。若还有答案，它不会在宫墙里。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "立刻前往海边",
+          "to": "T2_01",
+          "set": {
+            "act1_done": 1
+          }
+        },
+        {
+          "text": "回头看最后一眼，确认画页扩散速度",
+          "to": "T1_11",
+          "set": {
+            "clue_flatten": 1,
+            "science": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T1_11",
+      "act": "第一则：画页之城",
+      "title": "一掌宽的世界",
+      "location": "王宫 / 城墙高处",
+      "pov": "鹿暝公主",
+      "image_prompt": "from a city wall, a palace wing collapses into a flat luminous sheet only a handspan wide, snowflakes suspended in the air, characters watching in horror, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "让‘降维扩散需要时间’变成视觉线索。",
+      "bgm": "BGM_10_cosmic_fear",
+      "sfx": "SFX_low_rumble, SFX_paper_rip_slow",
+      "text": [
+        [
+          "槐姨",
+          "它没有一下子吞掉城。它在长大。"
+        ],
+        [
+          "风帆卫士",
+          "灾害有速度，就意味着还有逃离窗口。"
+        ],
+        [
+          "鹿暝",
+          "一掌宽，足够埋葬一个房间；一夜，足够埋葬一个王国。"
+        ],
+        [
+          "旁白",
+          "你记住这句童话式的测量。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "把‘扩散速度’标记为关键警告",
+          "to": "T2_01",
+          "set": {
+            "clue_spread_rate": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "只记录‘画页危险’，不记录速度",
+          "to": "T2_01",
+          "set": {
+            "clue_flatten": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_01",
+      "act": "第二则：饥潮之海",
+      "title": "没有船归来的港口",
+      "location": "拾声王国 / 南港",
+      "pov": "鹿暝公主",
+      "image_prompt": "an abandoned harbor filled with cracked ships, turquoise water boiling with dark fish-like swarms, a lighthouse extinguished under a gray sky, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "不要用原作饕餮鱼形象，改为黑色潮群。",
+      "bgm": "BGM_11_hungry_sea",
+      "sfx": "SFX_tide_chitter, SFX_wood_creak",
+      "text": [
+        [
+          "旁白",
+          "港口没有渔歌。海面像一张嚼动的嘴，所有船名都被咬得只剩半截。"
+        ],
+        [
+          "风帆卫士",
+          "它们叫饥潮鳞。不是鱼，更像海自己长出的牙。"
+        ],
+        [
+          "鹿暝",
+          "要去沉钟岛，就必须穿过它们。"
+        ],
+        [
+          "槐姨",
+          "我宁愿相信厨房还有比王室海军更有用的东西。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "调查旧商船沉没记录",
+          "to": "T2_02",
+          "set": {
+            "science": 1
+          }
+        },
+        {
+          "text": "检查厨房与浴室库存",
+          "to": "T2_03",
+          "set": {
+            "trust": 1
+          }
+        },
+        {
+          "text": "强行征用最大战舰",
+          "to": "T2_04",
+          "set": {
+            "risk": 1,
+            "heat": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_02",
+      "act": "第二则：饥潮之海",
+      "title": "北陆货单",
+      "location": "南港 / 破船税关",
+      "pov": "鹿暝公主",
+      "image_prompt": "a ruined customs office by the sea, soaked ledgers, crates marked with abstract symbols, a storm-lit window facing the hungry tide, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "账册不写可读文字，只显示符号和空白标签。",
+      "bgm": "BGM_04_archive",
+      "sfx": "SFX_wet_pages",
+      "text": [
+        [
+          "风帆卫士",
+          "许多年前，一艘北陆货船在近海裂开。它运来的东西，有些成了灾，有些被当作奢侈品。"
+        ],
+        [
+          "鹿暝",
+          "同一个地方来的灾难和救命物？"
+        ],
+        [
+          "槐姨",
+          "贵族买东西从不问它本来是做什么的。"
+        ],
+        [
+          "旁白",
+          "货单上，饥潮鳞旁边还有一种名为‘轻泡晶’的浴皂。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：灾害与解法可能同源",
+          "to": "T2_05",
+          "set": {
+            "clue_common_origin": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "去王室浴室寻找轻泡晶",
+          "to": "T2_03",
+          "set": {
+            "trust": 1
+          }
+        },
+        {
+          "text": "审问幸存海商",
+          "to": "T2_06",
+          "set": {
+            "politics": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_03",
+      "act": "第二则：饥潮之海",
+      "title": "一块让人不想动的皂",
+      "location": "王宫 / 废弃浴室",
+      "pov": "鹿暝公主",
+      "image_prompt": "an abandoned royal bathhouse with blue tiles, shelves of translucent soap crystals, weightless bubbles floating upward and refusing to pop, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "泡泡像微型宇宙泡，不要过分可爱。",
+      "bgm": "BGM_12_weightless_bubbles",
+      "sfx": "SFX_bubbles, SFX_water_drip",
+      "text": [
+        [
+          "槐姨",
+          "这种皂洗完，人会舒服得不想动。王后说它像把身体交给云。"
+        ],
+        [
+          "鹿暝",
+          "不想动，还是不需要动？"
+        ],
+        [
+          "旁白",
+          "一枚泡泡脱离皂面，竟没有落下。它在空中轻轻漂移，像忘记了重量。"
+        ],
+        [
+          "风帆卫士",
+          "北陆骑最快的马去追这些泡。追上了，才能做成一小块。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：泡沫与惯性/重量异常有关",
+          "to": "T2_05",
+          "set": {
+            "clue_curvature": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "让槐姨试着把泡沫涂到船底",
+          "to": "T2_07",
+          "set": {
+            "trust": 1,
+            "clue_curvature": 1
+          }
+        },
+        {
+          "text": "把泡沫撒向饥潮鳞进行小范围测试",
+          "to": "T2_05",
+          "set": {
+            "risk": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_04",
+      "act": "第二则：饥潮之海",
+      "title": "战舰的牙印",
+      "location": "南港 / 军船码头",
+      "pov": "鹿暝公主",
+      "image_prompt": "a massive wooden warship being pulled into dark churning water, bite-like gaps in the hull, soldiers frozen in fear on the pier, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "失败反馈：大船和武力不能解决。",
+      "bgm": "BGM_05_alarm",
+      "sfx": "SFX_hull_crack, SFX_tide_roar",
+      "text": [
+        [
+          "旁白",
+          "最大的战舰只坚持了七次心跳。第八次，船头像一块饼干被海咬下。"
+        ],
+        [
+          "风帆卫士",
+          "饥潮不怕大。大，只是更容易被发现。"
+        ],
+        [
+          "鹿暝",
+          "那我们需要不是更强的船，而是更不像船的船。"
+        ],
+        [
+          "监察音",
+          "寓言稳定。继续。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "停止军事尝试，寻找低可见度方案",
+          "to": "T2_03",
+          "set": {
+            "risk": -1,
+            "science": 1
+          }
+        },
+        {
+          "text": "继续用火攻海面",
+          "to": "E_CENSOR",
+          "set": {
+            "heat": 2
+          }
+        },
+        {
+          "text": "回到税关查同源货物",
+          "to": "T2_02",
+          "set": {}
+        }
+      ]
+    },
+    {
+      "id": "T2_05",
+      "act": "第二则：饥潮之海",
+      "title": "泡沫实验",
+      "location": "南港 / 小码头",
+      "pov": "鹿暝公主",
+      "image_prompt": "a small dock at dusk, a glass bowl of weightless blue bubbles poured toward black tide creatures, the creatures parting without blood, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "实验感强，泡沫让海面安静，不是杀戮。",
+      "bgm": "BGM_13_experiment",
+      "sfx": "SFX_glass_clink, SFX_bubbles_spread",
+      "text": [
+        [
+          "槐姨",
+          "它们不是死了。它们像忘了该往哪里咬。"
+        ],
+        [
+          "风帆卫士",
+          "泡沫不是毒。它改变的是路。"
+        ],
+        [
+          "鹿暝",
+          "如果一艘船能让前方的海先忘记自己有重量，也许它就能滑过去。"
+        ],
+        [
+          "旁白",
+          "你的童话笔记上出现第二条线索：不是推开世界，而是让世界在船前弯开。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "把轻泡晶用于船首，测试‘弯路’",
+          "to": "T2_07",
+          "set": {
+            "clue_curvature": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "把轻泡晶用于伞面，测试防御叠加",
+          "to": "T2_08",
+          "set": {
+            "clue_slowlight": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "大量投放泡沫，试图清空海域",
+          "to": "T2_06",
+          "set": {
+            "risk": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_06",
+      "act": "第二则：饥潮之海",
+      "title": "海商的谎账",
+      "location": "南港 / 海商会馆",
+      "pov": "鹿暝公主",
+      "image_prompt": "a dark merchant guild hall, old sailors around a round table, maps stained with salt, one lantern swinging as waves hit the walls, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "政治支线：失败源自贪婪与误用。",
+      "bgm": "BGM_14_merchant_secret",
+      "sfx": "SFX_lantern_swing",
+      "text": [
+        [
+          "老海商",
+          "我们以为饥潮鳞能清理海盗，以为轻泡晶只是贵族玩物。谁会想到货箱会统治海？"
+        ],
+        [
+          "鹿暝",
+          "你们把未知当作商品，把事故当作账损。"
+        ],
+        [
+          "风帆卫士",
+          "这也是一种坐标。愚蠢会指向文明。"
+        ],
+        [
+          "旁白",
+          "海商交出一张通往沉钟岛的旧航线。航线旁写着：不要留下白色尾迹。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：航迹可能暴露或改变环境",
+          "to": "T2_08",
+          "set": {
+            "clue_wake": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "没收海商库存，立刻造船",
+          "to": "T2_07",
+          "set": {
+            "risk": 1
+          }
+        },
+        {
+          "text": "安抚海商，换取更多航海细节",
+          "to": "T2_09",
+          "set": {
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_07",
+      "act": "第二则：饥潮之海",
+      "title": "不像船的船",
+      "location": "南港 / 临时船坞",
+      "pov": "鹿暝公主",
+      "image_prompt": "a small sailboat being coated with shimmering blue foam crystals, black umbrella mounted at the mast, workers silent under moonlight, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "把伞、泡沫、帆船组合成关键视觉。",
+      "bgm": "BGM_15_building_hope",
+      "sfx": "SFX_brush_on_hull, SFX_soft_waves",
+      "text": [
+        [
+          "槐姨",
+          "它看上去不像能救一个王国。"
+        ],
+        [
+          "风帆卫士",
+          "能救王国的东西，通常先要承认自己救不了整个王国。"
+        ],
+        [
+          "鹿暝",
+          "那它至少要救出一个答案。"
+        ],
+        [
+          "旁白",
+          "船首抹上轻泡晶，桅杆绑上黑伞。它像一枚准备从童话里逃走的标点。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "选择夜航，降低被看见的概率",
+          "to": "T2_09",
+          "set": {
+            "clue_coordinate": 1,
+            "trust": 1
+          }
+        },
+        {
+          "text": "选择白昼，便于观察航迹",
+          "to": "T2_08",
+          "set": {
+            "clue_wake": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "带更多难民上船",
+          "to": "T2_10",
+          "set": {
+            "trust": 1,
+            "risk": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_08",
+      "act": "第二则：饥潮之海",
+      "title": "白色尾迹",
+      "location": "南港外海 / 试航区",
+      "pov": "鹿暝公主",
+      "image_prompt": "a small foam-coated sailboat gliding over a dark sea, leaving a luminous white wake that slowly hardens like pale glass behind it, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "尾迹要明显、美丽且危险。",
+      "bgm": "BGM_16_dangerous_beauty",
+      "sfx": "SFX_water_silence",
+      "text": [
+        [
+          "风帆卫士",
+          "看见了吗？泡沫让船前的海弯开，也让船后的海变慢。"
+        ],
+        [
+          "鹿暝",
+          "这条尾迹像路，也像牢门。"
+        ],
+        [
+          "槐姨",
+          "孩子，能逃出去的办法，也可能把后来的人困住。"
+        ],
+        [
+          "旁白",
+          "你记下：航迹不是背景，而是技术的副作用。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：高速航行会留下低速尾迹",
+          "to": "T2_09",
+          "set": {
+            "clue_wake": 1,
+            "clue_slowlight": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "忽略尾迹，专注如何穿过饥潮",
+          "to": "T2_09",
+          "set": {
+            "clue_curvature": 1
+          }
+        },
+        {
+          "text": "尝试用黑伞抹除尾迹",
+          "to": "T2_10",
+          "set": {
+            "risk": 1,
+            "science": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_09",
+      "act": "第二则：饥潮之海",
+      "title": "穿越饥潮",
+      "location": "饥潮之海 / 夜航",
+      "pov": "鹿暝公主",
+      "image_prompt": "night sea crossing, a tiny sailboat under a rotating black umbrella, blue foam parting a swarm-filled ocean, stars reflected like cold eyes, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "本章高潮；构图要小船极小、海极大。",
+      "bgm": "BGM_17_crossing",
+      "sfx": "SFX_umbrella_spin, SFX_tide_whisper",
+      "text": [
+        [
+          "旁白",
+          "饥潮没有退。它只是来不及决定你们在不在这里。"
+        ],
+        [
+          "鹿暝",
+          "别让伞停。别让泡沫断。别让船尾的白痕被岸上的人误认为道路。"
+        ],
+        [
+          "风帆卫士",
+          "殿下，沉钟岛的灯在前方。"
+        ],
+        [
+          "槐姨",
+          "我看不见灯。我只看见海在我们身后合拢。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "把航海日志密封，带给潜灯王子",
+          "to": "T3_01",
+          "set": {
+            "clue_curvature": 1,
+            "clue_wake": 1,
+            "trust": 1
+          }
+        },
+        {
+          "text": "向王城发回‘可以穿越’的信号",
+          "to": "T2_10",
+          "set": {
+            "risk": 1,
+            "heat": 1
+          }
+        },
+        {
+          "text": "熄灭所有灯，只保留心跳般的伞声",
+          "to": "T3_01",
+          "set": {
+            "clue_coordinate": 1,
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T2_10",
+      "act": "第二则：饥潮之海",
+      "title": "错误的好消息",
+      "location": "饥潮之海 / 船尾",
+      "pov": "鹿暝公主",
+      "image_prompt": "a messenger flare rising from a small boat, illuminating a white wake across the dark ocean, distant harbor lights beginning to follow it, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "好消息变成误导，暗示人类误读技术。",
+      "bgm": "BGM_18_bad_news",
+      "sfx": "SFX_flare, SFX_distant_bells",
+      "text": [
+        [
+          "旁白",
+          "信号升空。王城的灯一盏接一盏亮起，仿佛整座岛都松了一口气。"
+        ],
+        [
+          "风帆卫士",
+          "太早了。你告诉他们有路，却没告诉他们路会改变海。"
+        ],
+        [
+          "鹿暝",
+          "我想给他们希望。"
+        ],
+        [
+          "槐姨",
+          "希望若少了警告，就会长得像陷阱。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "补发第二条：不要追随白色尾迹",
+          "to": "T3_01",
+          "set": {
+            "clue_wake": 1,
+            "trust": 1
+          }
+        },
+        {
+          "text": "保持沉默，先抵达沉钟岛",
+          "to": "T3_01",
+          "set": {
+            "risk": 1
+          }
+        },
+        {
+          "text": "继续发送详尽技术说明",
+          "to": "E_CENSOR",
+          "set": {
+            "heat": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_01",
+      "act": "第三则：深灯王子",
+      "title": "沉钟岛",
+      "location": "沉钟岛 / 雾岸",
+      "pov": "鹿暝公主",
+      "image_prompt": "a misty island with black cliffs, giant bronze bells half-submerged in the tide, the small foam-coated boat arriving under a dim rotating umbrella, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "岛不是坟墓而是档案馆入口；钟半沉海中。",
+      "bgm": "BGM_19_bell_island",
+      "sfx": "SFX_deep_bell, SFX_fog_horn",
+      "text": [
+        [
+          "旁白",
+          "沉钟岛没有城门，只有一排半沉的钟。海浪每碰一下，地下就回一声。"
+        ],
+        [
+          "鹿暝",
+          "潜灯王子真的在这里？"
+        ],
+        [
+          "风帆卫士",
+          "他在海下。不是被囚禁，是在守一座不会浮起来的图书馆。"
+        ],
+        [
+          "槐姨",
+          "会把家建在海底的人，要么疯了，要么早知道地面靠不住。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "敲响最小的钟",
+          "to": "T3_02",
+          "set": {
+            "trust": 1
+          }
+        },
+        {
+          "text": "先记录岛上潮汐与白色尾迹反应",
+          "to": "T3_03",
+          "set": {
+            "science": 1
+          }
+        },
+        {
+          "text": "让风帆卫士先下水探路",
+          "to": "T3_04",
+          "set": {
+            "risk": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_02",
+      "act": "第三则：深灯王子",
+      "title": "海底回声",
+      "location": "沉钟岛 / 钟井入口",
+      "pov": "鹿暝公主",
+      "image_prompt": "a circular stone well descending into glowing dark water, ripples forming concentric rings, a faint lantern visible far below, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "构图像进入另一个物理维度。",
+      "bgm": "BGM_20_underwater_call",
+      "sfx": "SFX_bell_underwater",
+      "text": [
+        [
+          "潜灯王子",
+          "姐姐，你终于带着一把会变成牢的伞、一艘会留下路的船来了。"
+        ],
+        [
+          "鹿暝",
+          "你知道王城发生了什么？"
+        ],
+        [
+          "潜灯王子",
+          "我知道得太早，所以回不去。回去会让灾害也知道那条路。"
+        ],
+        [
+          "旁白",
+          "水下的灯不是照亮他，而是在把他与外界隔开。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "询问为何不能回王城",
+          "to": "T3_05",
+          "set": {
+            "clue_coordinate": 1
+          }
+        },
+        {
+          "text": "询问海底图书馆保存了什么",
+          "to": "T3_06",
+          "set": {
+            "science": 1
+          }
+        },
+        {
+          "text": "请求他立刻继承王位",
+          "to": "T3_04",
+          "set": {
+            "politics": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_03",
+      "act": "第三则：深灯王子",
+      "title": "尾迹在岛边变慢",
+      "location": "沉钟岛 / 北岸岩台",
+      "pov": "鹿暝公主",
+      "image_prompt": "white luminous wake from a boat stiffening near black rocks, droplets frozen midair, bronze bells vibrating softly under a cloudy sky, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "视觉化‘航迹降低局部光速’。",
+      "bgm": "BGM_06_decode_soft",
+      "sfx": "SFX_frozen_droplets",
+      "text": [
+        [
+          "风帆卫士",
+          "白痕经过的地方，浪变慢，声音也变慢。"
+        ],
+        [
+          "鹿暝",
+          "如果王国的人全沿着白痕出海，他们会不会把自己的海也变成慢海？"
+        ],
+        [
+          "槐姨",
+          "慢到再也没有船能回来，慢到消息出不去。"
+        ],
+        [
+          "旁白",
+          "你终于理解：逃亡方式本身会改变故乡。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录：曲航尾迹可制造低光速区域",
+          "to": "T3_05",
+          "set": {
+            "clue_wake": 1,
+            "clue_slowlight": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "把尾迹当作天然防线",
+          "to": "T3_07",
+          "set": {
+            "defense_bias": 1
+          }
+        },
+        {
+          "text": "不记录副作用，避免吓坏王城",
+          "to": "T3_04",
+          "set": {
+            "trust": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_04",
+      "act": "第三则：深灯王子",
+      "title": "王位不能浮上来",
+      "location": "沉钟岛 / 海下门廊",
+      "pov": "鹿暝公主",
+      "image_prompt": "underwater stone corridor with air-filled lantern chambers, a pale prince behind a glass-like water wall, royal crown floating between them, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "王冠悬浮但无人触碰。",
+      "bgm": "BGM_21_underwater_palace",
+      "sfx": "SFX_muffled_water",
+      "text": [
+        [
+          "潜灯王子",
+          "王位是给地面的人准备的。海底只保存问题，不保存命令。"
+        ],
+        [
+          "鹿暝",
+          "父王说只有你能不被折进画页。"
+        ],
+        [
+          "潜灯王子",
+          "因为我早已不在画师的纸面上。他看不见我，不等于他永远看不见路。"
+        ],
+        [
+          "旁白",
+          "他的拒绝不是怯懦，而是一种坐标纪律。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "理解：隐藏路线比王位更重要",
+          "to": "T3_05",
+          "set": {
+            "clue_coordinate": 1,
+            "trust": 1
+          }
+        },
+        {
+          "text": "逼他回去救王国",
+          "to": "T3_07",
+          "set": {
+            "risk": 1,
+            "trust": -1
+          }
+        },
+        {
+          "text": "问他在海底保存的‘问题’",
+          "to": "T3_06",
+          "set": {
+            "science": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_05",
+      "act": "第三则：深灯王子",
+      "title": "两种幸存",
+      "location": "沉钟岛 / 深灯厅",
+      "pov": "鹿暝公主",
+      "image_prompt": "a vast underwater hall lit by slow blue lanterns, two pathways shown as models: a tiny sailboat toward stars and a dark sealed island under a dome, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "把‘逃逸’和‘黑域’以模型呈现，避免直白技术图。",
+      "bgm": "BGM_22_two_survivals",
+      "sfx": "SFX_lantern_hum",
+      "text": [
+        [
+          "潜灯王子",
+          "有两种活法。第一种，把船造到足够快，离开所有会被画到纸上的地方。"
+        ],
+        [
+          "潜灯王子",
+          "第二种，把灯熄到足够慢，让外面的画师觉得这里已经没有值得画的东西。"
+        ],
+        [
+          "鹿暝",
+          "第一种会失去家。第二种会把家变成笼。"
+        ],
+        [
+          "潜灯王子",
+          "所以童话必须把二者都说出来。只说一种，就是替死亡选择了语气。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "倾向远航：保存文明种子",
+          "to": "T3_08",
+          "set": {
+            "escape_bias": 1,
+            "clue_escape": 1
+          }
+        },
+        {
+          "text": "倾向慢灯：让故乡免于被看见",
+          "to": "T3_07",
+          "set": {
+            "defense_bias": 1,
+            "clue_blackdomain": 1
+          }
+        },
+        {
+          "text": "要求同时传回两种方案与代价",
+          "to": "T3_09",
+          "set": {
+            "clue_escape": 1,
+            "clue_blackdomain": 1,
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_06",
+      "act": "第三则：深灯王子",
+      "title": "海底图书馆",
+      "location": "沉钟岛 / 深海档案馆",
+      "pov": "鹿暝公主",
+      "image_prompt": "an underwater archive with transparent shelves, glowing scroll capsules, fish shadows outside, a prince holding a sealed star map, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "档案馆应像文明备份库，不像魔法图书馆。",
+      "bgm": "BGM_04_archive",
+      "sfx": "SFX_archive_capsules",
+      "text": [
+        [
+          "潜灯王子",
+          "这里有王国的歌谱、农书、法律、笑话，还有尚未出生的人可能需要的错误清单。"
+        ],
+        [
+          "槐姨",
+          "错误也要保存？"
+        ],
+        [
+          "潜灯王子",
+          "尤其是错误。胜利会被后人庆祝，错误才会被后人重复。"
+        ],
+        [
+          "旁白",
+          "他递给你一枚封蜡海图：只能在离岸后打开。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "接受海图，并承诺不在王城公开坐标",
+          "to": "T3_09",
+          "set": {
+            "clue_coordinate": 1,
+            "trust": 1,
+            "clue_escape": 1
+          }
+        },
+        {
+          "text": "要求复制所有档案带回王城",
+          "to": "T3_07",
+          "set": {
+            "risk": 1,
+            "trust": -1
+          }
+        },
+        {
+          "text": "先阅读错误清单",
+          "to": "T3_08",
+          "set": {
+            "science": 1,
+            "clue_wake": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_07",
+      "act": "第三则：深灯王子",
+      "title": "慢灯穹顶",
+      "location": "沉钟岛 / 模拟穹顶",
+      "pov": "鹿暝公主",
+      "image_prompt": "a model island under a dark blue dome where lantern light moves like syrup, people inside safe but isolated, outside stars blurred, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "美丽但压抑；让玩家感到这是安全牢笼。",
+      "bgm": "BGM_23_beautiful_prison",
+      "sfx": "SFX_slow_heartbeat",
+      "text": [
+        [
+          "潜灯王子",
+          "慢灯能让画师错过你，也能让朋友永远等不到你。"
+        ],
+        [
+          "鹿暝",
+          "如果全王国都躲进慢灯呢？"
+        ],
+        [
+          "潜灯王子",
+          "他们会活着，直到忘记外面曾经有海。"
+        ],
+        [
+          "旁白",
+          "穹顶里的小人没有死。他们只是把未来折成了一个很小的圆。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录慢灯方案与社会代价",
+          "to": "T3_09",
+          "set": {
+            "clue_blackdomain": 1,
+            "clue_slowlight": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "把慢灯视为唯一正确答案",
+          "to": "R02",
+          "set": {
+            "defense_bias": 2
+          }
+        },
+        {
+          "text": "拒绝慢灯，转向远航",
+          "to": "T3_08",
+          "set": {
+            "escape_bias": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_08",
+      "act": "第三则：深灯王子",
+      "title": "离岸海图",
+      "location": "沉钟岛 / 星潮观测井",
+      "pov": "鹿暝公主",
+      "image_prompt": "a vertical underwater observatory looking up at stars refracted through the sea, a sealed map glowing in the princess's hands, a tiny sailboat model points outward, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "远航不是浪漫，而是沉重的备份。",
+      "bgm": "BGM_24_escape_route",
+      "sfx": "SFX_star_tide",
+      "text": [
+        [
+          "潜灯王子",
+          "离岸之后，不要沿着白痕回头。回头会把猎手引向家，也会把家变成慢海。"
+        ],
+        [
+          "鹿暝",
+          "那离开的人还算王国的人吗？"
+        ],
+        [
+          "潜灯王子",
+          "如果他们还保存王国的错误、歌和名字，就算。"
+        ],
+        [
+          "旁白",
+          "你发现第三则童话真正的问题不是‘怎么逃’，而是‘带走什么才算活着’。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "记录远航条件：速度、隐蔽、文化备份",
+          "to": "T3_09",
+          "set": {
+            "clue_escape": 1,
+            "clue_coordinate": 1,
+            "science": 1
+          }
+        },
+        {
+          "text": "只记录速度，不记录隐蔽",
+          "to": "R02",
+          "set": {
+            "escape_bias": 1,
+            "risk": 1
+          }
+        },
+        {
+          "text": "请求王子亲自送出最后讯息",
+          "to": "T3_10",
+          "set": {
+            "trust": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_09",
+      "act": "第三则：深灯王子",
+      "title": "童话必须不完整",
+      "location": "沉钟岛 / 深灯厅",
+      "pov": "鹿暝公主",
+      "image_prompt": "the princess, prince, sailor, and nurse around a glowing underwater table, three symbolic objects floating: folded paper, blue foam, dark umbrella, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "三则童话线索汇合的关键视觉。",
+      "bgm": "BGM_25_revelation",
+      "sfx": "SFX_three_chimes",
+      "text": [
+        [
+          "鹿暝",
+          "为什么不把答案写成命令？"
+        ],
+        [
+          "潜灯王子",
+          "命令会被审查者看见，也会被后来的人误用。童话留下选择，选择留下责任。"
+        ],
+        [
+          "风帆卫士",
+          "殿下，王城的钟声停了。"
+        ],
+        [
+          "旁白",
+          "远处，海面上像有一页白纸正在慢慢展开。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "带走三件象征物，返回现实译码",
+          "to": "R02",
+          "set": {
+            "act3_done": 1,
+            "clue_flatten": 1,
+            "clue_curvature": 1,
+            "clue_slowlight": 1
+          }
+        },
+        {
+          "text": "让王子补充最后一句私人留言",
+          "to": "T3_10",
+          "set": {
+            "trust": 1
+          }
+        },
+        {
+          "text": "删去代价，只保留方案",
+          "to": "R02",
+          "set": {
+            "risk": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "T3_10",
+      "act": "第三则：深灯王子",
+      "title": "给听故事的人",
+      "location": "沉钟岛 / 深灯厅",
+      "pov": "鹿暝公主 / 远航者Y",
+      "image_prompt": "a distant messenger silhouette reflected in an underwater lantern, a princess listening as bubbles rise like unsent words, melancholic sci-fi fairy tale mood, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "不要画出现实角色脸部，保留‘私人信息无法被完全解码’。",
+      "bgm": "BGM_26_personal_message",
+      "sfx": "SFX_bubble_words",
+      "text": [
+        [
+          "潜灯王子",
+          "告诉那个听故事的人：我把最锋利的话磨成了圆石，这样它才可能从怪物的喉咙里滚过去。"
+        ],
+        [
+          "潜灯王子",
+          "如果她只听见童话，就让她保留童话。如果她听见了警告，就请她不要独自承担它。"
+        ],
+        [
+          "鹿暝",
+          "我会转告。"
+        ],
+        [
+          "旁白",
+          "深灯暗下去。三则童话结束，现实的白塔重新出现。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "返回白塔译码舱",
+          "to": "R02",
+          "set": {
+            "trust": 2,
+            "act3_done": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "act": "终章：译码",
+      "title": "三件童话物",
+      "location": "白塔译码舱",
+      "pov": "译码员",
+      "image_prompt": "white decoding chamber with three holographic objects floating over the console: a folded sheet, a blue foam crystal, a spinning black umbrella, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "回到现实，三件物品抽象投影。",
+      "bgm": "BGM_06_decode_soft",
+      "sfx": "SFX_console_resonance",
+      "text": [
+        [
+          "澄安",
+          "画页、轻泡、黑伞。它们不是道具，是三条生存条件。"
+        ],
+        [
+          "译码员",
+          "还缺一件事：我们要决定把童话翻译成什么。童话、警告，还是命令。"
+        ],
+        [
+          "监察音",
+          "请确认最终摘要。过度直译将造成通信损毁。"
+        ],
+        [
+          "旁白",
+          "你开始排列线索。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "优先解读‘画页灾害’",
+          "to": "R03",
+          "set": {
+            "decode_flatten": 1
+          }
+        },
+        {
+          "text": "优先解读‘轻泡远航’",
+          "to": "R04",
+          "set": {
+            "decode_escape": 1
+          }
+        },
+        {
+          "text": "优先解读‘黑伞慢灯’",
+          "to": "R05",
+          "set": {
+            "decode_blackdomain": 1
+          }
+        },
+        {
+          "text": "同时保留三条线索与代价",
+          "to": "R06",
+          "set": {
+            "decode_balanced": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "act": "终章：译码",
+      "title": "看见纸边",
+      "location": "白塔 / 模拟宇宙沙盘",
+      "pov": "译码员",
+      "image_prompt": "a holographic solar system model with one edge turning into a flat sheet, scientists watching in silence, no labels or text, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "末日沙盘，不出现具体太阳系名称。",
+      "bgm": "BGM_27_flattening_decode",
+      "sfx": "SFX_hologram_crackle",
+      "text": [
+        [
+          "译码员",
+          "画页灾害会把立体世界压成平面，且扩散需要时间。逃离窗口存在，但不能被拖延成祈祷。"
+        ],
+        [
+          "澄安",
+          "如果我们只证明灾害，委员会会要求更多证据。"
+        ],
+        [
+          "译码员",
+          "证据到来时，也许已经变成纸边。"
+        ],
+        [
+          "旁白",
+          "你可以提交警告，也可以继续补全方案。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "提交紧急灾害警告",
+          "to": "E_WARNING_ONLY",
+          "set": {}
+        },
+        {
+          "text": "继续补入远航与慢灯方案",
+          "to": "R06",
+          "set": {
+            "decode_balanced": 1
+          }
+        },
+        {
+          "text": "为避免恐慌，改写为文学分析",
+          "to": "E_MISSED",
+          "set": {}
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "act": "终章：译码",
+      "title": "远航派报告",
+      "location": "白塔 / 航线推演室",
+      "pov": "译码员",
+      "image_prompt": "a dark strategy room with holographic escape routes leaving a doomed blue planet, tiny ships as points of light, analysts reflected in glass, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "远航画面要有道德重量，不是胜利海报。",
+      "bgm": "BGM_24_escape_route",
+      "sfx": "SFX_route_projection",
+      "text": [
+        [
+          "译码员",
+          "轻泡暗示一种近似光速的远航方式。它能让少数船离岸，但航迹会改变后方环境。"
+        ],
+        [
+          "澄安",
+          "少数人走，许多人留。这个报告会被骂成背叛。"
+        ],
+        [
+          "译码员",
+          "不报告，才是把所有人交给同一种死亡。"
+        ],
+        [
+          "旁白",
+          "航线在屏幕上分叉。每一条都通向不再回头。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "建议立即建设远航方舟",
+          "to": "E_ESCAPE",
+          "set": {}
+        },
+        {
+          "text": "补充：不得形成危险尾迹，不得公开坐标",
+          "to": "R06",
+          "set": {
+            "decode_balanced": 1
+          }
+        },
+        {
+          "text": "删除副作用，以便方案通过",
+          "to": "E_ESCAPE_FLAWED",
+          "set": {}
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "act": "终章：译码",
+      "title": "慢灯派报告",
+      "location": "白塔 / 防御推演室",
+      "pov": "译码员",
+      "image_prompt": "a planet model enclosed in a dark blue low-light dome, outside stars smeared into long arcs, inside cities glowing faintly, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "美丽的囚笼；城市看似安全但与外界断开。",
+      "bgm": "BGM_23_beautiful_prison",
+      "sfx": "SFX_slow_clock",
+      "text": [
+        [
+          "译码员",
+          "黑伞暗示降低局部信息传播速度的防御。它能让文明不再显眼，也会让文明难以离开。"
+        ],
+        [
+          "澄安",
+          "这听起来像活着，也像自我埋葬。"
+        ],
+        [
+          "译码员",
+          "童话已经提醒：盾和牢可能是同一件东西。"
+        ],
+        [
+          "旁白",
+          "你必须决定是否把这种代价写进摘要第一行。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "如实写明：慢灯等于安全牢笼",
+          "to": "R06",
+          "set": {
+            "decode_balanced": 1
+          }
+        },
+        {
+          "text": "推荐全域慢灯防御",
+          "to": "E_BLACKDOMAIN",
+          "set": {}
+        },
+        {
+          "text": "淡化代价，争取政治通过",
+          "to": "E_BLACKDOMAIN_FLAWED",
+          "set": {}
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "act": "终章：译码",
+      "title": "三线报告",
+      "location": "白塔 / 主听证厅",
+      "pov": "译码员",
+      "image_prompt": "a formal hearing chamber shaped like a white amphitheater, three holographic symbols projected above a central podium, officials hidden in shadow, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "紧张、庄严、没有明确国家标识。",
+      "bgm": "BGM_28_hearing",
+      "sfx": "SFX_murmur, SFX_microphone_on",
+      "text": [
+        [
+          "译码员",
+          "第一，画页灾害：被发现的世界可能被压平，扩散存在窗口。"
+        ],
+        [
+          "译码员",
+          "第二，轻泡远航：可以离岸，但航迹会留下慢区，坐标纪律必须优先于凯旋。"
+        ],
+        [
+          "译码员",
+          "第三，黑伞慢灯：可以隐藏，但防御与囚禁只有参数差别。"
+        ],
+        [
+          "澄安",
+          "你没有把它翻译成答案。你把它翻译成选择。"
+        ]
+      ],
+      "choices": [
+        {
+          "text": "提交‘双轨黎明’：远航备份 + 有限慢灯 + 公开代价",
+          "to": "E_TRUE",
+          "set": {}
+        },
+        {
+          "text": "为求一致，删去远航，只留慢灯",
+          "to": "E_BLACKDOMAIN",
+          "set": {}
+        },
+        {
+          "text": "为求自由，删去慢灯，只留远航",
+          "to": "E_ESCAPE",
+          "set": {}
+        },
+        {
+          "text": "不提交，保留童话原文等待更多证据",
+          "to": "E_MISSED",
+          "set": {}
+        }
+      ]
+    },
+    {
+      "id": "E_TRUE",
+      "act": "结局",
+      "title": "结局A：双轨黎明",
+      "location": "白塔外 / 黎明前",
+      "pov": "译码员",
+      "image_prompt": "pre-dawn horizon outside a white tower, one small starship trail rising silently while a distant city dims under a protective blue halo, bittersweet hopeful mood, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "最佳结局不是全员胜利，而是文明有两种不完美延续。",
+      "bgm": "BGM_29_true_ending",
+      "sfx": "SFX_dawn_wind",
+      "text": [
+        [
+          "旁白",
+          "报告没有拯救所有人。没有报告能做到。"
+        ],
+        [
+          "澄安",
+          "至少童话没有被当成童话埋掉。"
+        ],
+        [
+          "译码员",
+          "也没有被当成唯一答案供起来。"
+        ],
+        [
+          "旁白",
+          "第一批远航者带走档案，故乡的灯逐区变慢。黎明来得很迟，但它确实来了。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_WARNING_ONLY",
+      "act": "结局",
+      "title": "结局B：纸边警报",
+      "location": "白塔 / 空听证厅",
+      "pov": "译码员",
+      "image_prompt": "an empty hearing chamber with emergency lights, a holographic flat edge approaching a planet model, papers scattered on the floor, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "警告被听见但方案不足。",
+      "bgm": "BGM_30_warning_only",
+      "sfx": "SFX_alarm_far",
+      "text": [
+        [
+          "旁白",
+          "灾害警告被归档为最高优先级。争论随即开始：证据、成本、恐慌、责任。"
+        ],
+        [
+          "澄安",
+          "我们让他们看见纸边，却没给他们船。"
+        ],
+        [
+          "译码员",
+          "也许下一份报告能补上。"
+        ],
+        [
+          "旁白",
+          "只是童话里说过：一掌宽的世界，会长大。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_ESCAPE",
+      "act": "结局",
+      "title": "结局C：远舟无岸",
+      "location": "深空 / 方舟内部",
+      "pov": "幸存者档案",
+      "image_prompt": "inside a generation starship archive, children looking at holographic memories of a blue homeworld, stars outside like cold dust, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "远航成功但故乡失联。",
+      "bgm": "BGM_31_escape_ending",
+      "sfx": "SFX_ship_hum",
+      "text": [
+        [
+          "旁白",
+          "船离开了。档案离开了。许多名字离开了。"
+        ],
+        [
+          "幸存者档案",
+          "故乡最后一次回信，比预计晚了很多年。再后来，所有钟声都停在航迹之后。"
+        ],
+        [
+          "旁白",
+          "远舟仍在前进。它保存了故事，也保存了没有带走所有人的罪。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_ESCAPE_FLAWED",
+      "act": "结局",
+      "title": "结局D：白痕归途",
+      "location": "深空航迹 / 慢光带",
+      "pov": "旁白",
+      "image_prompt": "a luminous white trail across deep space hardening into a slow-light barrier, distant ships trapped like insects in amber, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "错误远航：忽略尾迹副作用。",
+      "bgm": "BGM_32_flawed_escape",
+      "sfx": "SFX_static_slow",
+      "text": [
+        [
+          "旁白",
+          "他们掌握了离开的速度，却删去了不要回头的警告。"
+        ],
+        [
+          "旁白",
+          "白痕在星间变成琥珀。后来者沿着它追赶，追到一条越来越慢的路。"
+        ],
+        [
+          "旁白",
+          "童话没有骗他们。被删掉的部分，也曾经是答案。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_BLACKDOMAIN",
+      "act": "结局",
+      "title": "结局E：静蓝王国",
+      "location": "慢灯穹顶内 / 百年后",
+      "pov": "档案旁白",
+      "image_prompt": "a quiet city under a dark blue dome, people living safely with dim lanterns, outside stars unreachable and blurred, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "安全但悲伤。",
+      "bgm": "BGM_33_blackdomain_ending",
+      "sfx": "SFX_slow_city",
+      "text": [
+        [
+          "旁白",
+          "他们活了下来。很久，很久。"
+        ],
+        [
+          "档案旁白",
+          "孩子们学会了穹顶内的潮汐，却不再相信海图上那些远方大陆。"
+        ],
+        [
+          "旁白",
+          "静蓝王国没有被画进纸里。它只是把自己写成了一句永远传不出去的话。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_BLACKDOMAIN_FLAWED",
+      "act": "结局",
+      "title": "结局F：伞停之后",
+      "location": "慢灯控制塔",
+      "pov": "旁白",
+      "image_prompt": "an abandoned control tower under a dark umbrella-like dome, clocks stopped at different times, a single lantern flickering, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "参数错误导致防御脆弱。",
+      "bgm": "BGM_34_umbrella_stops",
+      "sfx": "SFX_clock_stop",
+      "text": [
+        [
+          "旁白",
+          "他们知道要撑伞，却不愿承认伞速有边界。"
+        ],
+        [
+          "旁白",
+          "慢灯过快时，世界听不见他们；慢灯过慢时，外面的纸先听见了他们。"
+        ],
+        [
+          "旁白",
+          "伞停的那一刻，所有被省略的代价同时回来了。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_MISSED",
+      "act": "结局",
+      "title": "结局G：仍是童话",
+      "location": "白塔 / 文学组档案室",
+      "pov": "旁白",
+      "image_prompt": "a dusty archive room with fairy-tale manuscripts sealed in glass cases, a faint cosmic disaster reflected on the glass, unnoticed by readers, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "最冷的坏结局：文本被安全地误读。",
+      "bgm": "BGM_35_missed_ending",
+      "sfx": "SFX_archive_dust",
+      "text": [
+        [
+          "旁白",
+          "三则童话被评为优美、晦涩、富有异域风情。"
+        ],
+        [
+          "文学评审",
+          "其中的伞、泡沫与白纸，显然象征童年恐惧。"
+        ],
+        [
+          "旁白",
+          "多年后，人们终于理解它们象征什么。那时，理解已经不再需要语言。"
+        ]
+      ],
+      "choices": []
+    },
+    {
+      "id": "E_CENSOR",
+      "act": "特殊失败",
+      "title": "通信中止",
+      "location": "白塔 / 断线舱",
+      "pov": "译码员",
+      "image_prompt": "a decoding chamber plunging into darkness, three fairy-tale holograms shattering into static, a red waveform flatlining, cinematic visual novel background, Chinese sci-fi fairy tale, painterly realism, 16:9, dramatic lighting, high detail, no text, no watermark",
+      "director_note_zh": "审查失败，不要出现具体外星人形象。",
+      "bgm": "BGM_36_censor_fail",
+      "sfx": "SFX_signal_cut",
+      "text": [
+        [
+          "监察音",
+          "检测到直接技术规避。通信中止。"
+        ],
+        [
+          "澄安",
+          "不，等等，他还没有讲完——"
+        ],
+        [
+          "旁白",
+          "三盏灯同时熄灭。童话没有死，它只是再也不能抵达你这里。"
+        ]
+      ],
+      "choices": []
+    }
+  ]
+}

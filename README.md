@@ -2,6 +2,8 @@
 
 一个面向“互动影视 / 视觉小说 / 文字冒险”的数据驱动 framework。核心目标是让同一个播放器运行多个 story：编剧改 JSON，资源写 manifest，播放器读取 catalog 并解释数据。
 
+在线试玩：[云天明童话：三盏灯熄灭之前](https://9tempest.github.io/text-adventure-framework/)
+
 ## 本地启动
 
 ```bash
@@ -93,5 +95,7 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
 - 条件分支、变量、自动跳转、存档/读档
 - Howler 音频管理：BGM、SFX、voice
 - 云天明童话 Chapter 1/2 背景、BGM 和 SFX 资源
+- 完整三幕《三盏灯熄灭之前》：52 节点、11 结局、面向新玩家的三段式背景与人物引言、跨章节线索与隐藏路线
+- 10 首 48 kHz 立体声 CC0 重混配乐（来源与加工记录见 `docs/AUDIO_SOURCES.md`）
 - `npm run validate` catalog / story / resource 检查工具
 - Vitest runtime 单元测试样例

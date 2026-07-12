@@ -143,3 +143,56 @@ npm run validate
 - choice/jump/next target 是否存在
 - story 引用的 asset id 是否存在
 - manifest 里的文件路径是否真实存在
+
+## 8. 沉浸式播放器元数据（可选）
+
+Story 可以通过 `presentation` 向播放器提供标题页、线索抽屉与状态名称，不需要在 React 中硬编码：
+
+```json
+{
+  "presentation": {
+    "kicker": "一场被监察的译码案",
+    "synopsis": "一句话简介",
+    "contentNotice": "内容提示",
+    "clueLabels": {
+      "clue_paper": {
+        "label": "折页",
+        "glyph": "◩",
+        "description": "玩家获得后显示的解释。"
+      }
+    },
+    "metricLabels": {
+      "trust": "倾听",
+      "science": "推演"
+    }
+  }
+}
+```
+
+Node 可声明当前章节、地点、叙事层级和总体进度：
+
+```json
+{
+  "id": "chapter3.lantern",
+  "chapter": "第三则 · 深灯王子",
+  "location": "沉钟岛 / 深灯厅",
+  "layer": "fairytale",
+  "progress": 0.72,
+  "steps": []
+}
+```
+
+`layer` 可取 `reality / fairytale / decode / ending`。结局节点还可以加：
+
+```json
+{
+  "ending": {
+    "code": "H · 隐藏",
+    "title": "第四盏灯",
+    "subtitle": "结局页副标题",
+    "tone": "secret"
+  }
+}
+```
+
+`tone` 可取 `hope / bittersweet / dark / secret / failure`。

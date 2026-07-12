@@ -35,6 +35,28 @@ export const SceneSchema = z.object({
   transition: z.enum(["cut", "fade", "dissolve"]).default("fade").optional()
 });
 
+export const StoryPresentationSchema = z.object({
+  kicker: z.string().optional(),
+  synopsis: z.string().optional(),
+  contentNotice: z.string().optional(),
+  clueLabels: z.record(
+    z.string(),
+    z.object({
+      label: z.string().min(1),
+      description: z.string().optional(),
+      glyph: z.string().optional()
+    })
+  ).default({}).optional(),
+  metricLabels: z.record(z.string(), z.string().min(1)).default({}).optional()
+});
+
+export const EndingMetaSchema = z.object({
+  code: z.string().min(1),
+  title: z.string().min(1),
+  subtitle: z.string().optional(),
+  tone: z.enum(["hope", "bittersweet", "dark", "secret", "failure"]).default("bittersweet").optional()
+});
+
 const BaseStepSchema = z.object({
   id: z.string().optional(),
   tags: z.array(z.string()).default([]).optional()
@@ -103,6 +125,11 @@ export const ChoiceSchema = z.object({
 export const StoryNodeSchema = z.object({
   id: z.string().min(1),
   title: z.string().optional(),
+  chapter: z.string().optional(),
+  location: z.string().optional(),
+  layer: z.enum(["reality", "fairytale", "decode", "ending"]).optional(),
+  progress: z.number().min(0).max(1).optional(),
+  ending: EndingMetaSchema.optional(),
   scene: SceneSchema.optional(),
   steps: z.array(StepSchema).default([]),
   choices: z.array(ChoiceSchema).default([]).optional(),
@@ -121,6 +148,7 @@ export const StorySchema = z
     version: z.literal(1),
     id: z.string().min(1),
     title: z.string().min(1),
+    presentation: StoryPresentationSchema.optional(),
     startNode: z.string().min(1),
     variables: z.record(z.string(), VariableValueSchema).default({}),
     characters: z.array(CharacterSchema).default([]),
@@ -128,6 +156,13 @@ export const StorySchema = z
   })
   .superRefine((story, ctx) => {
     const nodeIds = new Set(story.nodes.map((node) => node.id));
+    if (nodeIds.size !== story.nodes.length) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["nodes"],
+        message: "Story node ids must be unique"
+      });
+    }
     if (!nodeIds.has(story.startNode)) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
@@ -218,6 +253,8 @@ export type Condition = z.infer<typeof ConditionSchema>;
 export type Effect = z.infer<typeof EffectSchema>;
 export type Scene = z.infer<typeof SceneSchema>;
 export type SceneCharacter = z.infer<typeof SceneCharacterSchema>;
+export type StoryPresentation = z.infer<typeof StoryPresentationSchema>;
+export type EndingMeta = z.infer<typeof EndingMetaSchema>;
 export type Step = z.infer<typeof StepSchema>;
 export type LineStep = z.infer<typeof LineStepSchema>;
 export type Choice = z.infer<typeof ChoiceSchema>;

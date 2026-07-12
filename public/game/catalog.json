@@ -1,7 +1,20 @@
 {
   "version": 1,
-  "defaultStory": "yun-chapter1",
+  "defaultStory": "yun-tianming-three-fables",
   "stories": [
+    {
+      "id": "yun-tianming-three-fables",
+      "title": "云天明童话：三盏灯熄灭之前",
+      "description": "完整三幕主线：458 段叙事、跨章节线索、11 个结局与一场被监察的宇宙遗言译码。",
+      "storyUrl": "/game/story/yun-tianming-three-fables.story.json",
+      "manifestUrl": "/game/assets/manifest.json",
+      "tags": [
+        "yun-tianming",
+        "complete",
+        "branching",
+        "visual-novel"
+      ]
+    },
     {
       "id": "yun-chapter1",
       "title": "折光三则：第一则 画页之城",

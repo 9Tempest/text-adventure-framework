@@ -189,9 +189,124 @@
         "yun-tianming",
         "chapter-2"
       ]
+    },
+    "bg_r00": {
+      "src": "/game/assets/images/yun/R00.png",
+      "alt": "白塔地下译码舱，一把空椅面对黑色传输窗。",
+      "tags": ["background", "yun-tianming", "reality"]
+    },
+    "bg_r01": {
+      "src": "/game/assets/images/yun/R01.png",
+      "alt": "译码台上悬浮着画页、轻泡与深灯三枚童话图标。",
+      "tags": ["background", "yun-tianming", "reality"]
+    },
+    "bg_t3_01": {
+      "src": "/game/assets/images/yun/T3_01.png",
+      "alt": "小船驶向雾中的沉钟岛，海面浮着半沉的巨钟。",
+      "tags": ["background", "yun-tianming", "chapter-3"]
+    },
+    "bg_t3_02": {
+      "src": "/game/assets/images/yun/T3_02.png",
+      "alt": "幽暗钟井通向海底，深处有一盏克制的灯。",
+      "tags": ["background", "yun-tianming", "chapter-3"]
+    },
+    "bg_t3_04": {
+      "src": "/game/assets/images/yun/T3_04-v2.png",
+      "alt": "海下门廊里，鹿暝与潜灯王子隔水相望，无人触碰悬浮的王冠。",
+      "tags": ["background", "yun-tianming", "chapter-3", "generated-v2"]
+    },
+    "bg_t3_07": {
+      "src": "/game/assets/images/yun/T3_07-v2.png",
+      "alt": "静蓝穹顶保护着灯火温柔的岛城，也隔绝了外部群星。",
+      "tags": ["background", "yun-tianming", "chapter-3", "generated-v2"]
+    },
+    "bg_r06": {
+      "src": "/game/assets/images/yun/R06-v2.png",
+      "alt": "白色听证厅中，画页、轻泡与黑伞三条生存线索悬在译码员上方。",
+      "tags": ["background", "yun-tianming", "decode", "generated-v2"]
+    },
+    "bg_e_true": {
+      "src": "/game/assets/images/yun/E_TRUE-v2.png",
+      "alt": "黎明前，一艘远舟升向群星，故乡在有限慢灯穹顶下继续发光。",
+      "tags": ["background", "yun-tianming", "ending", "generated-v2"]
+    },
+    "bg_e_fourth_light": {
+      "src": "/game/assets/images/yun/E_FOURTH_LIGHT-v2.png",
+      "alt": "孤独的讲述者面前，三盏灯已熄灭，第四盏刚刚亮起。",
+      "tags": ["background", "yun-tianming", "ending", "secret", "generated-v2"]
     }
   },
   "audio": {
+    "SCORE_white_tower": {
+      "src": "/game/assets/audio/yun/score/SCORE_white_tower.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.34,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_bells_before_paper": {
+      "src": "/game/assets/audio/yun/score/SCORE_bells_before_paper.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.34,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_paper_edge": {
+      "src": "/game/assets/audio/yun/score/SCORE_paper_edge.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.4,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_hungry_sea": {
+      "src": "/game/assets/audio/yun/score/SCORE_hungry_sea.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.45,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_deep_lantern": {
+      "src": "/game/assets/audio/yun/score/SCORE_deep_lantern.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.55,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_three_line_hearing": {
+      "src": "/game/assets/audio/yun/score/SCORE_three_line_hearing.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.22,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_dual_dawn": {
+      "src": "/game/assets/audio/yun/score/SCORE_dual_dawn.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.75,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_thousand_islands": {
+      "src": "/game/assets/audio/yun/score/SCORE_thousand_islands.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.4,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_signal_cut": {
+      "src": "/game/assets/audio/yun/score/SCORE_signal_cut.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.3,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
+    "SCORE_after_the_warning": {
+      "src": "/game/assets/audio/yun/score/SCORE_after_the_warning.ogg",
+      "kind": "music",
+      "loop": true,
+      "volume": 0.4,
+      "tags": ["music", "yun-tianming", "score", "cc0-remix"]
+    },
     "BGM_02_fairytale_morning": {
       "src": "/game/assets/audio/yun/BGM_02_fairytale_morning.wav",
       "kind": "music",

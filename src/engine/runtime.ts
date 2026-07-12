@@ -35,12 +35,21 @@ export type RuntimeHistoryEntry = {
   at: number;
 };
 
+export type RuntimeLineHistoryEntry = {
+  key: string;
+  nodeId: string;
+  stepIndex: number;
+  speaker?: string;
+  text: string;
+};
+
 export type RuntimeSaveData = {
   storyId: string;
   nodeId: string;
   stepIndex: number;
   variables: Record<string, VariableValue>;
   history: RuntimeHistoryEntry[];
+  lineHistory?: RuntimeLineHistoryEntry[];
   scene: SceneState;
   ending: boolean;
   savedAt: string;
@@ -55,6 +64,8 @@ export type RuntimeSnapshot = {
   currentLine: LineStep | null;
   availableChoices: Choice[];
   variables: Record<string, VariableValue>;
+  choiceHistory: RuntimeHistoryEntry[];
+  lineHistory: RuntimeLineHistoryEntry[];
   scene: SceneState;
   ending: boolean;
   revision: number;
@@ -82,6 +93,7 @@ export class RuntimeEngine {
     stepIndex: number;
     variables: Record<string, VariableValue>;
     history: RuntimeHistoryEntry[];
+    lineHistory: RuntimeLineHistoryEntry[];
     scene: SceneState;
     ending: boolean;
     revision: number;
@@ -99,6 +111,7 @@ export class RuntimeEngine {
           stepIndex: initialState.stepIndex,
           variables: { ...initialState.variables },
           history: [...initialState.history],
+          lineHistory: [...(initialState.lineHistory ?? [])],
           scene: {
             ...initialState.scene,
             characters: [...initialState.scene.characters]
@@ -112,6 +125,7 @@ export class RuntimeEngine {
           stepIndex: 0,
           variables: { ...story.variables },
           history: [],
+          lineHistory: [],
           scene: { characters: [] },
           ending: false,
           revision: 0,
@@ -141,6 +155,8 @@ export class RuntimeEngine {
       currentLine: this.getCurrentLine(),
       availableChoices: this.getAvailableChoices(),
       variables: { ...this.state.variables },
+      choiceHistory: [...this.state.history],
+      lineHistory: [...this.state.lineHistory],
       scene: {
         ...this.state.scene,
         characters: [...this.state.scene.characters]
@@ -206,6 +222,7 @@ export class RuntimeEngine {
       stepIndex: this.state.stepIndex,
       variables: { ...this.state.variables },
       history: [...this.state.history],
+      lineHistory: [...this.state.lineHistory],
       scene: {
         ...this.state.scene,
         characters: [...this.state.scene.characters]
@@ -251,6 +268,7 @@ export class RuntimeEngine {
 
       if (step) {
         if (step.type === "line") {
+          this.rememberLine(step);
           events.push({ type: "line", line: step });
           return;
         }
@@ -393,6 +411,20 @@ export class RuntimeEngine {
   private getCurrentLine(): LineStep | null {
     const step = this.getCurrentNode().steps[this.state.stepIndex];
     return step?.type === "line" ? step : null;
+  }
+
+  private rememberLine(line: LineStep): void {
+    const key = `${this.state.nodeId}:${this.state.stepIndex}:${line.id ?? "line"}`;
+    if (this.state.lineHistory.at(-1)?.key === key) {
+      return;
+    }
+    this.state.lineHistory.push({
+      key,
+      nodeId: this.state.nodeId,
+      stepIndex: this.state.stepIndex,
+      speaker: line.speaker,
+      text: line.text
+    });
   }
 
   private getAvailableChoices(): Choice[] {
