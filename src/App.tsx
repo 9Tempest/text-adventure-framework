@@ -380,7 +380,7 @@ export default function App() {
               line={line}
               speaker={speaker}
               speakerName={speakerName}
-              portraitUrl={resolveImage(assets, line.portrait)?.src}
+              portraitUrl={resolveImage(assets, line.portrait ?? speaker?.defaultImage)?.src}
               autoMode={autoMode}
               paused={dialoguePaused}
               actionRef={dialogueActionRef}

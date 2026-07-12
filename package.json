@@ -11,6 +11,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "audit:narrative": "node tools/audit-narrative.mjs",
     "validate": "tsx tools/validate-story.ts",
     "test": "vitest run"
   },

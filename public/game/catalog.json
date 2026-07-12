@@ -5,7 +5,7 @@
     {
       "id": "yun-tianming-three-fables",
       "title": "云天明童话：三盏灯熄灭之前",
-      "description": "完整三幕主线：458 段叙事、跨章节线索、11 个结局与一场被监察的宇宙遗言译码。",
+      "description": "完整三幕主线：从画页定位、轻泡尾迹到慢光黑域，包含跨章节线索、11 个结局与一场受监察的宇宙遗言译码。",
       "storyUrl": "/game/story/yun-tianming-three-fables.story.json",
       "manifestUrl": "/game/assets/manifest.json",
       "tags": [
@@ -18,7 +18,7 @@
     {
       "id": "yun-chapter1",
       "title": "折光三则：第一则 画页之城",
-      "description": "拾声王国、画页灾害与黑伞防御的第一章。",
+      "description": "一幅永恒遗像如何暴露王国，以及一声迟到的钟如何引出慢光黑域。",
       "storyUrl": "/game/story/yun-chapter1.story.json",
       "manifestUrl": "/game/assets/manifest.json",
       "tags": [
@@ -30,7 +30,7 @@
     {
       "id": "yun-chapter2",
       "title": "折光三则：第二则 饥潮之海",
-      "description": "南港、轻泡晶、白色尾迹与穿越饥潮的第二章。",
+      "description": "从王室浴皂到曲率远航：造一艘能穿过饥潮、也会留下白痕的船。",
       "storyUrl": "/game/story/yun-chapter2.story.json",
       "manifestUrl": "/game/assets/manifest.json",
       "tags": [

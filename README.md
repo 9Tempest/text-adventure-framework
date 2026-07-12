@@ -33,6 +33,7 @@ src/App.tsx                                 # 示例播放器 UI：故事选择�
 tools/validate-story.ts                     # catalog、剧情与资源引用检查
 docs/SYSTEM_DESIGN.md                       # 详细系统设计
 docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
+docs/YUN_NARRATIVE_BIBLE.md                 # 云天明主线叙事与人物声音准则
 ```
 
 ## 添加一个新故事
@@ -65,7 +66,7 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
     "music": "BGM_02_fairytale_morning"
   },
   "steps": [
-    { "type": "line", "speaker": "luming", "text": "父王说，故事能让人记得自己是谁。" },
+    { "type": "line", "speaker": "luming", "text": "名单给我。不要删掉职位低的人。" },
     { "type": "inc", "key": "science", "by": 1 }
   ],
   "choices": [
@@ -98,4 +99,5 @@ docs/AUTHORING_GUIDE.md                     # 编剧/资源接入说明
 - 完整三幕《三盏灯熄灭之前》：51 节点、11 结局、两段式简明背景引言、人物首次登场介绍、跨章节线索与隐藏路线
 - 11 首 48 kHz 立体声 CC0 重混配乐（含低音量空灵童话主题；来源与加工记录见 `docs/AUDIO_SOURCES.md`）
 - `npm run validate` catalog / story / resource 检查工具
+- `npm run audit:narrative` 连贯性、重复文本、选项提示与关键剧情节点检查
 - Vitest runtime 单元测试样例

@@ -32,15 +32,27 @@
   "characters": [
     {
       "id": "luming",
-      "name": "鹿暝"
+      "name": "鹿暝",
+      "role": "拾声王国的年轻王女",
+      "bio": "先追问事实，再决定怎样保护具体的人。",
+      "defaultImage": "portrait_luming",
+      "color": "#f3d6a1"
     },
     {
       "id": "huaiyi",
-      "name": "槐姨"
+      "name": "槐姨",
+      "role": "王女的照料者与民间记忆",
+      "bio": "总能把宏大方案重新落到饭、床与姓名上。",
+      "defaultImage": "portrait_huaiyi",
+      "color": "#d8c4a7"
     },
     {
       "id": "folding_artisan",
-      "name": "折页匠"
+      "name": "折页匠",
+      "role": "替永恒肖像校光的神秘画师",
+      "bio": "把残酷称作丈量、校准与工艺要求。",
+      "defaultImage": "portrait_folding_artisan",
+      "color": "#e6e8ef"
     },
     {
       "id": "guard",
@@ -52,11 +64,19 @@
     },
     {
       "id": "sailor",
-      "name": "风帆卫士"
+      "name": "风帆卫士",
+      "role": "来自北陆废墟的航海者",
+      "bio": "先计算淡水、载重和潮时，再谈英雄。",
+      "defaultImage": "portrait_sailor",
+      "color": "#8fc7df"
     },
     {
       "id": "umbrella_master",
-      "name": "空伞师"
+      "name": "空伞师",
+      "role": "被逐出宫的校钟匠",
+      "bio": "用迟到的光说明慢域，也坚持公开它的边界。",
+      "defaultImage": "portrait_umbrella_master",
+      "color": "#99b7d2"
     },
     {
       "id": "decoder",
@@ -64,11 +84,18 @@
     },
     {
       "id": "chengan",
-      "name": "澄安"
+      "name": "澄安",
+      "role": "白塔通信负责人",
+      "bio": "保护原话、停顿与被技术摘要删掉的人。",
+      "defaultImage": "portrait_chengan",
+      "color": "#f0c9aa"
     },
     {
       "id": "prince_li",
-      "name": "砾亲王"
+      "name": "砾亲王",
+      "role": "鹿暝的弟弟与王位继承人",
+      "bio": "因为无法接受父亲被遗忘，邀请折页匠绘制永恒遗像。",
+      "color": "#d29086"
     }
   ],
   "nodes": [

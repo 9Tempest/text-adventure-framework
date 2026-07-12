@@ -64,6 +64,11 @@ function resolvePublicFile(src: string): string {
 
 function collectAssetRefs(story: Story): AssetRef[] {
   const refs: AssetRef[] = [];
+  for (const character of story.characters) {
+    if (character.defaultImage) {
+      refs.push({ kind: "image", id: character.defaultImage, where: `characters.${character.id}.defaultImage` });
+    }
+  }
   for (const node of story.nodes) {
     if (node.scene?.background) {
       refs.push({ kind: "image", id: node.scene.background, where: `${node.id}.scene.background` });
